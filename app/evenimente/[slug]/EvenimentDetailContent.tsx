@@ -20,9 +20,9 @@ export function EvenimentDetailContent({ event }: { event: Event }) {
   const [activeDay, setActiveDay] = useState(0);
 
   return (
-    <div className="pt-32">
+    <div className="pt-20">
       {/* Hero Section */}
-      <section className="relative min-h-[80vh] flex items-center overflow-hidden px-6 mb-32">
+      <section className="relative min-h-[80vh] flex items-start overflow-hidden px-6 mb-32">
         <div className="absolute inset-0 z-0">
           <img
             src="https://picsum.photos/seed/detail/1920/1080?blur=4"
@@ -33,7 +33,7 @@ export function EvenimentDetailContent({ event }: { event: Event }) {
           <div className="absolute inset-0 bg-gradient-to-t from-bg via-bg/80 to-transparent" />
         </div>
 
-        <div className="max-w-7xl mx-auto w-full relative z-10">
+        <div className="max-w-7xl mx-auto w-full relative z-10 pt-8">
           <Link
             href="/evenimente"
             className="inline-flex items-center gap-3 label-caps text-xs text-primary mb-12 hover:text-ink transition-colors duration-300 group"
