@@ -1,0 +1,32 @@
+[
+  {
+    "id": "1",
+    "title": "Sola Scriptura",
+    "description": "Scriptura singură este autoritatea supremă în materie de credință și practică.",
+    "longDescription": "Credem că Biblia este Cuvântul inspirat, inerent și suficient al lui Dumnezeu. Ea este singura regulă infailibilă pentru viața creștină și pentru biserică."
+  },
+  {
+    "id": "2",
+    "title": "Sola Fide",
+    "description": "Mântuirea este primită prin credință singură, fără faptele legii.",
+    "longDescription": "Suntem justificați înaintea lui Dumnezeu exclusiv prin credința în Hristos, nu prin meritele noastre sau prin faptele bune pe care le-am putea face."
+  },
+  {
+    "id": "3",
+    "title": "Sola Gratia",
+    "description": "Mântuirea este un dar gratuit al harului lui Dumnezeu.",
+    "longDescription": "Mântuirea nu este ceva ce merităm sau câștigăm, ci este un act suveran al harului lui Dumnezeu față de păcătoșii care nu merită nimic altceva decât judecata."
+  },
+  {
+    "id": "4",
+    "title": "Solus Christus",
+    "description": "Hristos singur este mântuitorul și mijlocitorul nostru.",
+    "longDescription": "Nu există alt nume sub cer prin care să fim mântuiți. Hristos este singurul care a împlinit legea și a plătit prețul pentru păcatele noastre."
+  },
+  {
+    "id": "5",
+    "title": "Soli Deo Gloria",
+    "description": "Toată gloria aparține lui Dumnezeu singur.",
+    "longDescription": "Scopul suprem al omului și al întregii creații este să-L preamărească pe Dumnezeu și să se bucure de El pentru totdeauna."
+  }
+]

@@ -1,0 +1,23 @@
+[
+  {
+    "id": "1",
+    "name": "Emanuel Conțac",
+    "role": "Președinte",
+    "bio": "Profesor universitar și traducător al Scripturii.",
+    "image": "https://picsum.photos/seed/emanuel/400/400"
+  },
+  {
+    "id": "2",
+    "name": "Ovidiu Kish",
+    "role": "Vicepreședinte",
+    "bio": "Pasionat de teologia reformată și istoria bisericii.",
+    "image": "https://picsum.photos/seed/ovidiu/400/400"
+  },
+  {
+    "id": "3",
+    "name": "Teofil Stanciu",
+    "role": "Secretar",
+    "bio": "Scriitor și editor, implicat în proiecte culturale creștine.",
+    "image": "https://picsum.photos/seed/teofil/400/400"
+  }
+]

@@ -1,0 +1,102 @@
+[
+  {
+    "id": "1",
+    "slug": "conferinta-sola-scriptura-2026",
+    "title": "Sola Scriptura: Autoritatea Cuvântului",
+    "startDate": "2025-05-15",
+    "endDate": "2025-05-16",
+    "location": "București, Hotel InterContinental",
+    "locationUrl": "https://maps.google.com/?q=Hotel+InterContinental+Bucharest",
+    "description": "O explorare profundă a autorității Scripturii în viața credinciosului și a bisericii moderne.",
+    "speakers": [
+      {
+        "name": "Dr. John Piper",
+        "role": "Teolog și Autor",
+        "image": "https://picsum.photos/seed/piper/400/400",
+        "bio": "John Piper este fondatorul desiringGod.org și pastor emerit al Bethlehem Baptist Church din Minneapolis. A scris peste 50 de cărți și a dedicat decenii propovăduirii suveranității lui Dumnezeu și bucuriei în Hristos."
+      },
+      {
+        "name": "Emanuel Conțac",
+        "role": "Profesor Universitar",
+        "image": "https://picsum.photos/seed/contac/400/400",
+        "bio": "Emanuel Conțac este profesor de Noul Testament și traducătorul principal al Bibliei NTR (Noua Traducere în Limba Română). Predă hermeneutică și exegeză biblică și este autor a numeroase studii teologice."
+      }
+    ],
+    "topics": [
+      "Ineranța Scripturii",
+      "Suficiența Cuvântului",
+      "Interpretarea corectă a textului"
+    ],
+    "schedule": [
+      {
+        "day": "Ziua 1 — Vineri, 15 Mai",
+        "items": [
+          { "time": "09:00", "activity": "Înregistrare & Cafea" },
+          { "time": "10:00", "activity": "Sesiunea 1: Fundamentul Scripturii" },
+          { "time": "12:00", "activity": "Prânz" },
+          { "time": "14:00", "activity": "Sesiunea 2: Scriptura în Biserică" },
+          { "time": "16:30", "activity": "Panel de întrebări și răspunsuri" }
+        ]
+      },
+      {
+        "day": "Ziua 2 — Sâmbătă, 16 Mai",
+        "items": [
+          { "time": "09:00", "activity": "Rugăciune & Devoțional" },
+          { "time": "10:00", "activity": "Sesiunea 3: Suficiența Cuvântului" },
+          { "time": "12:00", "activity": "Prânz" },
+          { "time": "14:00", "activity": "Sesiunea 4: Aplicarea Scripturii" },
+          { "time": "17:00", "activity": "Slujbă de închidere" }
+        ]
+      }
+    ],
+    "youtubePlaylist": "PL...",
+    "stripeLink": "https://buy.stripe.com/test_..."
+  },
+  {
+    "id": "2",
+    "slug": "solus-christus-2025",
+    "title": "Solus Christus: Singurul Mijlocitor",
+    "startDate": "2025-10-20",
+    "endDate": "2025-10-21",
+    "location": "Cluj-Napoca, Cinema Florin Piersic",
+    "locationUrl": "https://maps.google.com/?q=Cinema+Florin+Piersic+Cluj-Napoca",
+    "description": "O conferință dedicată centralității lui Hristos în mântuire și închinare.",
+    "speakers": [
+      {
+        "name": "Paul Washer",
+        "role": "Misionar",
+        "image": "https://picsum.photos/seed/washer/400/400",
+        "bio": "Paul Washer este fondatorul HeartCry Missionary Society și un predicator cunoscut pentru mesajele sale directe despre mântuire, pocăință și urmarea autentică a lui Hristos. A slujit ca misionar în Peru timp de mai mulți ani."
+      }
+    ],
+    "topics": [
+      "Hristos în Vechiul Testament",
+      "Ispășirea substitutivă",
+      "Hristos, singura Cale"
+    ],
+    "schedule": [
+      {
+        "day": "Ziua 1 — Luni, 20 Octombrie",
+        "items": [
+          { "time": "09:30", "activity": "Înregistrare & Întâmpinare" },
+          { "time": "10:30", "activity": "Sesiunea 1: Hristos în Vechiul Testament" },
+          { "time": "12:30", "activity": "Prânz" },
+          { "time": "14:30", "activity": "Sesiunea 2: Ispășirea substitutivă" },
+          { "time": "17:00", "activity": "Panel de întrebări și răspunsuri" }
+        ]
+      },
+      {
+        "day": "Ziua 2 — Marți, 21 Octombrie",
+        "items": [
+          { "time": "09:00", "activity": "Devoțional de dimineață" },
+          { "time": "10:00", "activity": "Sesiunea 3: Hristos, singura Cale" },
+          { "time": "12:00", "activity": "Prânz" },
+          { "time": "14:00", "activity": "Sesiunea 4: Urmând pe Hristos" },
+          { "time": "16:30", "activity": "Slujbă de încheiere" }
+        ]
+      }
+    ],
+    "youtubePlaylist": "PL_archive_1",
+    "stripeLink": ""
+  }
+]
