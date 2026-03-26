@@ -2,31 +2,41 @@
   {
     "id": "1",
     "title": "Sola Scriptura",
-    "description": "Scriptura singură este autoritatea supremă în materie de credință și practică.",
-    "longDescription": "Credem că Biblia este Cuvântul inspirat, inerent și suficient al lui Dumnezeu. Ea este singura regulă infailibilă pentru viața creștină și pentru biserică."
+    "subtitle": "Doar Scriptura",
+    "description": "Scriptura este singura autoritate infailibila si suficienta pentru credinta si viata.",
+    "longDescription": "Dumnezeu a vorbit in mod final si clar prin Cuvantul Sau, standardul suprem dupa care sunt evaluate toate traditiile, experientele si invataturile. Biserica nu creeaza adevarul, ci il primeste si il proclama. Orice doctrina sau practica trebuie testata si ancorata in Scriptura.",
+    "verses": ["Toata Scriptura este insuflata de Dumnezeu si de folos... (2 Timotei 3:16-17)", "Cuvantul Tau este adevarul. (Ioan 17:17)"]
   },
   {
     "id": "2",
     "title": "Sola Fide",
-    "description": "Mântuirea este primită prin credință singură, fără faptele legii.",
-    "longDescription": "Suntem justificați înaintea lui Dumnezeu exclusiv prin credința în Hristos, nu prin meritele noastre sau prin faptele bune pe care le-am putea face."
+    "subtitle": "Doar prin credinta",
+    "description": "Omul este socotit drept inaintea lui Dumnezeu doar prin credinta, nu prin faptele lui.",
+    "longDescription": "Credinta nu este un merit, ci instrumentul prin care primim dreptatea lui Cristos. Justificarea este un act juridic prin care Dumnezeu declara drept pe pacatosul care se increde in Cristos. Faptele bune nu sunt cauza mantuirii, ci rezultatul ei.",
+    "verses": ["Caci noi credem ca omul este socotit drept prin credinta... (Romani 3:28)", "Cel drept va trai prin credinta. (Romani 1:17)"]
   },
   {
     "id": "3",
     "title": "Sola Gratia",
-    "description": "Mântuirea este un dar gratuit al harului lui Dumnezeu.",
-    "longDescription": "Mântuirea nu este ceva ce merităm sau câștigăm, ci este un act suveran al harului lui Dumnezeu față de păcătoșii care nu merită nimic altceva decât judecata."
+    "subtitle": "Doar prin har",
+    "description": "Mantuirea este in intregime lucrarea harului lui Dumnezeu, de la inceput pana la sfarsit.",
+    "longDescription": "Omul, fiind mort spiritual, nu poate contribui la propria mantuire. Dumnezeu este Cel care initiaza, realizeaza si desavarseste mantuirea. Harul nu este doar o oferta, ci o putere eficienta care aduce viata spirituala, punand intreaga slava pe seama lui Dumnezeu.",
+    "verses": ["Caci prin har ati fost mantuiti, prin credinta... (Efeseni 2:8-9)", "El ne-a mantuit nu pentru faptele facute de noi... (Tit 3:5)"]
   },
   {
     "id": "4",
     "title": "Solus Christus",
-    "description": "Hristos singur este mântuitorul și mijlocitorul nostru.",
-    "longDescription": "Nu există alt nume sub cer prin care să fim mântuiți. Hristos este singurul care a împlinit legea și a plătit prețul pentru păcatele noastre."
+    "subtitle": "Doar prin Cristos",
+    "description": "Isus Cristos este singurul Mijlocitor intre Dumnezeu si oameni.",
+    "longDescription": "Prin viata Sa perfecta, moartea substitutiva si invierea Sa, El a realizat pe deplin mantuirea celor care cred. Nu exista alta cale sau alta autoritate prin care omul poate fi impacat cu Dumnezeu. Orice adaugare de mediatori suplimentari submineaza suficienta lucrarii lui Cristos.",
+    "verses": ["Eu sunt calea, adevarul si viata... (Ioan 14:6)", "Este un singur Mijlocitor... (1 Timotei 2:5)"]
   },
   {
     "id": "5",
     "title": "Soli Deo Gloria",
-    "description": "Toată gloria aparține lui Dumnezeu singur.",
-    "longDescription": "Scopul suprem al omului și al întregii creații este să-L preamărească pe Dumnezeu și să se bucure de El pentru totdeauna."
+    "subtitle": "Numai lui Dumnezeu gloria",
+    "description": "Intreaga viata a credinciosului este traita pentru gloria lui Dumnezeu.",
+    "longDescription": "Mantuirea, viata, slujirea si toate lucrurile exista pentru slava Lui. Dumnezeu este centrul si scopul ultim al tuturor lucrurilor. Acest principiu ne cheama la o viata orientata nu spre sine, ci spre Dumnezeu, in toate domeniile existentei.",
+    "verses": ["Faceti totul pentru slava lui Dumnezeu. (1 Corinteni 10:31)", "Din El, prin El si pentru El sunt toate lucrurile. (Romani 11:36)"]
   }
 ]

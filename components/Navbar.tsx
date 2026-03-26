@@ -12,6 +12,7 @@ const navLinks = [
   { name: "Cine suntem", path: "/cine-suntem" },
   { name: "Ce credem", path: "/ce-credem" },
   { name: "Evenimente", path: "/evenimente" },
+  { name: "Resurse", path: "/resurse" },
 ];
 
 export function Navbar() {
@@ -22,9 +23,11 @@ export function Navbar() {
     <nav className="fixed top-0 left-0 right-0 z-50 glass-nav">
       <div className="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
         <Link href="/" className="flex items-center gap-3 group">
-          <div className="w-10 h-10 bg-primary flex items-center justify-center font-serif text-white text-xl group-hover:bg-primary-dark transition-colors duration-300 rounded-xs">
-            5
-          </div>
+          <img
+            src="/images/social_logo.jpg"
+            alt="5 Sola"
+            className="w-10 h-10 rounded-xs object-cover"
+          />
           <span className="font-serif text-2xl font-black tracking-tighter group-hover:text-primary transition-colors duration-300">
             SOLA.RO
           </span>

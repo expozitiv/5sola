@@ -6,7 +6,7 @@ export function PageHeading({ children }: { children: React.ReactNode }) {
     <motion.h1
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
-      className="text-[12vw] md:text-[10vw] font-serif font-black leading-[0.85] tracking-tighter uppercase mb-12"
+      className="text-5xl md:text-7xl font-serif font-black leading-tight tracking-tighter uppercase mb-8"
     >
       {children}
     </motion.h1>

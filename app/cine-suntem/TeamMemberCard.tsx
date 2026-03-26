@@ -15,7 +15,8 @@ export function TeamMemberCard({ member }: { member: TeamMember }) {
         <div className="absolute inset-0 bg-primary/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
       </div>
       <h3 className="text-xl font-serif font-bold mb-1">{member.name}</h3>
-      <p className="label-caps text-xs text-primary">{member.role}</p>
+      <p className="label-caps text-xs text-primary mb-3">{member.role}</p>
+      <p className="text-muted text-sm leading-relaxed">{member.bio}</p>
     </motion.div>
   );
 }

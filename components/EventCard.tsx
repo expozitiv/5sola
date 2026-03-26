@@ -21,8 +21,22 @@ export function EventCard({ event, index = 0 }: EventCardProps) {
       transition={{ delay: index * 0.1 }}
       className="group bento-card h-full flex flex-col"
     >
+      {/* Poster Image */}
+      {event.image && (
+        <div className="relative -mx-[1px] -mt-[1px] mb-8 overflow-hidden aspect-[4/3]">
+          <img
+            src={event.image}
+            alt={event.title}
+            className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700 scale-105 group-hover:scale-100"
+          />
+          <div className="absolute inset-0 bg-gradient-to-t from-bg/60 to-transparent" />
+        </div>
+      )}
+
       {/* Background Glow */}
-      <div className="absolute -top-24 -right-24 w-48 h-48 bg-primary/5 blur-[100px] rounded-full group-hover:bg-primary/10 transition-all duration-500" />
+      {!event.image && (
+        <div className="absolute -top-24 -right-24 w-48 h-48 bg-primary/5 blur-[100px] rounded-full group-hover:bg-primary/10 transition-all duration-500" />
+      )}
 
       <div className="mb-8 flex items-center justify-between">
         <div className="flex items-center gap-2 text-primary label-caps">

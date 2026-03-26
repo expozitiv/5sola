@@ -1,102 +1,469 @@
 [
   {
     "id": "1",
-    "slug": "conferinta-sola-scriptura-2026",
-    "title": "Sola Scriptura: Autoritatea Cuvântului",
-    "startDate": "2025-05-15",
-    "endDate": "2025-05-16",
-    "location": "București, Hotel InterContinental",
-    "locationUrl": "https://maps.google.com/?q=Hotel+InterContinental+Bucharest",
-    "description": "O explorare profundă a autorității Scripturii în viața credinciosului și a bisericii moderne.",
+    "slug": "sfintenia-lui-dumnezeu-2023",
+    "title": "Sfințenia lui Dumnezeu",
+    "startDate": "2023-05-18",
+    "endDate": "2023-05-20",
+    "location": "Aurum Palace, București",
+    "image": "/images/events/sfintenia-lui-dumnezeu.jpg",
+    "locationUrl": "https://maps.google.com/?q=Aurum+Palace+Sos+Electronicii+19+Bucuresti",
+    "description": "Prima conferință națională 5 Sola, dedicată sfințeniei lui Dumnezeu — temelia din care izvorăsc toate celelalte atribute divine și chemarea la sfințenie a poporului Său.",
     "speakers": [
       {
-        "name": "Dr. John Piper",
-        "role": "Teolog și Autor",
-        "image": "https://picsum.photos/seed/piper/400/400",
-        "bio": "John Piper este fondatorul desiringGod.org și pastor emerit al Bethlehem Baptist Church din Minneapolis. A scris peste 50 de cărți și a dedicat decenii propovăduirii suveranității lui Dumnezeu și bucuriei în Hristos."
+        "name": "Lucian Bălănescu",
+        "role": "Pastor, Biserica Baptistă Buna Vestire, București",
+        "image": "https://images.ctfassets.net/w312hx68oyyc/7epFMKYfPROfvp4DC4yZYl/a9740dfe9a5663d99153034ed7546e66/luci__1_.jpg"
       },
       {
-        "name": "Emanuel Conțac",
-        "role": "Profesor Universitar",
-        "image": "https://picsum.photos/seed/contac/400/400",
-        "bio": "Emanuel Conțac este profesor de Noul Testament și traducătorul principal al Bibliei NTR (Noua Traducere în Limba Română). Predă hermeneutică și exegeză biblică și este autor a numeroase studii teologice."
+        "name": "Alex Ghiță",
+        "role": "Pastor, Stoborăști",
+        "image": "https://images.ctfassets.net/w312hx68oyyc/5FGBap5Wdn7jrHeRosBXt5/f55b2b75d2073ef4309d39d9766bd373/alex__1_.jpg"
+      },
+      {
+        "name": "Iosua Faur",
+        "role": "Pastor, Biserica Baptistă Sfânta Treime, Brăila",
+        "image": "https://images.ctfassets.net/w312hx68oyyc/33jH336BN57yASLlVertP1/3974db092584b8d3aec60e325b1577e6/iosua__1_.jpg"
+      },
+      {
+        "name": "Andrei Croitoru",
+        "role": "Lucrător în Biserică, Sășa, Gorj",
+        "image": "https://images.ctfassets.net/w312hx68oyyc/5stjIVUNPpPeA5gqVWWPkG/ac97666249effd996268526f9c894e22/andrei.jpg"
       }
     ],
     "topics": [
-      "Ineranța Scripturii",
-      "Suficiența Cuvântului",
-      "Interpretarea corectă a textului"
+      "Sfințenia lui Dumnezeu în Scriptură",
+      "Chemarea la sfințenie",
+      "Sfințenie și Evanghelie"
     ],
     "schedule": [
       {
-        "day": "Ziua 1 — Vineri, 15 Mai",
+        "day": "Ziua 1 — Joi, 18 Mai",
         "items": [
-          { "time": "09:00", "activity": "Înregistrare & Cafea" },
-          { "time": "10:00", "activity": "Sesiunea 1: Fundamentul Scripturii" },
-          { "time": "12:00", "activity": "Prânz" },
-          { "time": "14:00", "activity": "Sesiunea 2: Scriptura în Biserică" },
-          { "time": "16:30", "activity": "Panel de întrebări și răspunsuri" }
+          { "time": "17:00", "activity": "Înregistrare & Primire" },
+          { "time": "18:00", "activity": "Sesiunea 1" },
+          { "time": "20:00", "activity": "Timp liber" }
         ]
       },
       {
-        "day": "Ziua 2 — Sâmbătă, 16 Mai",
+        "day": "Ziua 2 — Vineri, 19 Mai",
         "items": [
-          { "time": "09:00", "activity": "Rugăciune & Devoțional" },
-          { "time": "10:00", "activity": "Sesiunea 3: Suficiența Cuvântului" },
-          { "time": "12:00", "activity": "Prânz" },
-          { "time": "14:00", "activity": "Sesiunea 4: Aplicarea Scripturii" },
-          { "time": "17:00", "activity": "Slujbă de închidere" }
+          { "time": "09:00", "activity": "Devotional de dimineață" },
+          { "time": "10:00", "activity": "Sesiunea 2" },
+          { "time": "12:30", "activity": "Prânz" },
+          { "time": "14:30", "activity": "Sesiunea 3" },
+          { "time": "17:00", "activity": "Panel de întrebări și răspunsuri" },
+          { "time": "19:00", "activity": "Sesiunea 4" }
+        ]
+      },
+      {
+        "day": "Ziua 3 — Sâmbătă, 20 Mai",
+        "items": [
+          { "time": "09:00", "activity": "Devotional de dimineață" },
+          { "time": "10:00", "activity": "Sesiunea 5" },
+          { "time": "12:30", "activity": "Prânz" },
+          { "time": "14:30", "activity": "Sesiunea 6" },
+          { "time": "17:00", "activity": "Slujbă de încheiere" }
         ]
       }
     ],
-    "youtubePlaylist": "PL...",
-    "stripeLink": "https://buy.stripe.com/test_..."
+    "youtubePlaylist": "https://www.youtube.com/playlist?list=PLT1HlO3pk6C2NR_ulsFbgVR1pwonGlTHQ"
   },
   {
     "id": "2",
-    "slug": "solus-christus-2025",
-    "title": "Solus Christus: Singurul Mijlocitor",
-    "startDate": "2025-10-20",
-    "endDate": "2025-10-21",
-    "location": "Cluj-Napoca, Cinema Florin Piersic",
-    "locationUrl": "https://maps.google.com/?q=Cinema+Florin+Piersic+Cluj-Napoca",
-    "description": "O conferință dedicată centralității lui Hristos în mântuire și închinare.",
+    "slug": "fiti-sfinti-2023",
+    "title": "Fiți Sfinți!",
+    "startDate": "2023-11-17",
+    "endDate": "2023-11-18",
+    "location": "Amfiteatrul Bisericii Filocalia, Iași",
+    "image": "/images/events/fiti-sfinti.jpg",
+    "locationUrl": "https://maps.google.com/?q=Strada+Smardan+13+Iasi",
+    "description": "Conferință regională dedicată chemării practice la sfințenie în viața creștinului și a bisericii locale, bazată pe porunca apostolică din 1 Petru 1:16.",
     "speakers": [
       {
-        "name": "Paul Washer",
-        "role": "Misionar",
-        "image": "https://picsum.photos/seed/washer/400/400",
-        "bio": "Paul Washer este fondatorul HeartCry Missionary Society și un predicator cunoscut pentru mesajele sale directe despre mântuire, pocăință și urmarea autentică a lui Hristos. A slujit ca misionar în Peru timp de mai mulți ani."
+        "name": "Iosif Marica",
+        "role": "Pastor",
+        "image": "https://images.ctfassets.net/w312hx68oyyc/6XfBkm58lmY4ovoLuNFado/8f3198aba023f7e6b77a953f7267c07a/marica__1_.png"
+      },
+      {
+        "name": "Iosua Faur",
+        "role": "Pastor, Biserica Baptistă Sfânta Treime, Brăila",
+        "image": "https://images.ctfassets.net/w312hx68oyyc/33jH336BN57yASLlVertP1/3974db092584b8d3aec60e325b1577e6/iosua__1_.jpg"
+      },
+      {
+        "name": "Andrei Croitoru",
+        "role": "Lucrător în Biserică, Sășa, Gorj",
+        "image": "https://images.ctfassets.net/w312hx68oyyc/5stjIVUNPpPeA5gqVWWPkG/ac97666249effd996268526f9c894e22/andrei.jpg"
+      },
+      {
+        "name": "Alex Ghiță",
+        "role": "Pastor, Stoborăști",
+        "image": "https://images.ctfassets.net/w312hx68oyyc/5FGBap5Wdn7jrHeRosBXt5/f55b2b75d2073ef4309d39d9766bd373/alex__1_.jpg"
+      },
+      {
+        "name": "Lucian Bălănescu",
+        "role": "Pastor, Biserica Baptistă Buna Vestire, București",
+        "image": "https://images.ctfassets.net/w312hx68oyyc/7epFMKYfPROfvp4DC4yZYl/a9740dfe9a5663d99153034ed7546e66/luci__1_.jpg"
       }
     ],
     "topics": [
-      "Hristos în Vechiul Testament",
-      "Ispășirea substitutivă",
-      "Hristos, singura Cale"
+      "Sfințenia în viața de zi cu zi",
+      "Sfințenie și comunitate",
+      "Sfințenie și Cuvântul lui Dumnezeu"
     ],
     "schedule": [
       {
-        "day": "Ziua 1 — Luni, 20 Octombrie",
+        "day": "Ziua 1 — Vineri, 17 Noiembrie",
         "items": [
-          { "time": "09:30", "activity": "Înregistrare & Întâmpinare" },
-          { "time": "10:30", "activity": "Sesiunea 1: Hristos în Vechiul Testament" },
-          { "time": "12:30", "activity": "Prânz" },
-          { "time": "14:30", "activity": "Sesiunea 2: Ispășirea substitutivă" },
-          { "time": "17:00", "activity": "Panel de întrebări și răspunsuri" }
+          { "time": "16:00", "activity": "Înregistrare" },
+          { "time": "17:00", "activity": "Sesiunea 1" },
+          { "time": "19:00", "activity": "Sesiunea 2" }
         ]
       },
       {
-        "day": "Ziua 2 — Marți, 21 Octombrie",
+        "day": "Ziua 2 — Sâmbătă, 18 Noiembrie",
         "items": [
-          { "time": "09:00", "activity": "Devoțional de dimineață" },
-          { "time": "10:00", "activity": "Sesiunea 3: Hristos, singura Cale" },
-          { "time": "12:00", "activity": "Prânz" },
-          { "time": "14:00", "activity": "Sesiunea 4: Urmând pe Hristos" },
-          { "time": "16:30", "activity": "Slujbă de încheiere" }
+          { "time": "09:00", "activity": "Devotional de dimineață" },
+          { "time": "10:00", "activity": "Sesiunea 3" },
+          { "time": "12:30", "activity": "Prânz" },
+          { "time": "14:30", "activity": "Sesiunea 4" },
+          { "time": "16:30", "activity": "Sesiunea 5 & Slujbă de încheiere" }
         ]
       }
     ],
-    "youtubePlaylist": "PL_archive_1",
-    "stripeLink": ""
+    "youtubePlaylist": "https://www.youtube.com/playlist?list=PLT1HlO3pk6C0J4u4jHF-xkfPiiVJtWt4m"
+  },
+  {
+    "id": "3",
+    "slug": "evanghelia-lui-cristos-2024",
+    "title": "Evanghelia lui Cristos",
+    "startDate": "2024-05-09",
+    "endDate": "2024-05-11",
+    "location": "București",
+    "image": "/images/events/evanghelia-lui-cristos.jpg",
+    "locationUrl": "https://maps.google.com/?q=Bucuresti+Romania",
+    "description": "Conferința națională 2024 dedicată Evangheliei lui Cristos — conținutul, puterea și proclamarea ei fidelă în contextul contemporan.",
+    "speakers": [
+      {
+        "name": "David Lavric",
+        "role": "Pastor, Biserica Baptistă ProNobis, Timișoara",
+        "image": "https://images.ctfassets.net/w312hx68oyyc/eE0YhkcPYcIP05bbD9rxv/d26be6d7a535c4de7095ae5ffa88ba45/david.jpg"
+      },
+      {
+        "name": "Iosua Faur",
+        "role": "Pastor, Biserica Baptistă Sfânta Treime, Brăila",
+        "image": "https://images.ctfassets.net/w312hx68oyyc/33jH336BN57yASLlVertP1/3974db092584b8d3aec60e325b1577e6/iosua__1_.jpg"
+      },
+      {
+        "name": "Andrei Croitoru",
+        "role": "Lucrător în Biserică, Sășa, Gorj",
+        "image": "https://images.ctfassets.net/w312hx68oyyc/5stjIVUNPpPeA5gqVWWPkG/ac97666249effd996268526f9c894e22/andrei.jpg"
+      },
+      {
+        "name": "Alex Ghiță",
+        "role": "Pastor, Stoborăști",
+        "image": "https://images.ctfassets.net/w312hx68oyyc/5FGBap5Wdn7jrHeRosBXt5/f55b2b75d2073ef4309d39d9766bd373/alex__1_.jpg"
+      },
+      {
+        "name": "Lucian Bălănescu",
+        "role": "Pastor, Biserica Baptistă Buna Vestire, București",
+        "image": "https://images.ctfassets.net/w312hx68oyyc/7epFMKYfPROfvp4DC4yZYl/a9740dfe9a5663d99153034ed7546e66/luci__1_.jpg"
+      }
+    ],
+    "topics": [
+      "Conținutul Evangheliei",
+      "Puterea Evangheliei",
+      "Proclamarea Evangheliei"
+    ],
+    "schedule": [
+      {
+        "day": "Ziua 1 — Joi, 9 Mai",
+        "items": [
+          { "time": "17:00", "activity": "Înregistrare & Primire" },
+          { "time": "18:00", "activity": "Sesiunea 1" },
+          { "time": "20:00", "activity": "Timp liber" }
+        ]
+      },
+      {
+        "day": "Ziua 2 — Vineri, 10 Mai",
+        "items": [
+          { "time": "09:00", "activity": "Devotional de dimineață" },
+          { "time": "10:00", "activity": "Sesiunea 2" },
+          { "time": "12:30", "activity": "Prânz" },
+          { "time": "14:30", "activity": "Sesiunea 3" },
+          { "time": "17:00", "activity": "Panel de întrebări și răspunsuri" },
+          { "time": "19:00", "activity": "Sesiunea 4" }
+        ]
+      },
+      {
+        "day": "Ziua 3 — Sâmbătă, 11 Mai",
+        "items": [
+          { "time": "09:00", "activity": "Devotional de dimineață" },
+          { "time": "10:00", "activity": "Sesiunea 5" },
+          { "time": "12:30", "activity": "Prânz" },
+          { "time": "14:30", "activity": "Sesiunea 6" },
+          { "time": "17:00", "activity": "Slujbă de încheiere" }
+        ]
+      }
+    ],
+    "youtubePlaylist": "https://www.youtube.com/playlist?list=PLT1HlO3pk6C1huUIOLeZPVOKDruMxmtVw"
+  },
+  {
+    "id": "4",
+    "slug": "sfanta-scriptura-2024",
+    "title": "Sfânta Scriptură",
+    "startDate": "2024-11-15",
+    "endDate": "2024-11-16",
+    "location": "Cluj-Napoca",
+    "image": "/images/events/sfanta-scriptura.png",
+    "locationUrl": "https://maps.google.com/?q=Cluj-Napoca+Romania",
+    "description": "Conferință națională dedicată autorității și suficienței Sfintei Scripturi — temelia pe care este zidită Biserica lui Dumnezeu.",
+    "speakers": [
+      {
+        "name": "Alex Ghiță",
+        "role": "Pastor, Stoborăști",
+        "image": "https://images.ctfassets.net/w312hx68oyyc/5FGBap5Wdn7jrHeRosBXt5/f55b2b75d2073ef4309d39d9766bd373/alex__1_.jpg"
+      },
+      {
+        "name": "Iosua Faur",
+        "role": "Pastor, Biserica Baptistă Sfânta Treime, Brăila",
+        "image": "https://images.ctfassets.net/w312hx68oyyc/33jH336BN57yASLlVertP1/3974db092584b8d3aec60e325b1577e6/iosua__1_.jpg"
+      },
+      {
+        "name": "David Lavric",
+        "role": "Pastor, Biserica Baptistă ProNobis, Timișoara",
+        "image": "https://images.ctfassets.net/w312hx68oyyc/eE0YhkcPYcIP05bbD9rxv/d26be6d7a535c4de7095ae5ffa88ba45/david.jpg"
+      },
+      {
+        "name": "Andrei Croitoru",
+        "role": "Lucrător în Biserică, Sășa, Gorj",
+        "image": "https://images.ctfassets.net/w312hx68oyyc/5stjIVUNPpPeA5gqVWWPkG/ac97666249effd996268526f9c894e22/andrei.jpg"
+      },
+      {
+        "name": "Lucian Bălănescu",
+        "role": "Pastor, Biserica Baptistă Buna Vestire, București",
+        "image": "https://images.ctfassets.net/w312hx68oyyc/7epFMKYfPROfvp4DC4yZYl/a9740dfe9a5663d99153034ed7546e66/luci__1_.jpg"
+      }
+    ],
+    "topics": [
+      "Autoritatea Scripturii",
+      "Suficiența Cuvântului lui Dumnezeu",
+      "Scriptura ca temelie a Bisericii"
+    ],
+    "schedule": [
+      {
+        "day": "Ziua 1 — Vineri, 15 Noiembrie",
+        "items": [
+          { "time": "16:00", "activity": "Înregistrare" },
+          { "time": "17:00", "activity": "Sesiunea 1" },
+          { "time": "19:00", "activity": "Sesiunea 2" }
+        ]
+      },
+      {
+        "day": "Ziua 2 — Sâmbătă, 16 Noiembrie",
+        "items": [
+          { "time": "09:00", "activity": "Devotional de dimineață" },
+          { "time": "10:00", "activity": "Sesiunea 3" },
+          { "time": "12:30", "activity": "Prânz" },
+          { "time": "14:30", "activity": "Sesiunea 4" },
+          { "time": "16:30", "activity": "Sesiunea 5 & Slujbă de încheiere" }
+        ]
+      }
+    ],
+    "youtubePlaylist": "https://www.youtube.com/playlist?list=PLT1HlO3pk6C3PW0H2w3xgTHwdLZWO_IcY"
+  },
+  {
+    "id": "5",
+    "slug": "biserica-lui-cristos-2025",
+    "title": "Biserica lui Cristos — Cum să te porți în casa lui Dumnezeu",
+    "startDate": "2025-05-08",
+    "endDate": "2025-05-10",
+    "location": "Iulius Congress Hall, Timișoara",
+    "image": "/images/events/biserica-lui-cristos.png",
+    "locationUrl": "https://maps.google.com/?q=Iulius+Congress+Hall+Timisoara",
+    "description": "Conferința națională 2025 dedicată eclesiologiei biblice — ce este Biserica, cum funcționează și cum sunt chemați credincioșii să trăiască împreună în casa lui Dumnezeu.",
+    "speakers": [
+      {
+        "name": "Andrei Croitoru",
+        "role": "Lucrător în Biserică, Sășa, Gorj",
+        "image": "https://images.ctfassets.net/w312hx68oyyc/5stjIVUNPpPeA5gqVWWPkG/ac97666249effd996268526f9c894e22/andrei.jpg"
+      },
+      {
+        "name": "Marius Birgean",
+        "role": "Pastor",
+        "image": "https://images.ctfassets.net/w312hx68oyyc/5aPv1sjPUMDSvMME5QLFFk/0147e6286703664a4a86a7c1dbf97e28/birgean__1_.jpg"
+      },
+      {
+        "name": "Alex Ghiță",
+        "role": "Pastor, Stoborăști",
+        "image": "https://images.ctfassets.net/w312hx68oyyc/5FGBap5Wdn7jrHeRosBXt5/f55b2b75d2073ef4309d39d9766bd373/alex__1_.jpg"
+      },
+      {
+        "name": "Lucian Bălănescu",
+        "role": "Pastor, Biserica Baptistă Buna Vestire, București",
+        "image": "https://images.ctfassets.net/w312hx68oyyc/7epFMKYfPROfvp4DC4yZYl/a9740dfe9a5663d99153034ed7546e66/luci__1_.jpg"
+      },
+      {
+        "name": "Iosua Faur",
+        "role": "Pastor, Biserica Baptistă Sfânta Treime, Brăila",
+        "image": "https://images.ctfassets.net/w312hx68oyyc/33jH336BN57yASLlVertP1/3974db092584b8d3aec60e325b1577e6/iosua__1_.jpg"
+      }
+    ],
+    "topics": [
+      "Natura și misiunea Bisericii",
+      "Disciplina bisericească",
+      "Viața de comunitate în Hristos"
+    ],
+    "schedule": [
+      {
+        "day": "Ziua 1 — Joi, 8 Mai",
+        "items": [
+          { "time": "17:00", "activity": "Înregistrare & Primire" },
+          { "time": "18:00", "activity": "Sesiunea 1" },
+          { "time": "20:00", "activity": "Timp liber" }
+        ]
+      },
+      {
+        "day": "Ziua 2 — Vineri, 9 Mai",
+        "items": [
+          { "time": "09:00", "activity": "Devotional de dimineață" },
+          { "time": "10:00", "activity": "Sesiunea 2" },
+          { "time": "12:30", "activity": "Prânz" },
+          { "time": "14:30", "activity": "Sesiunea 3" },
+          { "time": "17:00", "activity": "Panel de întrebări și răspunsuri" },
+          { "time": "19:00", "activity": "Sesiunea 4" }
+        ]
+      },
+      {
+        "day": "Ziua 3 — Sâmbătă, 10 Mai",
+        "items": [
+          { "time": "09:00", "activity": "Devotional de dimineață" },
+          { "time": "10:00", "activity": "Sesiunea 5" },
+          { "time": "12:30", "activity": "Prânz" },
+          { "time": "14:30", "activity": "Sesiunea 6" },
+          { "time": "17:00", "activity": "Slujbă de încheiere" }
+        ]
+      }
+    ],
+    "youtubePlaylist": "https://www.youtube.com/playlist?list=PLT1HlO3pk6C3q0I_dBVdVc7aee23PcCfR"
+  },
+  {
+    "id": "6",
+    "slug": "harul-lui-dumnezeu-2025",
+    "title": "Harul lui Dumnezeu",
+    "startDate": "2025-11-21",
+    "endDate": "2025-11-22",
+    "location": "Centrul Emaus Impact, Plopeni-Salcea, Suceava",
+    "image": "/images/events/harul-lui-dumnezeu.jpg",
+    "locationUrl": "https://maps.google.com/?q=Calea+Sucevei+261A+Plopeni-Salcea+Suceava",
+    "description": "Conferință dedicată doctrinei harului lui Dumnezeu — sursa, natura și efectele transformatoare ale harului divin în viața credinciosului și a Bisericii.",
+    "speakers": [
+      {
+        "name": "Beni Cruceru",
+        "role": "Pastor",
+        "image": "https://images.ctfassets.net/w312hx68oyyc/3BoEGAeRJ4JvuknfSNqLJ2/9924ec79ca96881e2c59ae69606eed96/cruceru.jpeg"
+      },
+      {
+        "name": "Alex Ghiță",
+        "role": "Pastor, Stoborăști",
+        "image": "https://images.ctfassets.net/w312hx68oyyc/5FGBap5Wdn7jrHeRosBXt5/f55b2b75d2073ef4309d39d9766bd373/alex__1_.jpg"
+      },
+      {
+        "name": "Andrei Croitoru",
+        "role": "Lucrător în Biserică, Sășa, Gorj",
+        "image": "https://images.ctfassets.net/w312hx68oyyc/5stjIVUNPpPeA5gqVWWPkG/ac97666249effd996268526f9c894e22/andrei.jpg"
+      },
+      {
+        "name": "David Lavric",
+        "role": "Pastor, Biserica Baptistă ProNobis, Timișoara",
+        "image": "https://images.ctfassets.net/w312hx68oyyc/eE0YhkcPYcIP05bbD9rxv/d26be6d7a535c4de7095ae5ffa88ba45/david.jpg"
+      },
+      {
+        "name": "Iosua Faur",
+        "role": "Pastor, Biserica Baptistă Sfânta Treime, Brăila",
+        "image": "https://images.ctfassets.net/w312hx68oyyc/33jH336BN57yASLlVertP1/3974db092584b8d3aec60e325b1577e6/iosua__1_.jpg"
+      },
+      {
+        "name": "Lucian Bălănescu",
+        "role": "Pastor, Biserica Baptistă Buna Vestire, București",
+        "image": "https://images.ctfassets.net/w312hx68oyyc/7epFMKYfPROfvp4DC4yZYl/a9740dfe9a5663d99153034ed7546e66/luci__1_.jpg"
+      }
+    ],
+    "topics": [
+      "Doctrina harului în Scriptură",
+      "Harul în mântuire",
+      "Harul în sfințire"
+    ],
+    "schedule": [
+      {
+        "day": "Ziua 1 — Vineri, 21 Noiembrie",
+        "items": [
+          { "time": "16:00", "activity": "Înregistrare" },
+          { "time": "17:00", "activity": "Sesiunea 1" },
+          { "time": "19:00", "activity": "Sesiunea 2" }
+        ]
+      },
+      {
+        "day": "Ziua 2 — Sâmbătă, 22 Noiembrie",
+        "items": [
+          { "time": "09:00", "activity": "Devotional de dimineață" },
+          { "time": "10:00", "activity": "Sesiunea 3" },
+          { "time": "12:30", "activity": "Prânz" },
+          { "time": "14:30", "activity": "Sesiunea 4" },
+          { "time": "16:30", "activity": "Sesiunea 5" },
+          { "time": "18:30", "activity": "Slujbă de încheiere" }
+        ]
+      }
+    ],
+    "youtubePlaylist": ""
+  },
+  {
+    "id": "7",
+    "slug": "duhul-sfant-2026",
+    "title": "Persoana și lucrarea Duhului Sfânt",
+    "startDate": "2026-05-07",
+    "endDate": "2026-05-09",
+    "location": "Aurum Palace, București",
+    "image": "/images/events/duhul-sfant.png",
+    "locationUrl": "https://maps.google.com/?q=Aurum+Palace+Sos+Electronicii+Bucuresti",
+    "description": "Conferința națională 2026 dedicată persoanei și lucrării Duhului Sfânt — cine este El, cum lucrează în mântuire și sfințire, și rolul Său în viața Bisericii.",
+    "speakers": [],
+    "topics": [
+      "Persoana Duhului Sfânt",
+      "Lucrarea Duhului în mântuire",
+      "Darurile și roadele Duhului"
+    ],
+    "schedule": [
+      {
+        "day": "Ziua 1 — Joi, 7 Mai",
+        "items": [
+          { "time": "17:00", "activity": "Înregistrare & Primire" },
+          { "time": "18:00", "activity": "Sesiunea 1" },
+          { "time": "20:00", "activity": "Timp liber" }
+        ]
+      },
+      {
+        "day": "Ziua 2 — Vineri, 8 Mai",
+        "items": [
+          { "time": "09:00", "activity": "Devotional de dimineață" },
+          { "time": "10:00", "activity": "Sesiunea 2" },
+          { "time": "12:30", "activity": "Prânz" },
+          { "time": "14:30", "activity": "Sesiunea 3" },
+          { "time": "17:00", "activity": "Panel de întrebări și răspunsuri" },
+          { "time": "19:00", "activity": "Sesiunea 4" }
+        ]
+      },
+      {
+        "day": "Ziua 3 — Sâmbătă, 9 Mai",
+        "items": [
+          { "time": "09:00", "activity": "Devotional de dimineață" },
+          { "time": "10:00", "activity": "Sesiunea 5" },
+          { "time": "12:30", "activity": "Prânz" },
+          { "time": "14:30", "activity": "Sesiunea 6" },
+          { "time": "17:00", "activity": "Slujbă de încheiere" }
+        ]
+      }
+    ],
+    "stripeLink": "https://buy.stripe.com/6oU00jgjV7Uoc68ahfeAg0c"
   }
 ]

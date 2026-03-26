@@ -10,22 +10,11 @@ import { BeliefCard } from "./BeliefCard";
 const beliefs = beliefsData as Belief[];
 
 const confessionOfFaith = `
-# Mărturisirea de Credință
+# Declarație Doctrinară
 
-## I. Despre Sfânta Scriptură
-Credem că Sfânta Scriptură este singura regulă infailibilă de credință și practică. Ea este Cuvântul inspirat al lui Dumnezeu, inerent în manuscrisele originale și suficient pentru mântuire.
+Credem că Biblia este Cuvântul inspirat, infailibil și suficient al lui Dumnezeu, autoritatea supremă în toate aspectele credinței și vieții. Credem într-un singur Dumnezeu, existent în trei Persoane: Tatăl, Fiul și Duhul Sfânt. Credem că omul este căzut în păcat și incapabil să se mântuiască prin propriile puteri.
 
-## II. Despre Dumnezeu
-Credem într-un singur Dumnezeu viu și adevărat, care există veșnic în trei persoane: Tatăl, Fiul și Duhul Sfânt. Acești trei sunt un singur Dumnezeu, egali în putere și glorie.
-
-## III. Despre Om și Păcat
-Credem că omul a fost creat după chipul lui Dumnezeu, dar prin cădere a ajuns într-o stare de depravare totală, fiind incapabil să se salveze singur.
-
-## IV. Despre Mântuire
-Credem că mântuirea este exclusiv prin harul lui Dumnezeu, prin credința în Hristos singur. Hristos a murit ca substitut pentru păcătoși, satisfăcând dreptatea lui Dumnezeu.
-
-## V. Despre Biserică
-Credem că Biserica este trupul lui Hristos, formată din toți cei care au fost regenerați de Duhul Sfânt prin credința în Evanghelie.
+Credem că mântuirea este prin har, prin credință, doar în Isus Cristos, pe baza lucrării Sale desăvârșite. Credem în nașterea din nou, în sfințirea progresivă a credinciosului și în rolul esențial al bisericii locale ca trup al lui Cristos. Așteptăm revenirea lui Cristos și restaurarea finală a tuturor lucrurilor.
 `;
 
 export const metadata: Metadata = {
@@ -56,15 +45,15 @@ export const metadata: Metadata = {
 
 export default function CeCredem() {
   return (
-    <div className="pt-32">
+    <div className="pt-20">
       {/* Header */}
-      <section className="px-6 mb-32">
+      <section className="px-6 mb-12">
         <div className="max-w-7xl mx-auto">
           <PageHeading>
             Ce <span className="text-primary glow-red">Credem</span>
           </PageHeading>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-20">
-            <p className="text-2xl md:text-3xl font-serif italic leading-relaxed text-ink">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
+            <p className="text-xl font-serif italic leading-relaxed text-ink">
               Fundamentele teologice care ne definesc identitatea și misiunea, ancorate în tradiția
               Reformei Protestante.
             </p>

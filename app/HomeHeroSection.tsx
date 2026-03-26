@@ -15,10 +15,9 @@ export function HomeHeroSection({ event, hasFutureEvents }: Props) {
     <section className="relative min-h-[90vh] flex items-center overflow-hidden bg-surface-low">
       <div className="absolute inset-0 z-0">
         <img
-          src="https://picsum.photos/seed/sola/1920/1080?blur=4"
+          src="/images/hero.png"
           alt="Hero Background"
           className="w-full h-full object-cover opacity-20 grayscale"
-          referrerPolicy="no-referrer"
         />
         <div className="absolute inset-0 bg-gradient-to-t from-bg via-bg/40 to-transparent" />
       </div>
@@ -73,17 +72,13 @@ export function HomeHeroSection({ event, hasFutureEvents }: Props) {
           className="hidden lg:block relative"
         >
           <div className="aspect-[4/5] bg-surface-high p-4 relative group rounded-lg">
-            <img
-              src="https://picsum.photos/seed/event/800/1000"
-              alt="Featured Event"
-              className="w-full h-full object-cover grayscale opacity-80 group-hover:opacity-100 transition-all duration-700 rounded-sm"
-              referrerPolicy="no-referrer"
-            />
-            <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-500">
-              <div className="w-20 h-20 bg-primary rounded-full flex items-center justify-center text-white shadow-[0_0_30px_rgba(177,31,36,0.5)]">
-                <Play size={32} fill="currentColor" />
-              </div>
-            </div>
+            {event.image && (
+              <img
+                src={event.image}
+                alt={event.title}
+                className="w-full h-full object-cover transition-all duration-700 rounded-sm"
+              />
+            )}
           </div>
           <div className="absolute -bottom-10 -left-10 bg-primary p-10 text-white max-w-xs shadow-2xl rounded-xs">
             <div className="flex items-center gap-2 label-caps mb-4 text-white/80">

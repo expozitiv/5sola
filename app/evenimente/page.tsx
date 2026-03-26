@@ -24,19 +24,19 @@ export const metadata: Metadata = {
 
 export default function Evenimente() {
   return (
-    <div className="pt-32">
+    <div className="pt-20">
       {/* Header */}
-      <section className="px-6 mb-32">
+      <section className="px-6 mb-12">
         <div className="max-w-7xl mx-auto">
           <PageHeading>
             Evenimente <span className="text-primary glow-red">&</span> Conferințe
           </PageHeading>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-20">
-            <p className="text-2xl md:text-3xl font-serif italic leading-relaxed text-ink">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
+            <p className="text-xl font-serif italic leading-relaxed text-ink">
               Explorați conferințele noastre trecute și viitoare, dedicate studiului riguros al
               Scripturii și formării teologice.
             </p>
-            <p className="text-muted text-lg leading-relaxed">
+            <p className="text-muted leading-relaxed">
               Fiecare eveniment este conceput ca un spațiu de învățare, dialog și închinare,
               aducând împreună vorbitori dedicați și o comunitate pasionată de adevăr.
             </p>

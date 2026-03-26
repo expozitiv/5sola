@@ -15,7 +15,12 @@ const hasFutureEvents = events.some((e) => isEventFuture(e.endDate));
 const featuredEvent = hasFutureEvents
   ? events.find((e) => isEventFuture(e.endDate))!
   : [...events].sort((a, b) => new Date(b.endDate).getTime() - new Date(a.endDate).getTime())[0];
-const upcomingEvents = events.filter((e) => e.id !== featuredEvent.id).slice(0, 3);
+const upcomingEvents = hasFutureEvents
+  ? events.filter((e) => isEventFuture(e.endDate) && e.id !== featuredEvent.id).slice(0, 3)
+  : [...events]
+      .filter((e) => e.id !== featuredEvent.id)
+      .sort((a, b) => new Date(b.endDate).getTime() - new Date(a.endDate).getTime())
+      .slice(0, 3);
 
 export const metadata: Metadata = {
   title: {
@@ -47,18 +52,16 @@ export default function Home() {
             <div className="grid grid-cols-2 gap-8">
               <AnimateIn className="aspect-square bg-surface-high overflow-hidden rounded-lg">
                 <img
-                  src="https://picsum.photos/seed/1/600/600"
+                  src="/images/main1.png"
                   alt="Gallery 1"
                   className="w-full h-full object-cover grayscale opacity-40 hover:opacity-100 transition-all duration-500"
-                  referrerPolicy="no-referrer"
                 />
               </AnimateIn>
               <AnimateIn className="aspect-square bg-surface-high overflow-hidden mt-16 rounded-lg" delay={0.1}>
                 <img
-                  src="https://picsum.photos/seed/2/600/600"
+                  src="/images/main2.png"
                   alt="Gallery 2"
                   className="w-full h-full object-cover grayscale opacity-40 hover:opacity-100 transition-all duration-500"
-                  referrerPolicy="no-referrer"
                 />
               </AnimateIn>
             </div>
@@ -107,10 +110,13 @@ export default function Home() {
           <div className="flex flex-col md:flex-row justify-between items-end gap-8 mb-24">
             <div>
               <div className="label-caps mb-6 text-primary">Calendar</div>
-              <h2 className="text-5xl md:text-7xl font-black mb-6">Evenimente viitoare</h2>
+              <h2 className="text-5xl md:text-7xl font-black mb-6">
+                {hasFutureEvents ? "Evenimente viitoare" : "Evenimente recente"}
+              </h2>
               <p className="text-muted max-w-xl text-lg font-medium">
-                Alătură-te nouă la următoarele evenimente pentru a explora împreună profunzimile
-                teologiei creștine.
+                {hasFutureEvents
+                  ? "Alătură-te nouă la următoarele evenimente pentru a explora împreună profunzimile teologiei creștine."
+                  : "Explorează conferințele noastre anterioare și resursele teologice disponibile."}
               </p>
             </div>
             <Link href="/evenimente" className="btn-outline">

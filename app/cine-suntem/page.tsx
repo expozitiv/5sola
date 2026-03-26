@@ -24,27 +24,30 @@ export const metadata: Metadata = {
 
 export default function CineSuntem() {
   return (
-    <div className="pt-32">
+    <div className="pt-20">
       {/* Header */}
-      <section className="px-6 mb-32">
+      <section className="px-6 mb-12">
         <div className="max-w-7xl mx-auto">
           <PageHeading>
             Cine <span className="text-primary glow-red">Suntem</span>
           </PageHeading>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-20">
-            <p className="text-2xl md:text-3xl font-serif italic leading-relaxed text-ink">
-              Suntem o comunitate dedicată redescoperirii și trăirii adevărurilor fundamentale ale
-              credinței creștine, așa cum au fost ele reafirmate în timpul Reformei.
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
+            <p className="text-xl font-serif italic leading-relaxed text-ink">
+              Asociația 5 Sola a luat naștere din dorința unor păstori și slujitori de a răspunde
+              nevoii reale din bisericile evanghelice din România: nevoia de învățătură teologică
+              clară și ancorată în Scriptură.
             </p>
             <div className="flex flex-col gap-6 text-muted text-lg leading-relaxed">
               <p>
-                Asociația Sola Scriptura s-a născut din dorința de a oferi un spațiu de dialog și
-                formare pentru cei care caută o ancoră solidă în Cuvântul lui Dumnezeu. Într-o lume
-                a relativismului, noi credem în autoritatea absolută a Scripturii.
+                Uniți în jurul principiilor Reformei — cele cinci „sola" — ne dorim să echipăm
+                credincioșii, să susținem bisericile locale și să promovăm o proclamare fidelă a
+                Evangheliei. Prin conferințe, resurse și inițiative teologice, urmărim formarea
+                unei generații ancorate în Cuvântul lui Dumnezeu.
               </p>
               <p>
-                Prin evenimentele, resursele și comunitatea noastră, urmărim să echipăm creștinii
-                pentru o viață de integritate, închinare și slujire, spre slava lui Dumnezeu.
+                Am început în anul 2022 printr-o tabără teologică cu tema „Cele 5 Sola ale
+                Reformei", urmând ca din 2023 să avem în mod constant o conferință națională, o
+                conferință regională și o conferință în diaspora.
               </p>
             </div>
           </div>
@@ -58,24 +61,25 @@ export default function CineSuntem() {
             <div>
               <span className="label-caps text-primary mb-6 block">Misiunea Noastră</span>
               <h2 className="text-4xl md:text-5xl font-serif font-black mb-8 leading-tight">
-                Să proclamăm centralitatea lui Hristos în toate aspectele vieții.
+                Echipăm credincioșii și întărim biserica locală prin învățătură biblică fidelă.
               </h2>
             </div>
             <p className="text-muted text-lg">
-              Ne propunem să fim o voce clară în peisajul spiritual românesc, promovând o teologie
-              biblică robustă care transformă mintea și inima.
+              Prin conferințe, resurse și inițiative teologice, slujim churches locale și promovăm
+              o proclamare fidelă a Evangheliei în România și în diaspora.
             </p>
           </div>
           <div className="bento-card p-12 md:p-20 flex flex-col justify-between min-h-[400px] bg-surface-low">
             <div>
               <span className="label-caps text-secondary mb-6 block">Viziunea Noastră</span>
               <h2 className="text-4xl md:text-5xl font-serif font-black mb-8 leading-tight">
-                O generație ancorată în Scriptură și pasionată de slava lui Dumnezeu.
+                O generație formată doctrinar, ancorată în Scriptură și dedicată proclamării clare
+                a Evangheliei.
               </h2>
             </div>
             <p className="text-muted text-lg">
-              Vedem o biserică revitalizată prin întoarcerea la izvoarele credinței, capabilă să
-              răspundă provocărilor contemporane cu înțelepciune și curaj.
+              Vedem o biserică revitalizată prin întoarcerea la adevărurile esențiale ale credinței
+              creștine, capabilă să răspundă provocărilor contemporane cu curaj și înțelepciune.
             </p>
           </div>
         </div>
@@ -94,12 +98,11 @@ export default function CineSuntem() {
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
             {[
-              { title: "Integritate", desc: "Trăim în conformitate cu adevărul pe care îl proclamăm, în orice context." },
-              { title: "Excelență", desc: "Căutăm să oferim ce avem mai bun în tot ceea ce facem, pentru slava Lui." },
-              { title: "Comunitate", desc: "Credem în puterea relațiilor autentice și a sprijinului reciproc în credință." },
-              { title: "Educație", desc: "Investim în formarea continuă a minții prin studiul riguros al Scripturii." },
-              { title: "Slujire", desc: "Suntem chemați să fim mâinile și picioarele lui Hristos în lume." },
-              { title: "Închinare", desc: "Întreaga noastră viață este un act de recunoștință înaintea Creatorului." },
+              { title: "Autoritatea Scripturii", desc: "Biblia este Cuvântul lui Dumnezeu — singura autoritate infailibilă pentru credință și viață." },
+              { title: "Claritatea Evangheliei", desc: "Evanghelia mântuirii prin har, prin credință, doar în Cristos trebuie proclamată fără compromis." },
+              { title: "Centralitatea lui Cristos", desc: "Isus Cristos este centrul Scripturii, al mântuirii și al întregii vieți creștine." },
+              { title: "Sfințenia vieții", desc: "Credința autentică produce o viață transformată, separată de lume și dedicată lui Dumnezeu." },
+              { title: "Biserica locală", desc: "Biserica locală este instituția rânduită de Dumnezeu pentru creșterea și misiunea credincioșilor." },
             ].map((value, idx) => (
               <div key={idx} className="group">
                 <div className="text-primary font-mono text-sm mb-4">0{idx + 1}</div>
@@ -123,7 +126,7 @@ export default function CineSuntem() {
               Oameni cu <br /> <span className="text-primary">Viziune</span>
             </h2>
           </div>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
             {team.map((member) => (
               <TeamMemberCard key={member.id} member={member} />
             ))}

@@ -7,9 +7,11 @@ export function Footer() {
       <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-4 gap-20">
         <div className="col-span-1 md:col-span-2">
           <Link href="/" className="flex items-center gap-3 mb-10 group">
-            <div className="w-12 h-12 bg-primary flex items-center justify-center font-serif text-white text-2xl group-hover:bg-primary-dark transition-colors duration-300 rounded-xs">
-              5
-            </div>
+            <img
+              src="/images/social_logo.jpg"
+              alt="5 Sola"
+              className="w-12 h-12 rounded-xs object-cover"
+            />
             <span className="font-serif text-3xl font-black tracking-tighter group-hover:text-primary transition-colors duration-300">
               SOLA.RO
             </span>
@@ -71,6 +73,14 @@ export function Footer() {
                 className="text-muted hover:text-ink transition-colors duration-300 font-medium"
               >
                 Evenimente
+              </Link>
+            </li>
+            <li>
+              <Link
+                href="/resurse"
+                className="text-muted hover:text-ink transition-colors duration-300 font-medium"
+              >
+                Resurse
               </Link>
             </li>
             <li>

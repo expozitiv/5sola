@@ -1,0 +1,69 @@
+{
+  "magazines": [
+    {
+      "id": "ad-fontes-1",
+      "type": "magazine",
+      "volume": 1,
+      "title": "Cele 5 Sola ale Reformei",
+      "description": "Un volum dedicat fundamentelor Reformei Protestante, explicand cele cinci principii esentiale care stau la baza credintei crestine biblice. O resursa introductiva pentru intelegerea clara a Evangheliei.",
+      "coverImage": "/images/ad-fontes-1.png",
+      "shopUrl": null
+    },
+    {
+      "id": "ad-fontes-2",
+      "type": "magazine",
+      "volume": 2,
+      "title": "Cresterea copiilor",
+      "description": "Un material practic care abordeaza responsabilitatea crestina a cresterii copiilor intr-un mod biblic, oferind principii clare pentru formarea lor spirituala.",
+      "coverImage": "/images/ad-fontes-2.png",
+      "shopUrl": null
+    },
+    {
+      "id": "ad-fontes-3",
+      "type": "magazine",
+      "volume": 3,
+      "title": "1700 de ani de la Conciliul de la Niceea",
+      "description": "O analiza teologica si istorica a unuia dintre cele mai importante momente din istoria crestinismului, subliniind relevanta lui pentru credinta contemporana.",
+      "coverImage": "/images/ad-fontes-3.png",
+      "shopUrl": null
+    },
+    {
+      "id": "ad-fontes-4",
+      "type": "magazine",
+      "volume": 4,
+      "title": "Pericolul miscarii carismatice",
+      "description": "Un volum care examineaza critic influentele miscarii carismatice si ofera o perspectiva biblica asupra discernamantului doctrinar.",
+      "coverImage": "/images/ad-fontes-4.png",
+      "shopUrl": null
+    }
+  ],
+  "books": [
+    {
+      "id": "book-sola-scriptura",
+      "type": "book",
+      "title": "Sola Scriptura",
+      "author": "James R. White",
+      "description": "O lucrare dedicata apararii si explicarii autoritatii si suficientei Scripturii in contextul contemporan. Cartea abordeaza provocarile moderne la adresa doctrinei Sola Scriptura si ofera o fundamentare biblica solida.",
+      "coverImage": "/images/resources/sola-scriptura.png",
+      "shopUrl": "https://www.mostenirea-baptista.ro/product/sola-scriptura-james-white/"
+    },
+    {
+      "id": "book-reformarea-bisericii",
+      "type": "book",
+      "title": "Reformarea Bisericii",
+      "author": "Iain H. Murray",
+      "description": "O analiza istorica si teologica a nevoii continue de reformare a bisericii conform Scripturii. Cartea evidentiaza lectii din trecut relevante pentru sanatatea doctrinara a bisericii de astazi.",
+      "coverImage": "/images/resources/reformarea_bisericii.png",
+      "shopUrl": "https://www.mostenirea-baptista.ro/product/reformarea-bisericii-iain-h-murray/"
+    },
+    {
+      "id": "book-harul-definit",
+      "type": "book",
+      "title": "Harul definit si apărat",
+      "author": "Kevin DeYoung",
+      "description": "O prezentare clara si biblica a doctrinei harului, subliniind atat definitia, cat si apararea acestuia in fata interpretarilor eronate. Cartea ajuta la intelegerea corecta a mantuirii prin har.",
+      "coverImage": "/images/resources/harul-definit.png",
+      "shopUrl": "https://www.mostenirea-baptista.ro/product/harul-definit-si-aparat-kevin-deyoung/"
+    }
+  ]
+}
