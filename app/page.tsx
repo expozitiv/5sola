@@ -14,17 +14,24 @@ const events = eventsData as Event[];
 const hasFutureEvents = events.some((e) => isEventFuture(e.endDate));
 const featuredEvent = hasFutureEvents
   ? events.find((e) => isEventFuture(e.endDate))!
-  : [...events].sort((a, b) => new Date(b.endDate).getTime() - new Date(a.endDate).getTime())[0];
+  : [...events].sort(
+      (a, b) => new Date(b.endDate).getTime() - new Date(a.endDate).getTime(),
+    )[0];
 const upcomingEvents = hasFutureEvents
-  ? events.filter((e) => isEventFuture(e.endDate) && e.id !== featuredEvent.id).slice(0, 3)
+  ? events
+      .filter((e) => isEventFuture(e.endDate) && e.id !== featuredEvent.id)
+      .slice(0, 3)
   : [...events]
       .filter((e) => e.id !== featuredEvent.id)
-      .sort((a, b) => new Date(b.endDate).getTime() - new Date(a.endDate).getTime())
+      .sort(
+        (a, b) => new Date(b.endDate).getTime() - new Date(a.endDate).getTime(),
+      )
       .slice(0, 3);
 
 export const metadata: Metadata = {
   title: {
-    absolute: "5SOLA.RO — Conferințe Biblice & Resurse Teologice în Spiritul Reformei",
+    absolute:
+      "5SOLA.RO — Conferințe Biblice & Resurse Teologice în Spiritul Reformei",
   },
   description:
     "Asociația 5 Sola organizează conferințe biblice și oferă resurse teologice ancorate în cele 5 Sola ale Reformei Protestante. Alătură-te comunității reformate din România.",
@@ -43,7 +50,10 @@ export default function Home() {
   return (
     <div className="pt-20">
       {/* Hero — client, uses animate */}
-      <HomeHeroSection event={featuredEvent} hasFutureEvents={hasFutureEvents} />
+      <HomeHeroSection
+        event={featuredEvent}
+        hasFutureEvents={hasFutureEvents}
+      />
 
       {/* Cine Suntem Preview */}
       <section className="py-40 bg-bg relative overflow-hidden">
@@ -52,16 +62,19 @@ export default function Home() {
             <div className="grid grid-cols-2 gap-8">
               <AnimateIn className="aspect-square bg-surface-high overflow-hidden rounded-lg">
                 <img
-                  src="/images/main1.png"
+                  src="/images/main1.jpg"
                   alt="Gallery 1"
-                  className="w-full h-full object-cover grayscale opacity-40 hover:opacity-100 transition-all duration-500"
+                  className="w-full h-full object-cover transition-all duration-500"
                 />
               </AnimateIn>
-              <AnimateIn className="aspect-square bg-surface-high overflow-hidden mt-16 rounded-lg" delay={0.1}>
+              <AnimateIn
+                className="aspect-square bg-surface-high overflow-hidden mt-16 rounded-lg"
+                delay={0.1}
+              >
                 <img
-                  src="/images/main2.png"
+                  src="/images/main2.jpg"
                   alt="Gallery 2"
-                  className="w-full h-full object-cover grayscale opacity-40 hover:opacity-100 transition-all duration-500"
+                  className="w-full h-full object-cover transition-all duration-500"
                 />
               </AnimateIn>
             </div>
@@ -72,15 +85,19 @@ export default function Home() {
 
           <AnimateIn direction="right" className="order-1 lg:order-2">
             <div className="label-caps mb-6 text-primary">Misiunea noastră</div>
-            <h2 className="text-5xl md:text-7xl mb-10 font-black leading-tight">Cine suntem?</h2>
+            <h2 className="text-5xl md:text-7xl mb-10 font-black leading-tight">
+              Cine suntem?
+            </h2>
             <p className="text-xl text-muted mb-8 leading-relaxed font-medium">
-              Asociația Sola Scriptura este o comunitate de credincioși dedicați promovării
-              teologiei reformate și a valorilor creștine fundamentale în societatea românească.
+              Asociația Sola Scriptura este o comunitate de credincioși dedicați
+              promovării teologiei reformate și a valorilor creștine
+              fundamentale în societatea românească.
             </p>
             <p className="text-muted mb-12 leading-relaxed">
-              Credem că o întoarcere la Scriptură este singura cale spre o viață creștină autentică
-              și o biserică sănătoasă. Organizăm conferințe, publicăm resurse și facilităm dialogul
-              teologic între diverse tradiții creștine.
+              Credem că o întoarcere la Scriptură este singura cale spre o viață
+              creștină autentică și o biserică sănătoasă. Organizăm conferințe,
+              publicăm resurse și facilităm dialogul teologic între diverse
+              tradiții creștine.
             </p>
             <Link
               href="/cine-suntem"
@@ -131,7 +148,10 @@ export default function Home() {
         </div>
       </section>
 
-      <section id="newsletter" className="py-40 bg-surface-low border-y border-outline-variant">
+      <section
+        id="newsletter"
+        className="py-40 bg-surface-low border-y border-outline-variant"
+      >
         <div className="max-w-7xl mx-auto px-6">
           <NewsletterForm />
         </div>

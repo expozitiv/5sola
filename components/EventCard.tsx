@@ -27,7 +27,7 @@ export function EventCard({ event, index = 0 }: EventCardProps) {
           <img
             src={event.image}
             alt={event.title}
-            className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700 scale-105 group-hover:scale-100"
+            className="w-full h-full object-cover transition-all duration-700 scale-105 group-hover:scale-100"
           />
           <div className="absolute inset-0 bg-gradient-to-t from-bg/60 to-transparent" />
         </div>
