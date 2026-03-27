@@ -29,7 +29,7 @@ export function Navbar() {
             className="w-10 h-10 rounded-xs object-cover"
           />
           <span className="font-serif text-2xl font-black tracking-tighter group-hover:text-primary transition-colors duration-300">
-            SOLA.RO
+            5SOLA.RO
           </span>
         </Link>
 

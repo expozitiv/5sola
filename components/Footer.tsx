@@ -21,7 +21,7 @@ export function Footer() {
               className="w-12 h-12 rounded-xs object-cover"
             />
             <span className="font-serif text-3xl font-black tracking-tighter group-hover:text-primary transition-colors duration-300">
-              SOLA.RO
+              5SOLA.RO
             </span>
           </Link>
           <p className="text-muted max-w-md leading-relaxed mb-10 text-lg font-medium">
