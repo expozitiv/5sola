@@ -4,7 +4,9 @@ import { Footer } from "@/components/Footer";
 import { ThemeProvider } from "@/components/ThemeProvider";
 import "./globals.css";
 
-const SITE_URL = "https://5sola.ro";
+const SITE_URL =
+  process.env.NEXT_PUBLIC_SITE_URL ||
+  (process.env.VERCEL_URL ? `https://${process.env.VERCEL_URL}` : "https://5sola.ro");
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
