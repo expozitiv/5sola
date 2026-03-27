@@ -42,9 +42,9 @@ export function EvenimentDetailContent({ event }: { event: Event }) {
         <div className="max-w-7xl mx-auto w-full relative z-10">
           <Link
             href="/evenimente"
-            className="inline-flex items-center gap-3 label-caps text-xs text-primary mb-8 hover:text-ink transition-colors duration-300 group"
+            className="inline-flex items-center gap-2 text-sm font-medium text-muted hover:text-ink transition-colors duration-200 group mb-8 bg-surface-low border border-outline-variant hover:border-outline px-4 py-2 rounded-xs w-fit"
           >
-            <ArrowLeft size={16} className="group-hover:-translate-x-1 transition-transform" />
+            <ArrowLeft size={15} className="group-hover:-translate-x-0.5 transition-transform" />
             <span>Înapoi la evenimente</span>
           </Link>
 
@@ -229,6 +229,14 @@ export function EvenimentDetailContent({ event }: { event: Event }) {
                       </div>
                     ))}
                   </div>
+
+                  <Link
+                    href={`/evenimente/${event.slug}/orar`}
+                    className="mt-6 w-full inline-flex items-center justify-center gap-2 label-caps text-xs text-primary border border-primary/30 hover:border-primary hover:bg-primary/5 transition-colors duration-200 py-3 px-4 rounded-xs"
+                  >
+                    <span>Vezi programul complet</span>
+                    <ExternalLink size={13} />
+                  </Link>
                 </div>
               )}
 

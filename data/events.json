@@ -399,19 +399,28 @@
         "day": "Ziua 1 — Vineri, 21 Noiembrie",
         "items": [
           { "time": "16:00", "activity": "Înregistrare" },
-          { "time": "17:00", "activity": "Sesiunea 1" },
-          { "time": "19:00", "activity": "Sesiunea 2" }
+          { "time": "18:00", "activity": "Bun venit" },
+          { "time": "18:15", "activity": "Sesiunea I", "topic": "Harul Definit", "speaker": "Iosua Faur" },
+          { "time": "19:30", "activity": "Pauză" },
+          { "time": "19:45", "activity": "Sesiunea II", "topic": "Harul Relațional", "speaker": "Beni Cruceru" }
         ]
       },
       {
         "day": "Ziua 2 — Sâmbătă, 22 Noiembrie",
         "items": [
-          { "time": "09:00", "activity": "Devotional de dimineață" },
-          { "time": "10:00", "activity": "Sesiunea 3" },
-          { "time": "12:30", "activity": "Prânz" },
-          { "time": "14:30", "activity": "Sesiunea 4" },
-          { "time": "16:30", "activity": "Sesiunea 5" },
-          { "time": "18:30", "activity": "Slujbă de încheiere" }
+          { "time": "08:00", "activity": "Primire" },
+          { "time": "09:00", "activity": "Sesiunea III", "topic": "Harul Comun", "speaker": "Andrei Croitoru" },
+          { "time": "10:15", "activity": "Pauză" },
+          { "time": "10:40", "activity": "Sesiunea IV", "topic": "Harul Măreț", "speaker": "Alex Ghiță" },
+          { "time": "11:55", "activity": "Ateliere I" },
+          { "time": "13:05", "activity": "Prânz" },
+          { "time": "14:05", "activity": "Ateliere II" },
+          { "time": "15:25", "activity": "Sesiunea V", "topic": "Harul Mântuitor", "speaker": "David Lavric" },
+          { "time": "16:40", "activity": "Pauză" },
+          { "time": "17:10", "activity": "Sesiunea VI", "topic": "Harul Transformator", "speaker": "Lucian Bălănescu" },
+          { "time": "18:25", "activity": "Cină" },
+          { "time": "19:30", "activity": "Sesiune Q&A" },
+          { "time": "21:00", "activity": "Finalul Conferinței" }
         ]
       }
     ],
@@ -433,7 +442,40 @@
       "Lucrarea Duhului în mântuire",
       "Darurile și roadele Duhului"
     ],
-    "schedule": [],
+    "schedule": [
+      {
+        "day": "Ziua 1 — Joi, 7 Mai",
+        "items": [
+          { "time": "16:00-18:00", "activity": "Înregistrare" },
+          { "time": "18:00-19:15", "activity": "Sesiune Panel" },
+          { "time": "19:00-19:30", "activity": "Pauză" },
+          { "time": "19:30-20:45", "activity": "Sesiunea I" }
+        ]
+      },
+      {
+        "day": "Ziua 2 — Vineri, 8 Mai",
+        "items": [
+          { "time": "09:00-10:20", "activity": "Sesiunea II" },
+          { "time": "10:20-10:45", "activity": "Pauză" },
+          { "time": "10:45-12:00", "activity": "Sesiunea III" },
+          { "time": "12:00-14:00", "activity": "Pauza de prânz" },
+          { "time": "14:00-15:30", "activity": "Atelier 1" },
+          { "time": "16:00-17:30", "activity": "Atelier 2" },
+          { "time": "17:30-19:00", "activity": "Pauza de cină" },
+          { "time": "19:00-20:30", "activity": "Sesiunea IV" }
+        ]
+      },
+      {
+        "day": "Ziua 3 — Sâmbătă, 9 Mai",
+        "items": [
+          { "time": "09:00-10:20", "activity": "Sesiunea V" },
+          { "time": "10:20-10:45", "activity": "Pauză" },
+          { "time": "10:45-11:55", "activity": "Sesiunea VI" },
+          { "time": "11:55-12:10", "activity": "Pauză" },
+          { "time": "12:10-13:30", "activity": "Q&A" }
+        ]
+      }
+    ],
     "stripeLink": "https://buy.stripe.com/6oU00jgjV7Uoc68ahfeAg0c"
   }
 ]

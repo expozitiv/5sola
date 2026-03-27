@@ -8,6 +8,8 @@ export interface Speaker {
 export interface ScheduleItem {
   time: string;
   activity: string;
+  topic?: string;
+  speaker?: string;
 }
 
 export interface DaySchedule {
