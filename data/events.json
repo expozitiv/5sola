@@ -433,37 +433,7 @@
       "Lucrarea Duhului în mântuire",
       "Darurile și roadele Duhului"
     ],
-    "schedule": [
-      {
-        "day": "Ziua 1 — Joi, 7 Mai",
-        "items": [
-          { "time": "17:00", "activity": "Înregistrare & Primire" },
-          { "time": "18:00", "activity": "Sesiunea 1" },
-          { "time": "20:00", "activity": "Timp liber" }
-        ]
-      },
-      {
-        "day": "Ziua 2 — Vineri, 8 Mai",
-        "items": [
-          { "time": "09:00", "activity": "Devotional de dimineață" },
-          { "time": "10:00", "activity": "Sesiunea 2" },
-          { "time": "12:30", "activity": "Prânz" },
-          { "time": "14:30", "activity": "Sesiunea 3" },
-          { "time": "17:00", "activity": "Panel de întrebări și răspunsuri" },
-          { "time": "19:00", "activity": "Sesiunea 4" }
-        ]
-      },
-      {
-        "day": "Ziua 3 — Sâmbătă, 9 Mai",
-        "items": [
-          { "time": "09:00", "activity": "Devotional de dimineață" },
-          { "time": "10:00", "activity": "Sesiunea 5" },
-          { "time": "12:30", "activity": "Prânz" },
-          { "time": "14:30", "activity": "Sesiunea 6" },
-          { "time": "17:00", "activity": "Slujbă de încheiere" }
-        ]
-      }
-    ],
+    "schedule": [],
     "stripeLink": "https://buy.stripe.com/6oU00jgjV7Uoc68ahfeAg0c"
   }
 ]
