@@ -15,6 +15,16 @@ export const metadata: Metadata = {
   title: "Resurse — Cărți și Reviste Teologice",
   description:
     "Descoperă resursele teologice publicate de Asociația 5 Sola: revista Ad Fontes și cărți traduse în colaborare cu Corpus Reformatorum.",
+  keywords: [
+    "resurse teologice",
+    "revista ad fontes",
+    "cărți teologice română",
+    "corpus reformatorum",
+    "teologie reformată cărți",
+    "sola scriptura carte",
+    "publicații crestine romania",
+    "5 sola resurse",
+  ],
   alternates: {
     canonical: "https://5sola.ro/resurse",
   },
@@ -40,7 +50,7 @@ function ResourceCard({ resource }: { resource: Resource }) {
           src={resource.coverImage}
           alt={resource.title}
           fill
-          className="object-cover grayscale group-hover:grayscale-0 transition-all duration-700 scale-105 group-hover:scale-100"
+          className="object-cover transition-all duration-700 scale-105 group-hover:scale-100"
         />
         <div className="absolute inset-0 bg-primary/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
         {!isBook && resource.volume && (
@@ -70,9 +80,20 @@ function ResourceCard({ resource }: { resource: Resource }) {
   );
 }
 
+const breadcrumbJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  itemListElement: [
+    { "@type": "ListItem", position: 1, name: "Acasă", item: "https://5sola.ro" },
+    { "@type": "ListItem", position: 2, name: "Resurse", item: "https://5sola.ro/resurse" },
+  ],
+};
+
 export default function Resurse() {
   return (
-    <div className="pt-20">
+    <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }} />
+      <div className="pt-20">
       {/* Header */}
       <section className="px-6 mb-12">
         <div className="max-w-7xl mx-auto">
@@ -156,5 +177,6 @@ export default function Resurse() {
         </div>
       </section>
     </div>
+    </>
   );
 }

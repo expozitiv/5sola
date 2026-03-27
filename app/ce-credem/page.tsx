@@ -43,9 +43,20 @@ export const metadata: Metadata = {
   },
 };
 
+const breadcrumbJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  itemListElement: [
+    { "@type": "ListItem", position: 1, name: "Acasă", item: "https://5sola.ro" },
+    { "@type": "ListItem", position: 2, name: "Ce Credem", item: "https://5sola.ro/ce-credem" },
+  ],
+};
+
 export default function CeCredem() {
   return (
-    <div className="pt-20">
+    <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }} />
+      <div className="pt-20">
       {/* Header */}
       <section className="px-6 mb-12">
         <div className="max-w-7xl mx-auto">
@@ -67,9 +78,9 @@ export default function CeCredem() {
       </section>
 
       {/* 5 Solas Grid — client, each card uses whileInView */}
-      <section className="px-6 mb-32">
+      <section className="px-6 mb-12 md:mb-20 lg:mb-32">
         <div className="max-w-7xl mx-auto">
-          <div className="mb-20">
+          <div className="mb-10 md:mb-16 lg:mb-20">
             <span className="label-caps text-primary mb-6 block">Pilonii Reformei</span>
             <h2 className="text-5xl md:text-7xl font-serif font-black leading-none uppercase">
               Cele 5 <br /> <span className="text-primary">Sola</span>
@@ -84,9 +95,9 @@ export default function CeCredem() {
       </section>
 
       {/* Confession of Faith */}
-      <section className="bg-surface-low py-32 px-6 mb-32">
+      <section className="bg-surface-low py-12 md:py-20 lg:py-32 px-6 mb-12 md:mb-20 lg:mb-32">
         <div className="max-w-4xl mx-auto">
-          <div className="mb-20 text-center">
+          <div className="mb-10 md:mb-16 lg:mb-20 text-center">
             <span className="label-caps text-primary mb-6 block">Document Doctrinar</span>
             <h2 className="text-5xl md:text-7xl font-serif font-black leading-none uppercase">
               Mărturisirea <br /> <span className="text-primary">Noastră</span>
@@ -94,7 +105,7 @@ export default function CeCredem() {
           </div>
           <AnimateIn
             direction="scale"
-            className="bg-bg p-12 md:p-24 border border-outline-variant shadow-2xl relative overflow-hidden"
+            className="bg-bg p-8 md:p-16 lg:p-24 border border-outline-variant shadow-2xl relative overflow-hidden"
           >
             <div className="absolute top-0 right-0 font-serif text-[20rem] font-black text-ink/[0.04] leading-none select-none pointer-events-none -translate-y-20 translate-x-20">
               S
@@ -107,8 +118,8 @@ export default function CeCredem() {
       </section>
 
       {/* CTA */}
-      <section className="px-6 mb-32">
-        <div className="max-w-7xl mx-auto bento-card p-12 md:p-24 text-center bg-primary/5 border-primary/20">
+      <section className="px-6 mb-12 md:mb-20 lg:mb-32">
+        <div className="max-w-7xl mx-auto bento-card p-8 md:p-16 lg:p-24 text-center bg-primary/5 border-primary/20">
           <h2 className="text-4xl md:text-6xl font-serif font-black mb-8 uppercase leading-tight">
             Vrei să aprofundezi <br /> <span className="text-primary">Aceste Adevăruri?</span>
           </h2>
@@ -127,5 +138,6 @@ export default function CeCredem() {
         </div>
       </section>
     </div>
+    </>
   );
 }

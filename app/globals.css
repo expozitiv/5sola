@@ -10,8 +10,8 @@
   --color-bg:               var(--bg);
   --color-ink:              var(--ink);
   --color-muted:            var(--muted);
-  --color-primary:          #B11F24;
-  --color-primary-dark:     #8B181C;
+  --color-primary:          var(--primary);
+  --color-primary-dark:     var(--primary-dark);
   --color-secondary:        #FDB883;
   --color-surface-low:      var(--surface-low);
   --color-surface-high:     var(--surface-high);
@@ -35,6 +35,8 @@
   --outline-variant:  rgba(255, 255, 255, 0.08);
   --nav-bg:           rgba(22, 22, 22, 0.9);
   --body-gradient:    radial-gradient(ellipse at top, #1a0d0d 0%, #161616 60%);
+  --primary:          #B11F24;
+  --primary-dark:     #8B181C;
 }
 
 /* ── Light theme ─────────────────────────────────────────── */
@@ -48,6 +50,8 @@
   --outline-variant:  rgba(0, 0, 0, 0.08);
   --nav-bg:           rgba(250, 247, 243, 0.9);
   --body-gradient:    radial-gradient(ellipse at top, #f5e8e0 0%, #FAF7F3 60%);
+  --primary:          #8B181C;
+  --primary-dark:     #6D1215;
 }
 
 @layer base {

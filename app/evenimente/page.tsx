@@ -11,6 +11,16 @@ export const metadata: Metadata = {
   title: "Evenimente & Conferințe Biblice",
   description:
     "Conferințe biblice organizate de Asociația 5 Sola în România. Explorează evenimentele viitoare și arhiva conferințelor trecute dedicate teologiei reformate.",
+  keywords: [
+    "conferințe biblice românia",
+    "conferință teologică",
+    "conferință reformată",
+    "5 sola conferință",
+    "asociatia 5 sola evenimente",
+    "conferinte crestine",
+    "teologie reformată conferință",
+    "studiu biblic conferință",
+  ],
   alternates: {
     canonical: "https://5sola.ro/evenimente",
   },
@@ -22,9 +32,20 @@ export const metadata: Metadata = {
   },
 };
 
+const breadcrumbJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  itemListElement: [
+    { "@type": "ListItem", position: 1, name: "Acasă", item: "https://5sola.ro" },
+    { "@type": "ListItem", position: 2, name: "Evenimente", item: "https://5sola.ro/evenimente" },
+  ],
+};
+
 export default function Evenimente() {
   return (
-    <div className="pt-20">
+    <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }} />
+      <div className="pt-20">
       {/* Header */}
       <section className="px-6 mb-12">
         <div className="max-w-7xl mx-auto">
@@ -68,5 +89,6 @@ export default function Evenimente() {
         </div>
       </section>
     </div>
+    </>
   );
 }

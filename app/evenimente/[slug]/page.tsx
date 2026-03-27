@@ -53,9 +53,22 @@ export async function generateMetadata({
     })),
   };
 
+  const ogImage = event.image
+    ? [{ url: event.image, width: 1200, height: 630, alt: event.title }]
+    : undefined;
+
   return {
     title: event.title,
     description: `${event.description} — ${event.location}. Vorbitori: ${speakerNames}.`,
+    keywords: [
+      event.title,
+      "conferință biblică",
+      "5 Sola",
+      event.location,
+      "teologie reformată",
+      "România",
+      ...event.speakers.map((s) => s.name),
+    ],
     alternates: {
       canonical: url,
     },
@@ -64,14 +77,13 @@ export async function generateMetadata({
       type: "website",
       title: `${event.title} | 5SOLA.RO`,
       description: `${event.description} — ${event.location}. Vorbitori: ${speakerNames}.`,
+      ...(ogImage && { images: ogImage }),
     },
     twitter: {
       card: "summary_large_image",
       title: `${event.title} | 5SOLA.RO`,
       description: `${event.description} — ${event.location}.`,
-    },
-    other: {
-      "application/ld+json": JSON.stringify(eventJsonLd),
+      ...(event.image && { images: [event.image] }),
     },
   };
 }
@@ -117,11 +129,25 @@ export default async function EvenimentDetailPage({
     })),
   };
 
+  const breadcrumbJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      { "@type": "ListItem", position: 1, name: "Acasă", item: "https://5sola.ro" },
+      { "@type": "ListItem", position: 2, name: "Evenimente", item: "https://5sola.ro/evenimente" },
+      { "@type": "ListItem", position: 3, name: event.title, item: url },
+    ],
+  };
+
   return (
     <>
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(eventJsonLd) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}
       />
       <EvenimentDetailContent event={event} />
     </>

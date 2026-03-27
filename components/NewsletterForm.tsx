@@ -24,10 +24,10 @@ export function NewsletterForm() {
   return (
     <div className="max-w-3xl mx-auto text-center">
       <div className="label-caps mb-6 text-primary">Newsletter</div>
-      <h3 className="font-serif text-5xl md:text-7xl font-black mb-8 leading-tight">
+      <h3 className="font-serif text-4xl md:text-6xl lg:text-7xl font-black mb-6 md:mb-8 leading-tight">
         Rămâi conectat
       </h3>
-      <p className="text-muted mb-12 text-xl leading-relaxed font-medium">
+      <p className="text-muted mb-8 md:mb-10 text-lg md:text-xl leading-relaxed font-medium">
         Abonează-te la newsletter-ul nostru pentru a primi noutăți despre evenimente, conferințe și
         resurse teologice.
       </p>

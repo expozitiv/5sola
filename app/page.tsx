@@ -56,8 +56,8 @@ export default function Home() {
       />
 
       {/* Cine Suntem Preview */}
-      <section className="py-40 bg-bg relative overflow-hidden">
-        <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-2 gap-24 items-center">
+      <section className="py-16 md:py-28 lg:py-32 bg-bg relative overflow-hidden">
+        <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-24 items-center">
           <div className="order-2 lg:order-1 relative">
             <div className="grid grid-cols-2 gap-8">
               <AnimateIn className="aspect-square bg-surface-high overflow-hidden rounded-lg">
@@ -89,15 +89,18 @@ export default function Home() {
               Cine suntem?
             </h2>
             <p className="text-xl text-muted mb-8 leading-relaxed font-medium">
-              Asociația Sola Scriptura este o comunitate de credincioși dedicați
-              promovării teologiei reformate și a valorilor creștine
-              fundamentale în societatea românească.
+              5 Sola e o inițiativă creată pentru a sprijini Biserica lui Cristos.
+              Ne propunem să organizăm conferințe biblice și să oferim resurse teologice
+              care să ajute credincioșii să înțeleagă mai bine Sfânta Scriptură și să
+              crească în credință.
             </p>
             <p className="text-muted mb-12 leading-relaxed">
-              Credem că o întoarcere la Scriptură este singura cale spre o viață
-              creștină autentică și o biserică sănătoasă. Organizăm conferințe,
-              publicăm resurse și facilităm dialogul teologic între diverse
-              tradiții creștine.
+              Motto-ul nostru, „În sprijinul Bisericii", reflectă angajamentul nostru
+              de a fi alături de bisericile locale și de credincioși, oferindu-le resurse
+              și învățături bazate pe principiile Reformei. Prin conferințele noastre
+              aducem vorbitori cu experiență și cunoștințe biblice solide, care să
+              îmbogățească viața spirituală a comunităților. Ne bucurăm să fim instrumente
+              în mâna lui Dumnezeu pentru edificarea Trupului lui Cristos.
             </p>
             <Link
               href="/cine-suntem"
@@ -113,7 +116,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="py-20 bg-surface-low">
+      <section className="py-10 md:py-14 bg-surface-low">
         <div className="max-w-7xl mx-auto px-6">
           <BiblicalQuote
             text="Căci prin har ați fost mântuiți, prin credință. Și aceasta nu vine de la voi, ci este darul lui Dumnezeu."
@@ -122,9 +125,9 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="py-40 bg-bg">
+      <section className="py-16 md:py-28 lg:py-32 bg-bg">
         <div className="max-w-7xl mx-auto px-6">
-          <div className="flex flex-col md:flex-row justify-between items-end gap-8 mb-24">
+          <div className="flex flex-col md:flex-row justify-between items-end gap-8 mb-10 md:mb-16 lg:mb-20">
             <div>
               <div className="label-caps mb-6 text-primary">Calendar</div>
               <h2 className="text-5xl md:text-7xl font-black mb-6">
@@ -150,7 +153,7 @@ export default function Home() {
 
       <section
         id="newsletter"
-        className="py-40 bg-surface-low border-y border-outline-variant"
+        className="py-16 md:py-24 lg:py-32 bg-surface-low border-y border-outline-variant"
       >
         <div className="max-w-7xl mx-auto px-6">
           <NewsletterForm />

@@ -54,9 +54,9 @@ export function Navbar() {
             </Link>
           ))}
           <ThemeToggle />
-          <Link href="/evenimente" className="btn-primary">
-            Înscrie-te
-          </Link>
+          <a href="https://donate.stripe.com/5kAbJ80h2cjM9oY289" target="_blank" rel="noopener noreferrer" className="btn-primary">
+            Donează
+          </a>
         </div>
 
         {/* Mobile Toggle */}
@@ -88,13 +88,15 @@ export function Navbar() {
               {link.name}
             </Link>
           ))}
-          <Link
-            href="/evenimente"
-            onClick={() => setIsOpen(false)}
+          <a
+            href="https://donate.stripe.com/5kAbJ80h2cjM9oY289"
+            target="_blank"
+            rel="noopener noreferrer"
             className="btn-primary py-3 text-center"
+            onClick={() => setIsOpen(false)}
           >
-            Înscrie-te
-          </Link>
+            Donează
+          </a>
         </motion.div>
       )}
     </nav>

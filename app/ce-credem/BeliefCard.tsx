@@ -9,7 +9,7 @@ export function BeliefCard({ belief, index }: { belief: Belief; index: number })
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
       transition={{ delay: index * 0.1 }}
-      className="bento-card p-12 flex flex-col justify-between min-h-[450px] group"
+      className="bento-card p-8 md:p-10 lg:p-12 flex flex-col justify-between md:min-h-[420px] group"
     >
       <div>
         <div className="text-primary font-mono text-sm mb-8">0{index + 1}</div>
