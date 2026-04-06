@@ -89,18 +89,19 @@ export default function Home() {
               Cine suntem?
             </h2>
             <p className="text-xl text-muted mb-8 leading-relaxed font-medium">
-              5 Sola e o inițiativă creată pentru a sprijini Biserica lui Cristos.
-              Ne propunem să organizăm conferințe biblice și să oferim resurse teologice
-              care să ajute credincioșii să înțeleagă mai bine Sfânta Scriptură și să
-              crească în credință.
+              5 Sola e o inițiativă creată pentru a sprijini Biserica lui
+              Cristos. Ne propunem să organizăm conferințe biblice și să oferim
+              resurse teologice care să ajute credincioșii să înțeleagă mai bine
+              Sfânta Scriptură și să crească în credință.
             </p>
             <p className="text-muted mb-12 leading-relaxed">
-              Motto-ul nostru, „În sprijinul Bisericii", reflectă angajamentul nostru
-              de a fi alături de bisericile locale și de credincioși, oferindu-le resurse
-              și învățături bazate pe principiile Reformei. Prin conferințele noastre
-              aducem vorbitori cu experiență și cunoștințe biblice solide, care să
-              îmbogățească viața spirituală a comunităților. Ne bucurăm să fim instrumente
-              în mâna lui Dumnezeu pentru edificarea Trupului lui Cristos.
+              Motto-ul nostru, „În sprijinul Bisericii", reflectă angajamentul
+              nostru de a fi alături de bisericile locale și de credincioși,
+              oferindu-le resurse și învățături bazate pe principiile Reformei.
+              Prin conferințele noastre aducem vorbitori cu experiență și
+              cunoștințe biblice solide, care să îmbogățească viața spirituală a
+              comunităților. Ne bucurăm să fim instrumente în mâna lui Dumnezeu
+              pentru edificarea Trupului lui Cristos.
             </p>
             <Link
               href="/cine-suntem"
@@ -148,15 +149,6 @@ export default function Home() {
               <EventCard key={event.id} event={event} index={index} />
             ))}
           </div>
-        </div>
-      </section>
-
-      <section
-        id="newsletter"
-        className="py-16 md:py-24 lg:py-32 bg-surface-low border-y border-outline-variant"
-      >
-        <div className="max-w-7xl mx-auto px-6">
-          <NewsletterForm />
         </div>
       </section>
     </div>

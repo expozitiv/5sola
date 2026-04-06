@@ -4,13 +4,21 @@ import { motion } from "motion/react";
 import { Send } from "lucide-react";
 
 export function ContactForm() {
-  const [status, setStatus] = useState<"idle" | "loading" | "success">("idle");
+  const [status, setStatus] = useState<"idle" | "loading" | "success" | "error">("idle");
 
-  const handleSubmit = async (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     setStatus("loading");
-    await new Promise((resolve) => setTimeout(resolve, 1500));
-    setStatus("success");
+    try {
+      const res = await fetch("https://formspree.io/f/mwvwaarz", {
+        method: "POST",
+        body: new FormData(e.currentTarget),
+        headers: { Accept: "application/json" },
+      });
+      setStatus(res.ok ? "success" : "error");
+    } catch {
+      setStatus("error");
+    }
   };
 
   return (
@@ -40,6 +48,7 @@ export function ContactForm() {
               <label className="label-caps text-[10px] text-muted">Nume Complet</label>
               <input
                 type="text"
+                name="name"
                 required
                 placeholder="Ex: Ioan Popescu"
                 className="w-full bg-bg border border-white/5 py-5 px-8 focus:outline-none focus:border-primary transition-all duration-300 text-white placeholder:text-white/10 font-medium"
@@ -49,6 +58,7 @@ export function ContactForm() {
               <label className="label-caps text-[10px] text-muted">Adresă Email</label>
               <input
                 type="email"
+                name="email"
                 required
                 placeholder="Ex: ioan@exemplu.ro"
                 className="w-full bg-bg border border-white/5 py-5 px-8 focus:outline-none focus:border-primary transition-all duration-300 text-white placeholder:text-white/10 font-medium"
@@ -59,6 +69,7 @@ export function ContactForm() {
             <label className="label-caps text-[10px] text-muted">Subiect</label>
             <input
               type="text"
+              name="subject"
               required
               placeholder="Cum te putem ajuta?"
               className="w-full bg-bg border border-white/5 py-5 px-8 focus:outline-none focus:border-primary transition-all duration-300 text-white placeholder:text-white/10 font-medium"
@@ -68,6 +79,7 @@ export function ContactForm() {
             <label className="label-caps text-[10px] text-muted">Mesaj</label>
             <textarea
               rows={6}
+              name="message"
               required
               placeholder="Scrie mesajul tău aici..."
               className="w-full bg-bg border border-white/5 py-5 px-8 focus:outline-none focus:border-primary transition-all duration-300 text-white placeholder:text-white/10 font-medium resize-none"
@@ -90,6 +102,11 @@ export function ContactForm() {
               </>
             )}
           </button>
+          {status === "error" && (
+            <p className="text-red-400 text-sm text-center">
+              A apărut o eroare. Te rugăm să încerci din nou.
+            </p>
+          )}
         </form>
       )}
     </motion.div>
