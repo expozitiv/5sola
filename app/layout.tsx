@@ -87,13 +87,6 @@ const organizationJsonLd = {
     "Asociația 5 Sola organizează conferințe biblice și oferă resurse teologice ancorate în cele 5 Sola ale Reformei Protestante în România.",
   email: "asociatia5sola@gmail.com",
   telephone: "+40742215569",
-  address: {
-    "@type": "PostalAddress",
-    streetAddress: "Sat Dumbrăvița, Com. Dumbrăvița",
-    addressLocality: "Dumbrăvița",
-    addressRegion: "Timiș",
-    addressCountry: "RO",
-  },
   foundingDate: "2022",
   sameAs: [
     "https://www.youtube.com/@Asociatia5sola",

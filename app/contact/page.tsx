@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Mail, Phone, MapPin, Facebook, Instagram, Youtube, MessageCircle } from "lucide-react";
+import { Mail, Phone, Facebook, Instagram, Youtube } from "lucide-react";
 import { PageHeading } from "@/components/PageHeading";
 import { AnimateIn } from "@/components/AnimateIn";
 import { ContactForm } from "./ContactForm";
@@ -84,15 +84,6 @@ export default function Contact() {
                   <div>
                     <h4 className="label-caps text-xs text-muted mb-3">Telefon</h4>
                     <a href="tel:+40742215569" className="text-2xl font-serif font-bold text-ink hover:text-primary transition-colors duration-300">+40 742 215 569</a>
-                  </div>
-                </div>
-                <div className="flex items-start gap-8 group">
-                  <div className="w-16 h-16 bg-surface-low border border-white/5 flex items-center justify-center text-primary shrink-0 group-hover:bg-primary group-hover:text-white transition-all duration-500 rounded-xs">
-                    <MapPin size={28} />
-                  </div>
-                  <div>
-                    <h4 className="label-caps text-xs text-muted mb-3">Locație</h4>
-                    <p className="text-2xl font-serif font-bold text-ink">Sat Dumbrăvița,<br />Jud. Timiș</p>
                   </div>
                 </div>
               </div>
