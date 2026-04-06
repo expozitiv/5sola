@@ -4,41 +4,41 @@
     "name": "Alex Ghita",
     "role": "Pastor",
     "bio": "Alex este casatorit cu Manuela si au doi copii. Slujeste ca pastor al bisericii baptiste din Stoborasti.",
-    "image": "https://images.ctfassets.net/w312hx68oyyc/5FGBap5Wdn7jrHeRosBXt5/f55b2b75d2073ef4309d39d9766bd373/alex__1_.jpg"
+    "image": "/images/echipa/alex.jpg"
   },
   {
     "id": "2",
     "name": "Andrei Croitoru",
     "role": "Pastor",
     "bio": "Andrei este casatorit cu Cristina si au trei baieti. Slujeste ca lucrator in biserica in Sasa, judetul Gorj.",
-    "image": "https://images.ctfassets.net/w312hx68oyyc/5stjIVUNPpPeA5gqVWWPkG/ac97666249effd996268526f9c894e22/andrei.jpg"
+    "image": "/images/echipa/andrei.jpg"
   },
   {
     "id": "3",
     "name": "Cristi Maritan",
     "role": "Prezbiter",
     "bio": "Cristi este casatorit cu Bianca si au trei fete. Slujeste ca prezbiter in Biserica Baptista ProNobis din Timisoara.",
-    "image": "https://picsum.photos/seed/cristi/400/400"
+    "image": "/images/echipa/cristi.jpg"
   },
   {
     "id": "4",
     "name": "David Lavric",
     "role": "Pastor",
     "bio": "David este casatorit cu Manana si au trei copii. Slujeste ca pastor al Bisericii Baptiste ProNobis din Timisoara.",
-    "image": "https://images.ctfassets.net/w312hx68oyyc/eE0YhkcPYcIP05bbD9rxv/d26be6d7a535c4de7095ae5ffa88ba45/david.jpg"
+    "image": "/images/echipa/david.jpg"
   },
   {
     "id": "5",
     "name": "Iosua Faur",
     "role": "Pastor",
     "bio": "Iosua este casatorit cu Cristiana si au trei copii. Slujeste ca pastor al Bisericii Baptiste Sfanta Treime din Braila.",
-    "image": "https://images.ctfassets.net/w312hx68oyyc/33jH336BN57yASLlVertP1/3974db092584b8d3aec60e325b1577e6/iosua__1_.jpg"
+    "image": "/images/echipa/iosua.jpg"
   },
   {
     "id": "6",
     "name": "Lucian Balanescu",
     "role": "Pastor",
     "bio": "Lucian este casatorit cu Rodi si au doua fiice. Slujeste ca pastor al Bisericii Baptiste Buna Vestire din Bucuresti.",
-    "image": "https://images.ctfassets.net/w312hx68oyyc/7epFMKYfPROfvp4DC4yZYl/a9740dfe9a5663d99153034ed7546e66/luci__1_.jpg"
+    "image": "/images/echipa/lucian.jpg"
   }
 ]

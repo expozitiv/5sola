@@ -13,22 +13,22 @@
       {
         "name": "Lucian Bălănescu",
         "role": "Pastor, Biserica Baptistă Buna Vestire, București",
-        "image": "https://images.ctfassets.net/w312hx68oyyc/7epFMKYfPROfvp4DC4yZYl/a9740dfe9a5663d99153034ed7546e66/luci__1_.jpg"
+        "image": "/images/echipa/lucian.jpg"
       },
       {
         "name": "Alex Ghiță",
         "role": "Pastor, Stoborăști",
-        "image": "https://images.ctfassets.net/w312hx68oyyc/5FGBap5Wdn7jrHeRosBXt5/f55b2b75d2073ef4309d39d9766bd373/alex__1_.jpg"
+        "image": "/images/echipa/alex.jpg"
       },
       {
         "name": "Iosua Faur",
         "role": "Pastor, Biserica Baptistă Sfânta Treime, Brăila",
-        "image": "https://images.ctfassets.net/w312hx68oyyc/33jH336BN57yASLlVertP1/3974db092584b8d3aec60e325b1577e6/iosua__1_.jpg"
+        "image": "/images/echipa/iosua.jpg"
       },
       {
         "name": "Andrei Croitoru",
         "role": "Lucrător în Biserică, Sășa, Gorj",
-        "image": "https://images.ctfassets.net/w312hx68oyyc/5stjIVUNPpPeA5gqVWWPkG/ac97666249effd996268526f9c894e22/andrei.jpg"
+        "image": "/images/echipa/andrei.jpg"
       }
     ],
     "topics": [
@@ -400,24 +400,54 @@
         "items": [
           { "time": "16:00", "activity": "Înregistrare" },
           { "time": "18:00", "activity": "Bun venit" },
-          { "time": "18:15", "activity": "Sesiunea I", "topic": "Harul Definit", "speaker": "Iosua Faur" },
+          {
+            "time": "18:15",
+            "activity": "Sesiunea I",
+            "topic": "Harul Definit",
+            "speaker": "Iosua Faur"
+          },
           { "time": "19:30", "activity": "Pauză" },
-          { "time": "19:45", "activity": "Sesiunea II", "topic": "Harul Relațional", "speaker": "Beni Cruceru" }
+          {
+            "time": "19:45",
+            "activity": "Sesiunea II",
+            "topic": "Harul Relațional",
+            "speaker": "Beni Cruceru"
+          }
         ]
       },
       {
         "day": "Ziua 2 — Sâmbătă, 22 Noiembrie",
         "items": [
           { "time": "08:00", "activity": "Primire" },
-          { "time": "09:00", "activity": "Sesiunea III", "topic": "Harul Comun", "speaker": "Andrei Croitoru" },
+          {
+            "time": "09:00",
+            "activity": "Sesiunea III",
+            "topic": "Harul Comun",
+            "speaker": "Andrei Croitoru"
+          },
           { "time": "10:15", "activity": "Pauză" },
-          { "time": "10:40", "activity": "Sesiunea IV", "topic": "Harul Măreț", "speaker": "Alex Ghiță" },
+          {
+            "time": "10:40",
+            "activity": "Sesiunea IV",
+            "topic": "Harul Măreț",
+            "speaker": "Alex Ghiță"
+          },
           { "time": "11:55", "activity": "Ateliere I" },
           { "time": "13:05", "activity": "Prânz" },
           { "time": "14:05", "activity": "Ateliere II" },
-          { "time": "15:25", "activity": "Sesiunea V", "topic": "Harul Mântuitor", "speaker": "David Lavric" },
+          {
+            "time": "15:25",
+            "activity": "Sesiunea V",
+            "topic": "Harul Mântuitor",
+            "speaker": "David Lavric"
+          },
           { "time": "16:40", "activity": "Pauză" },
-          { "time": "17:10", "activity": "Sesiunea VI", "topic": "Harul Transformator", "speaker": "Lucian Bălănescu" },
+          {
+            "time": "17:10",
+            "activity": "Sesiunea VI",
+            "topic": "Harul Transformator",
+            "speaker": "Lucian Bălănescu"
+          },
           { "time": "18:25", "activity": "Cină" },
           { "time": "19:30", "activity": "Sesiune Q&A" },
           { "time": "21:00", "activity": "Finalul Conferinței" }
@@ -435,44 +465,89 @@
     "location": "Aurum Palace, București",
     "image": "/images/events/duhul-sfant.png",
     "locationUrl": "https://maps.google.com/?q=Aurum+Palace+Sos+Electronicii+Bucuresti",
-    "description": "Conferința națională 2026 dedicată persoanei și lucrării Duhului Sfânt — cine este El, cum lucrează în mântuire și sfințire, și rolul Său în viața Bisericii.",
-    "speakers": [],
-    "topics": [
-      "Persoana Duhului Sfânt",
-      "Lucrarea Duhului în mântuire",
-      "Darurile și roadele Duhului"
+    "description": "Conferința națională 2026 dedicată persoanei și lucrării Duhului Sfânt — cine este El și ce face El cu adevărat?",
+    "speakers": [
+      {
+        "name": "Alex Ghiță",
+        "role": "Pastor, Stoborăști",
+        "image": "/images/echipa/alex.jpg"
+      },
+      {
+        "name": "Andrei Croitoru",
+        "role": "Lucrător în Biserică, Sășa, Gorj",
+        "image": "/images/echipa/andrei.jpg"
+      },
+      {
+        "name": "Andrei Sava",
+        "role": "Pastor",
+        "image": ""
+      },
+      {
+        "name": "David Lavric",
+        "role": "Pastor, Biserica Baptistă ProNobis, Timișoara",
+        "image": "/images/echipa/david.jpg"
+      },
+      {
+        "name": "Iosua Faur",
+        "role": "Pastor, Biserica Baptistă Sfânta Treime, Brăila",
+        "image": "/images/echipa/iosua.jpg"
+      },
+      {
+        "name": "Lucian Bălănescu",
+        "role": "Pastor, Biserica Baptistă Buna Vestire, București",
+        "image": "/images/echipa/lucian.jpg"
+      }
     ],
+    "topics": [],
     "schedule": [
       {
         "day": "Ziua 1 — Joi, 7 Mai",
         "items": [
-          { "time": "16:00-18:00", "activity": "Înregistrare" },
-          { "time": "18:00-19:15", "activity": "Sesiune Panel" },
-          { "time": "19:00-19:30", "activity": "Pauză" },
-          { "time": "19:30-20:45", "activity": "Sesiunea I" }
+          { "time": "16:00", "activity": "Înregistrare" },
+          { "time": "18:00", "activity": "Sesiune panel" },
+          { "time": "19:00", "activity": "Pauză" },
+          {
+            "time": "19:30",
+            "activity": "Sesiunea I — Duhul Sfânt și mântuirea"
+          }
         ]
       },
       {
         "day": "Ziua 2 — Vineri, 8 Mai",
         "items": [
-          { "time": "09:00-10:20", "activity": "Sesiunea II" },
-          { "time": "10:20-10:45", "activity": "Pauză" },
-          { "time": "10:45-12:00", "activity": "Sesiunea III" },
-          { "time": "12:00-14:00", "activity": "Pauza de prânz" },
-          { "time": "14:00-15:30", "activity": "Atelier 1" },
-          { "time": "16:00-17:30", "activity": "Atelier 2" },
-          { "time": "17:30-19:00", "activity": "Pauza de cină" },
-          { "time": "19:00-20:30", "activity": "Sesiunea IV" }
+          {
+            "time": "09:00",
+            "activity": "Sesiunea II — Duhul Sfânt și Cuvântul"
+          },
+          { "time": "10:20", "activity": "Pauză" },
+          {
+            "time": "10:45",
+            "activity": "Sesiunea III — Păcat împotriva Duhului Sfânt"
+          },
+          { "time": "12:00", "activity": "Pauza de prânz" },
+          { "time": "14:00", "activity": "Atelier I" },
+          { "time": "16:00", "activity": "Atelier II" },
+          { "time": "17:30", "activity": "Pauza de cină" },
+          {
+            "time": "19:00",
+            "activity": "Sesiunea IV — Botezul cu Duhul Sfânt"
+          }
         ]
       },
       {
         "day": "Ziua 3 — Sâmbătă, 9 Mai",
         "items": [
-          { "time": "09:00-10:20", "activity": "Sesiunea V" },
-          { "time": "10:20-10:45", "activity": "Pauză" },
-          { "time": "10:45-11:55", "activity": "Sesiunea VI" },
-          { "time": "11:55-12:10", "activity": "Pauză" },
-          { "time": "12:10-13:30", "activity": "Q&A" }
+          {
+            "time": "09:00",
+            "activity": "Sesiunea V — Duhul Sfânt și minunile"
+          },
+          { "time": "10:20", "activity": "Pauză" },
+          {
+            "time": "10:45",
+            "activity": "Sesiunea VI — Călăuzirea Duhului Sfânt"
+          },
+          { "time": "12:00", "activity": "Pauză" },
+          { "time": "12:10", "activity": "Q&A" }
         ]
       }
     ],
