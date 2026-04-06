@@ -118,12 +118,14 @@ export function EvenimentDetailContent({ event }: { event: Event }) {
                   {event.speakers.map((speaker, i) => (
                     <div key={i} className="group">
                       <div className="aspect-square bg-surface-low mb-4 overflow-hidden relative">
-                        <img
-                          src={speaker.image}
-                          alt={speaker.name}
-                          className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700 scale-110 group-hover:scale-100"
-                          referrerPolicy="no-referrer"
-                        />
+                        {speaker.image && (
+                          <img
+                            src={speaker.image}
+                            alt={speaker.name}
+                            className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700 scale-110 group-hover:scale-100"
+                            referrerPolicy="no-referrer"
+                          />
+                        )}
                         <div className="absolute inset-0 bg-primary/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
                       </div>
                       <h3 className="text-xl font-serif font-black mb-1 group-hover:text-primary transition-colors">
