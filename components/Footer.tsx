@@ -154,6 +154,18 @@ export function Footer() {
           © {new Date().getFullYear()} Asociația 5 Sola. Toate drepturile
           rezervate.
         </p>
+        <p className="text-muted text-sm font-medium">
+          Realizat cu bune intenții de către{" "}
+          <a
+            href="https://expozitiv.ro"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="hover:text-ink transition-colors duration-300"
+            style={{ fontFamily: "'Cormorant Garamond', serif" }}
+          >
+            Studio Expozitiv
+          </a>
+        </p>
       </div>
     </footer>
   );
