@@ -46,20 +46,23 @@ export function HomeHeroSection({ event, hasFutureEvents }: Props) {
             {event.description}
           </p>
           <div className="flex flex-wrap gap-6">
-            <Link href={`/evenimente/${event.slug}`} className="btn-primary">
-              {hasFutureEvents ? (
-                <>
-                  <span>Înscrie-te acum</span>
-                  <ArrowRight className="ml-2" size={16} />
-                </>
-              ) : (
-                <>
-                  <span>Urmărește Înregistrările</span>
-                  <Play className="ml-2" size={16} fill="currentColor" />
-                </>
-              )}
-            </Link>
-            <Link href="/cine-suntem" className="btn-outline">
+            {hasFutureEvents ? (
+              <a
+                href={event.stripeLink}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="btn-primary"
+              >
+                <span>Înscrie-te acum</span>
+                <ArrowRight className="ml-2" size={16} />
+              </a>
+            ) : (
+              <Link href={`/evenimente/${event.slug}`} className="btn-primary">
+                <span>Urmărește Înregistrările</span>
+                <Play className="ml-2" size={16} fill="currentColor" />
+              </Link>
+            )}
+            <Link href={`/evenimente/${event.slug}`} className="btn-outline">
               <span>Află mai multe</span>
             </Link>
           </div>
