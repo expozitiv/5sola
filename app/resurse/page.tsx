@@ -14,7 +14,7 @@ const { magazines, books } = resourcesData as unknown as {
 export const metadata: Metadata = {
   title: "Resurse — Cărți și Reviste Teologice",
   description:
-    "Descoperă resursele teologice publicate de Asociația 5 Sola: revista Ad Fontes și cărți traduse în colaborare cu Corpus Reformatorum.",
+    "Descoperă resursele teologice promovate de Asociația 5 Sola: revista Ad Fontes și cărți traduse de editura Corpus Reformatorum.",
   keywords: [
     "resurse teologice",
     "revista ad fontes",
@@ -32,7 +32,7 @@ export const metadata: Metadata = {
     url: "https://5sola.ro/resurse",
     title: "Resurse | 5SOLA.RO",
     description:
-      "Revista Ad Fontes și cărți traduse — resurse teologice pentru echiparea credincioșilor și întărirea bisericii locale.",
+      "Revista Ad Fontes și cărți — resurse teologice pentru echiparea credincioșilor și întărirea bisericii locale.",
   },
 };
 
@@ -60,12 +60,16 @@ function ResourceCard({ resource }: { resource: Resource }) {
         )}
       </div>
       {isBook && resource.author && (
-        <p className="label-caps text-xs text-primary mb-1">{resource.author}</p>
+        <p className="label-caps text-xs text-primary mb-1">
+          {resource.author}
+        </p>
       )}
       <h3 className="text-xl font-serif font-bold mb-3 group-hover:text-primary transition-colors leading-snug">
         {resource.title}
       </h3>
-      <p className="text-muted text-sm leading-relaxed flex-1">{resource.description}</p>
+      <p className="text-muted text-sm leading-relaxed flex-1">
+        {resource.description}
+      </p>
       {resource.shopUrl && (
         <Link
           href={resource.shopUrl}
@@ -84,99 +88,133 @@ const breadcrumbJsonLd = {
   "@context": "https://schema.org",
   "@type": "BreadcrumbList",
   itemListElement: [
-    { "@type": "ListItem", position: 1, name: "Acasă", item: "https://5sola.ro" },
-    { "@type": "ListItem", position: 2, name: "Resurse", item: "https://5sola.ro/resurse" },
+    {
+      "@type": "ListItem",
+      position: 1,
+      name: "Acasă",
+      item: "https://5sola.ro",
+    },
+    {
+      "@type": "ListItem",
+      position: 2,
+      name: "Resurse",
+      item: "https://5sola.ro/resurse",
+    },
   ],
 };
 
 export default function Resurse() {
   return (
     <>
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }} />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}
+      />
       <div className="pt-20">
-      {/* Header */}
-      <section className="px-6 mb-12">
-        <div className="max-w-7xl mx-auto">
-          <PageHeading>
-            <span className="text-primary glow-red">Resurse</span>
-          </PageHeading>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
-            <p className="text-xl font-serif italic leading-relaxed text-ink">
-              Publicații și cărți teologice pentru echiparea credincioșilor și întărirea
-              bisericilor locale.
-            </p>
-            <p className="text-muted text-lg leading-relaxed">
-              Prin revista{" "}
-              <span className="italic">Ad Fontes</span> și prin cărțile traduse în colaborare cu{" "}
-              <span className="italic">Corpus Reformatorum</span>, dorim să aducem în mâinile
-              credincioșilor din România o teologie clară, ancorată în Scriptură.
-            </p>
-          </div>
-        </div>
-      </section>
-
-      {/* Revista Ad Fontes */}
-      <section className="px-6 mb-32">
-        <div className="max-w-7xl mx-auto">
-          <div className="mb-20">
-            <span className="label-caps text-primary mb-6 block">Publicație periodică</span>
-            <h2 className="text-5xl md:text-7xl font-serif font-black leading-none uppercase">
-              Revista <br /> <span className="text-primary">Ad Fontes</span>
-            </h2>
-          </div>
-          <AnimateIn direction="up">
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10">
-              {magazines.map((magazine) => (
-                <ResourceCard key={magazine.id} resource={magazine} />
-              ))}
+        {/* Header */}
+        <section className="px-6 mb-12">
+          <div className="max-w-7xl mx-auto">
+            <PageHeading>
+              <span className="text-primary glow-red">Resurse</span>
+            </PageHeading>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
+              <p className="text-xl font-serif italic leading-relaxed text-ink">
+                Publicații și cărți teologice pentru echiparea credincioșilor și
+                întărirea bisericilor locale.
+              </p>
+              <p className="text-muted text-lg leading-relaxed">
+                Prin revista <span className="italic">Ad Fontes</span> și
+                cărțile recomandate, traduse de editura{" "}
+                <Link
+                  href="https://corpusreformatorum.org/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="italic text-primary underline underline-offset-2 hover:text-primary/70 transition-colors"
+                >
+                  Corpus Reformatorum
+                </Link>
+                , dorim să aducem în mâinile credincioșilor din România o
+                teologie clară, ancorată în Scriptură.
+              </p>
             </div>
-          </AnimateIn>
-        </div>
-      </section>
-
-      {/* Cărți traduse */}
-      <section className="bg-surface-low py-32 px-6 mb-32">
-        <div className="max-w-7xl mx-auto">
-          <div className="mb-20">
-            <span className="label-caps text-primary mb-6 block">
-              În colaborare cu Corpus Reformatorum
-            </span>
-            <h2 className="text-5xl md:text-7xl font-serif font-black leading-none uppercase">
-              Cărți <br /> <span className="text-primary">Traduse</span>
-            </h2>
           </div>
-          <AnimateIn direction="up">
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10">
-              {books.map((book) => (
-                <ResourceCard key={book.id} resource={book} />
-              ))}
+        </section>
+
+        {/* Revista Ad Fontes */}
+        <section className="px-6 mb-32">
+          <div className="max-w-7xl mx-auto">
+            <div className="mb-20">
+              <span className="label-caps text-primary mb-6 block">
+                Publicație periodică
+              </span>
+              <h2 className="text-5xl md:text-7xl font-serif font-black leading-none uppercase">
+                Revista <br /> <span className="text-primary">Ad Fontes</span>
+              </h2>
             </div>
-          </AnimateIn>
-        </div>
-      </section>
-
-      {/* CTA */}
-      <section className="px-6 mb-32">
-        <div className="max-w-7xl mx-auto bento-card p-12 md:p-24 text-center bg-primary/5 border-primary/20">
-          <h2 className="text-4xl md:text-6xl font-serif font-black mb-8 uppercase leading-tight">
-            Vrei să afli mai mult <br />{" "}
-            <span className="text-primary">despre lucrarea noastră?</span>
-          </h2>
-          <p className="text-xl text-muted mb-12 max-w-2xl mx-auto">
-            Participă la conferințele noastre sau contactează-ne pentru mai multe detalii despre
-            resursele disponibile.
-          </p>
-          <div className="flex flex-col sm:flex-row justify-center gap-6">
-            <Link href="/evenimente" className="btn-primary px-12 py-5 text-lg">
-              Vezi Evenimente
-            </Link>
-            <Link href="/contact" className="btn-outline px-12 py-5 text-lg">
-              Contactează-ne
-            </Link>
+            <AnimateIn direction="up">
+              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10">
+                {magazines.map((magazine) => (
+                  <ResourceCard key={magazine.id} resource={magazine} />
+                ))}
+              </div>
+            </AnimateIn>
           </div>
-        </div>
-      </section>
-    </div>
+        </section>
+
+        {/* Cărți traduse */}
+        <section className="bg-surface-low py-32 px-6 mb-32">
+          <div className="max-w-7xl mx-auto">
+            <div className="mb-20">
+              <span className="label-caps text-primary mb-6 block">
+                Editura{" "}
+                <Link
+                  href="https://corpusreformatorum.org/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="underline underline-offset-2 hover:opacity-70 transition-opacity"
+                >
+                  Corpus Reformatorum
+                </Link>
+              </span>
+              <h2 className="text-5xl md:text-7xl font-serif font-black leading-none uppercase">
+                Cărți <br />
+              </h2>
+            </div>
+            <AnimateIn direction="up">
+              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10">
+                {books.map((book) => (
+                  <ResourceCard key={book.id} resource={book} />
+                ))}
+              </div>
+            </AnimateIn>
+          </div>
+        </section>
+
+        {/* CTA */}
+        <section className="px-6 mb-32">
+          <div className="max-w-7xl mx-auto bento-card p-12 md:p-24 text-center bg-primary/5 border-primary/20">
+            <h2 className="text-4xl md:text-6xl font-serif font-black mb-8 uppercase leading-tight">
+              Vrei să afli mai mult <br />{" "}
+              <span className="text-primary">despre lucrarea noastră?</span>
+            </h2>
+            <p className="text-xl text-muted mb-12 max-w-2xl mx-auto">
+              Participă la conferințele noastre sau contactează-ne pentru mai
+              multe detalii despre resursele disponibile.
+            </p>
+            <div className="flex flex-col sm:flex-row justify-center gap-6">
+              <Link
+                href="/evenimente"
+                className="btn-primary px-12 py-5 text-lg"
+              >
+                Vezi Evenimente
+              </Link>
+              <Link href="/contact" className="btn-outline px-12 py-5 text-lg">
+                Contactează-ne
+              </Link>
+            </div>
+          </div>
+        </section>
+      </div>
     </>
   );
 }

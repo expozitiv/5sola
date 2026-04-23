@@ -39,6 +39,24 @@
   ],
   "books": [
     {
+      "id": "book-cinci-puncte",
+      "type": "book",
+      "title": "Cinci puncte ",
+      "author": "John Piper",
+      "description": "Harul este mijlocul prin care Dumnezeu îți face bine atunci când nu meriți deloc.Dar știm cu adevărat cât de nemeritat este harul? Numai Dumnezeu ne poate dezvălui acest lucru. El o face prin Biblie. Iar când o face, minunile harului Său se revarsă cu o strălucire impresionantă.Aceste Cinci puncte tratează modul în care creștinii iau naștere și modul în care sunt păstrați pentru totdeauna prin harul lui Dumnezeu.",
+      "coverImage": "/images/resources/cinci-puncte.png",
+      "shopUrl": "https://www.mostenirea-baptista.ro/product/john-piper-cinci-puncte/"
+    },
+    {
+      "id": "book-sex-lume",
+      "type": "book",
+      "title": "Sex într-o lume frântă",
+      "author": "Paul David Tripp",
+      "description": "Trăim într-o lume profund frântă… dar există speranță. Sexualitatea este o parte fundamentală a ceea ce înseamnă să fii om – parte din designul frumos al lui Dumnezeu atunci când a creat toate lucrurile. Și totuși, sexul în lumea noastră de astăzi nu arată deloc așa cum a intenționat Dumnezeu să fie. Frângerea sexuală ne înconjoară și, într-un fel sau altul, ne afectează pe toți. Această frângere sexuală ne arată nevoia profundă de răscumpărare ...",
+      "coverImage": "/images/resources/sex-lume.png",
+      "shopUrl": "https://www.mostenirea-baptista.ro/product/sex-intr-o-lume-franta-paul-david-tripp/"
+    },
+    {
       "id": "book-sola-scriptura",
       "type": "book",
       "title": "Sola Scriptura",
