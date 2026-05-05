@@ -12,7 +12,7 @@ import {
   CheckCircle2,
 } from "lucide-react";
 import type { Event } from "@/types";
-import { formatDateRange, isEventFuture } from "@/lib/utils";
+import { formatDateRange } from "@/lib/utils";
 import { cn } from "@/lib/utils";
 
 function getYoutubePlaylistUrl(value: string): string {
@@ -20,8 +20,7 @@ function getYoutubePlaylistUrl(value: string): string {
   return `https://www.youtube.com/playlist?list=${value}`;
 }
 
-export function EvenimentDetailContent({ event }: { event: Event }) {
-  const isFuture = isEventFuture(event.endDate);
+export function EvenimentDetailContent({ event, isFuture, registrationOpen }: { event: Event; isFuture: boolean; registrationOpen: boolean }) {
   const [activeDay, setActiveDay] = useState(0);
 
   return (
@@ -69,17 +68,29 @@ export function EvenimentDetailContent({ event }: { event: Event }) {
               {event.title}
             </h1>
 
-            {isFuture && event.stripeLink && (
+            {isFuture && (event.stripeLink || event.registrationDeadline) && (
               <div className="flex flex-col sm:flex-row gap-4">
-                <a
-                  href={event.stripeLink}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="btn-primary px-10 py-4"
-                >
-                  <span>Înscrie-te acum</span>
-                  <ExternalLink className="ml-3" size={18} />
-                </a>
+                {registrationOpen && event.stripeLink ? (
+                  <a
+                    href={event.stripeLink}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="btn-primary px-10 py-4"
+                  >
+                    <span>Înscrie-te acum</span>
+                    <ExternalLink className="ml-3" size={18} />
+                  </a>
+                ) : (
+                  <a
+                    href="https://wa.me/40742215569"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="btn-primary px-10 py-4"
+                  >
+                    <span>Contactează-ne</span>
+                    <ExternalLink className="ml-3" size={18} />
+                  </a>
+                )}
                 <a href="#program" className="btn-outline px-10 py-4">
                   Vezi Programul
                 </a>

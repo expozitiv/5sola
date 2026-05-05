@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import eventsData from "@/data/events.json";
 import type { Event } from "@/types";
+import { isEventFuture, isRegistrationOpen } from "@/lib/utils";
 import { EvenimentDetailContent } from "./EvenimentDetailContent";
 
 const events = eventsData as Event[];
@@ -149,7 +150,11 @@ export default async function EvenimentDetailPage({
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}
       />
-      <EvenimentDetailContent event={event} />
+      <EvenimentDetailContent
+        event={event}
+        isFuture={isEventFuture(event.endDate)}
+        registrationOpen={isRegistrationOpen(event.registrationDeadline)}
+      />
     </>
   );
 }

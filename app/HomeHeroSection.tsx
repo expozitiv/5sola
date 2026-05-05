@@ -8,9 +8,10 @@ import { formatDateRange } from "@/lib/utils";
 interface Props {
   event: Event;
   hasFutureEvents: boolean;
+  registrationOpen: boolean;
 }
 
-export function HomeHeroSection({ event, hasFutureEvents }: Props) {
+export function HomeHeroSection({ event, hasFutureEvents, registrationOpen }: Props) {
   return (
     <section className="relative min-h-[90vh] flex items-center overflow-hidden bg-surface-low">
       <div className="absolute inset-0 z-0">
@@ -47,15 +48,27 @@ export function HomeHeroSection({ event, hasFutureEvents }: Props) {
           </p>
           <div className="flex flex-wrap gap-6">
             {hasFutureEvents ? (
-              <a
-                href={event.stripeLink}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="btn-primary"
-              >
-                <span>Înscrie-te acum</span>
-                <ArrowRight className="ml-2" size={16} />
-              </a>
+              registrationOpen && event.stripeLink ? (
+                <a
+                  href={event.stripeLink}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="btn-primary"
+                >
+                  <span>Înscrie-te acum</span>
+                  <ArrowRight className="ml-2" size={16} />
+                </a>
+              ) : (
+                <a
+                  href="https://wa.me/40742215569"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="btn-primary"
+                >
+                  <span>Contactează-ne</span>
+                  <ArrowRight className="ml-2" size={16} />
+                </a>
+              )
             ) : (
               <Link href={`/evenimente/${event.slug}`} className="btn-primary">
                 <span>Urmărește Înregistrările</span>

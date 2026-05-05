@@ -32,6 +32,7 @@ export interface Event {
   schedule: DaySchedule[];
   youtubePlaylist?: string;
   stripeLink?: string;
+  registrationDeadline?: string;
 }
 
 export interface TeamMember {

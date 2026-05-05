@@ -33,3 +33,10 @@ export function isEventFuture(endDate: string) {
   today.setHours(0, 0, 0, 0);
   return new Date(endDate) >= today;
 }
+
+export function isRegistrationOpen(registrationDeadline?: string) {
+  if (!registrationDeadline) return true;
+  const today = new Date();
+  today.setHours(0, 0, 0, 0);
+  return new Date(registrationDeadline) >= today;
+}
