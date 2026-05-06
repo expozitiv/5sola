@@ -45,13 +45,23 @@ export default async function OrarPage({
     <div className="pt-28 pb-20 min-h-screen">
       {/* Header */}
       <div className="px-6 mb-10 max-w-2xl mx-auto">
-        <Link
-          href={`/evenimente/${slug}`}
-          className="inline-flex items-center gap-2 text-sm font-medium text-muted hover:text-ink transition-colors duration-200 group mb-10 bg-surface-low border border-outline-variant hover:border-outline px-4 py-2 rounded-xs w-fit"
-        >
-          <ArrowLeft size={15} className="group-hover:-translate-x-0.5 transition-transform" />
-          <span>Înapoi la eveniment</span>
-        </Link>
+        <div className="flex flex-wrap gap-3 mb-10">
+          <Link
+            href={`/evenimente/${slug}`}
+            className="inline-flex items-center gap-2 text-sm font-medium text-muted hover:text-ink transition-colors duration-200 group bg-surface-low border border-outline-variant hover:border-outline px-4 py-2 rounded-xs w-fit"
+          >
+            <ArrowLeft size={15} className="group-hover:-translate-x-0.5 transition-transform" />
+            <span>Înapoi la eveniment</span>
+          </Link>
+          {event.qaDetails?.formId && (
+            <Link
+              href={`/evenimente/${slug}/qa`}
+              className="inline-flex items-center gap-2 text-sm font-medium text-muted hover:text-ink transition-colors duration-200 bg-surface-low border border-outline-variant hover:border-outline px-4 py-2 rounded-xs w-fit"
+            >
+              <span>Întrebări & Răspunsuri</span>
+            </Link>
+          )}
+        </div>
 
         <div className="flex flex-wrap gap-4 mb-5 text-sm font-mono">
           <div className="flex items-center gap-2 text-primary">

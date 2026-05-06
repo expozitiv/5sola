@@ -33,6 +33,10 @@ export interface Event {
   youtubePlaylist?: string;
   stripeLink?: string;
   registrationDeadline?: string;
+  qaDetails?: {
+    formId: string;
+    entryField: string;
+  };
 }
 
 export interface TeamMember {

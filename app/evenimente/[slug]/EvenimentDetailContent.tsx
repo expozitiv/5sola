@@ -10,6 +10,7 @@ import {
   ExternalLink,
   Clock,
   CheckCircle2,
+  MessageCircle,
 } from "lucide-react";
 import type { Event } from "@/types";
 import { formatDateRange } from "@/lib/utils";
@@ -68,34 +69,45 @@ export function EvenimentDetailContent({ event, isFuture, registrationOpen }: { 
               {event.title}
             </h1>
 
-            {isFuture && (event.stripeLink || event.registrationDeadline) && (
-              <div className="flex flex-col sm:flex-row gap-4">
-                {registrationOpen && event.stripeLink ? (
-                  <a
-                    href={event.stripeLink}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="btn-primary px-10 py-4"
-                  >
-                    <span>Înscrie-te acum</span>
-                    <ExternalLink className="ml-3" size={18} />
-                  </a>
-                ) : (
-                  <a
-                    href="https://wa.me/40742215569"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="btn-primary px-10 py-4"
-                  >
-                    <span>Contactează-ne</span>
-                    <ExternalLink className="ml-3" size={18} />
-                  </a>
-                )}
-                <a href="#program" className="btn-outline px-10 py-4">
-                  Vezi Programul
-                </a>
-              </div>
-            )}
+            <div className="flex flex-col sm:flex-row flex-wrap gap-4">
+              {isFuture && (event.stripeLink || event.registrationDeadline) && (
+                <>
+                  {registrationOpen && event.stripeLink ? (
+                    <a
+                      href={event.stripeLink}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="btn-primary px-10 py-4"
+                    >
+                      <span>Înscrie-te acum</span>
+                      <ExternalLink className="ml-3" size={18} />
+                    </a>
+                  ) : (
+                    <a
+                      href="https://wa.me/40742215569"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="btn-primary px-10 py-4"
+                    >
+                      <span>Contactează-ne</span>
+                      <ExternalLink className="ml-3" size={18} />
+                    </a>
+                  )}
+                  <Link href={`/evenimente/${event.slug}/orar`} className="btn-outline px-10 py-4">
+                    Vezi Programul
+                  </Link>
+                </>
+              )}
+              {event.qaDetails?.formId && (
+                <Link
+                  href={`/evenimente/${event.slug}/qa`}
+                  className="btn-outline px-10 py-4 inline-flex items-center gap-3"
+                >
+                  <MessageCircle size={16} />
+                  <span>Întrebări & Răspunsuri</span>
+                </Link>
+              )}
+            </div>
           </motion.div>
         </div>
       </section>

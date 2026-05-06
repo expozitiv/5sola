@@ -552,6 +552,10 @@
       }
     ],
     "stripeLink": "https://buy.stripe.com/6oU00jgjV7Uoc68ahfeAg0c",
-    "registrationDeadline": "2026-05-04"
+    "registrationDeadline": "2026-05-04",
+    "qaDetails": {
+      "formId": "1FAIpQLScL8MDqXyyWN8Sw2dJZuDMNihjhj_Woq2dus1JHLrbnd005ag",
+      "entryField": "entry.1859035300"
+    }
   }
 ]

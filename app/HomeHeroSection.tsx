@@ -1,7 +1,7 @@
 "use client";
 import Link from "next/link";
 import { motion } from "motion/react";
-import { ArrowRight, Play, Calendar } from "lucide-react";
+import { ArrowRight, Play, Calendar, MessageCircle } from "lucide-react";
 import type { Event } from "@/types";
 import { formatDateRange } from "@/lib/utils";
 
@@ -9,9 +9,10 @@ interface Props {
   event: Event;
   hasFutureEvents: boolean;
   registrationOpen: boolean;
+  isOngoing: boolean;
 }
 
-export function HomeHeroSection({ event, hasFutureEvents, registrationOpen }: Props) {
+export function HomeHeroSection({ event, hasFutureEvents, registrationOpen, isOngoing }: Props) {
   return (
     <section className="relative min-h-[90vh] flex items-center overflow-hidden bg-surface-low">
       <div className="absolute inset-0 z-0">
@@ -48,7 +49,12 @@ export function HomeHeroSection({ event, hasFutureEvents, registrationOpen }: Pr
           </p>
           <div className="flex flex-wrap gap-6">
             {hasFutureEvents ? (
-              registrationOpen && event.stripeLink ? (
+              isOngoing && event.qaDetails?.formId ? (
+                <Link href={`/evenimente/${event.slug}/qa`} className="btn-primary inline-flex items-center">
+                  <MessageCircle className="mr-2" size={16} />
+                  <span>Întrebări & Răspunsuri</span>
+                </Link>
+              ) : registrationOpen && event.stripeLink ? (
                 <a
                   href={event.stripeLink}
                   target="_blank"

@@ -115,7 +115,7 @@ Cele trei fișiere JSON din `data/` controlează conținutul principal al site-u
 
 Deschide `data/events.json` și adaugă un obiect nou în array. **Evenimentele viitoare apar automat în tab-ul "Viitoare"**, iar cele trecute în "Arhivă" — diferența se face pe baza câmpului `endDate`.
 
-### Structura completă a unui eveniment
+### Toate câmpurile unui eveniment
 
 ```json
 {
@@ -127,11 +127,19 @@ Deschide `data/events.json` și adaugă un obiect nou în array. **Evenimentele 
   "location": "Cluj-Napoca, Casa de Cultură a Studenților",
   "locationUrl": "https://maps.google.com/?q=Casa+de+Cultura+Cluj-Napoca",
   "description": "O conferință despre harul suveran al lui Dumnezeu în mântuire.",
+  "image": "/images/events/sola-gratia-2027.jpg",
+  "registrationDeadline": "2027-04-05",
+  "stripeLink": "https://buy.stripe.com/...",
+  "youtubePlaylist": "PLxxxxxxxxxxxxxxxx",
+  "qaDetails": {
+    "formId": "ID_FORMULAR_TALLY",
+    "entryField": "question"
+  },
   "speakers": [
     {
       "name": "Numele Vorbitorului",
       "role": "Pastor / Profesor / Misionar",
-      "image": "https://example.com/imagine-vorbitor.jpg",
+      "image": "/images/echipa/vorbitor.jpg",
       "bio": "Descriere scurtă a vorbitorului, background teologic și lucrare."
     }
   ],
@@ -145,9 +153,9 @@ Deschide `data/events.json` și adaugă un obiect nou în array. **Evenimentele 
       "day": "Ziua 1 — Vineri, 10 Aprilie",
       "items": [
         { "time": "09:00", "activity": "Înregistrare & Cafea" },
-        { "time": "10:00", "activity": "Sesiunea 1: Harul în Vechiul Testament" },
+        { "time": "10:00", "activity": "Sesiunea 1", "topic": "Harul în Vechiul Testament", "speaker": "Numele Vorbitorului" },
         { "time": "12:00", "activity": "Prânz" },
-        { "time": "14:00", "activity": "Sesiunea 2: Harul în Noul Testament" },
+        { "time": "14:00", "activity": "Sesiunea 2", "topic": "Harul în Noul Testament", "speaker": "Numele Vorbitorului" },
         { "time": "16:30", "activity": "Panel Q&A" }
       ]
     },
@@ -155,25 +163,56 @@ Deschide `data/events.json` și adaugă un obiect nou în array. **Evenimentele 
       "day": "Ziua 2 — Sâmbătă, 11 Aprilie",
       "items": [
         { "time": "09:00", "activity": "Rugăciune & Devoțional" },
-        { "time": "10:00", "activity": "Sesiunea 3: Harul și sfințirea" },
+        { "time": "10:00", "activity": "Sesiunea 3", "topic": "Harul și sfințirea", "speaker": "Numele Vorbitorului" },
         { "time": "12:00", "activity": "Prânz" },
-        { "time": "14:00", "activity": "Sesiunea 4: Trăind din har" },
+        { "time": "14:00", "activity": "Sesiunea 4", "topic": "Trăind din har", "speaker": "Numele Vorbitorului" },
         { "time": "17:00", "activity": "Slujbă de închidere" }
       ]
     }
-  ],
-  "youtubePlaylist": "",
-  "stripeLink": ""
+  ]
 }
 ```
 
-### Câmpuri opționale
+### Descrierea câmpurilor
 
-| Câmp | Comportament dacă e gol (`""`) |
-|---|---|
-| `youtubePlaylist` | Secțiunea "Înregistrări video" nu apare pe pagina evenimentului |
-| `stripeLink` | Butonul "Cumpără bilet" nu apare |
-| `locationUrl` | Locația apare ca text simplu, fără link Google Maps |
+| Câmp | Obligatoriu | Descriere |
+|---|---|---|
+| `id` | Da | Număr unic, incrementat față de ultimul eveniment |
+| `slug` | Da | Identificator URL; litere mici, cifre, cratime (`sola-gratia-2027`) → `/evenimente/sola-gratia-2027` |
+| `title` | Da | Titlul conferinței, afișat mare pe hero și pe carduri |
+| `startDate` | Da | Data de început, format `YYYY-MM-DD` |
+| `endDate` | Da | Data de sfârșit, format `YYYY-MM-DD`; determină dacă evenimentul e viitor sau arhivat |
+| `location` | Da | Textul locației afișat pe site |
+| `description` | Da | Descriere scurtă (1-2 propoziții), apare pe hero și pe carduri |
+| `speakers` | Da | Array cu vorbitorii (poate fi gol `[]`) |
+| `topics` | Da | Array de teme/subiecte abordate (poate fi gol `[]`) |
+| `schedule` | Da | Array cu zilele și programul (poate fi gol `[]`) |
+| `locationUrl` | Nu | Link Google Maps; dacă lipsește, locația apare ca text simplu |
+| `image` | Nu | Imaginea principală a evenimentului, afișată în hero și pe carduri |
+| `registrationDeadline` | Nu | Data limită de înregistrare, format `YYYY-MM-DD`; dacă lipsește, înregistrarea e mereu considerată deschisă |
+| `stripeLink` | Nu | URL Stripe pentru cumpărare bilete; dacă lipsește, butonul de bilete nu apare |
+| `youtubePlaylist` | Nu | ID-ul playlist-ului YouTube (ex. `PLxxxxxxxx`); dacă lipsește, secțiunea video nu apare |
+| `qaDetails` | Nu | Activează pagina Q&A live (`/evenimente/[slug]/qa`) în timpul conferinței |
+| `qaDetails.formId` | — | ID-ul formularului Tally folosit pentru întrebări |
+| `qaDetails.entryField` | — | Numele câmpului din formular în care se trimite întrebarea |
+
+### Câmpurile unui vorbitor (`speakers[]`)
+
+| Câmp | Obligatoriu | Descriere |
+|---|---|---|
+| `name` | Da | Numele complet |
+| `role` | Da | Titlul/rolul afișat sub nume (ex. `"Pastor, Biserica X"`) |
+| `image` | Da | Calea sau URL-ul fotografiei |
+| `bio` | Nu | Biografie scurtă, afișată pe pagina evenimentului |
+
+### Câmpurile din program (`schedule[].items[]`)
+
+| Câmp | Obligatoriu | Descriere |
+|---|---|---|
+| `time` | Da | Ora sesiunii, format `HH:MM` |
+| `activity` | Da | Numele activității (ex. `"Sesiunea 1"`, `"Prânz"`) |
+| `topic` | Nu | Subiectul sesiunii, afișat pe pagina de orar |
+| `speaker` | Nu | Numele vorbitorului acelei sesiuni |
 
 ### Reguli pentru `slug`
 
@@ -181,14 +220,49 @@ Deschide `data/events.json` și adaugă un obiect nou în array. **Evenimentele 
 - Trebuie să fie **unic** (nu repeta slug-uri)
 - Slug-ul devine URL-ul paginii: `/evenimente/sola-gratia-2027`
 
-### Imagini pentru vorbitori
+### Imagini
 
 Poți folosi:
-- **URL extern** (recomandat pentru producție): `"image": "https://domeniu.com/foto.jpg"`
-- **Fișier local**: pune imaginea în `/public/images/` și referențiaz-o ca `"image": "/images/vorbitor.jpg"`
-- **Placeholder temporar**: `"image": "https://picsum.photos/seed/NUME/400/400"` (înlocuiește `NUME` cu ceva unic)
+- **Fișier local** (recomandat): pune imaginea în `public/images/events/` și referențiaz-o ca `"image": "/images/events/nume.jpg"`
+- **URL extern**: `"image": "https://domeniu.com/foto.jpg"` — dacă folosești un domeniu nou, trebuie adăugat în `next.config.ts` la `images.remotePatterns`, altfel Next.js va bloca imaginea
+- **Placeholder temporar**: `"image": "https://picsum.photos/seed/NUME/800/600"`
 
-> **Atenție:** Dacă folosești un domeniu extern nou pentru imagini, trebuie adăugat în `next.config.ts` la `images.remotePatterns`, altfel Next.js va bloca imaginea.
+---
+
+## Logica paginii principale (`/`)
+
+### Ce eveniment apare în hero
+
+Pagina principală afișează **un singur eveniment featured** în secțiunea hero, ales automat astfel:
+
+1. **Dacă există cel puțin un eveniment viitor** (adică `endDate >= azi`): se afișează **primul eveniment viitor** din `events.json` (în ordinea în care apare în fișier).
+2. **Dacă nu există niciun eveniment viitor**: se afișează **ultimul eveniment din arhivă** (cel cu `endDate` cel mai recent).
+
+> Ordinea în `events.json` contează: dacă ai mai multe viitoare, primul din fișier e cel afișat în hero.
+
+### Grila de sub hero ("Evenimente viitoare" / "Evenimente recente")
+
+Sub hero apar **maxim 3 carduri** suplimentare, cu aceeași logică:
+- Dacă sunt viitoare: celelalte viitoare (excluzând cel din hero), maxim 3.
+- Dacă nu sunt viitoare: celelalte din arhivă (sortate descrescător după dată), maxim 3.
+
+### Logica butoanelor din hero
+
+Butonul principal din hero se schimbă dinamic în funcție de starea evenimentului:
+
+| Condiție | Buton afișat |
+|---|---|
+| **Nu există evenimente viitoare** | "Urmărește Înregistrările" → pagina evenimentului |
+| **Evenimentul e în desfășurare** (`startDate <= azi <= endDate`) **și are `qaDetails`** | "Întrebări & Răspunsuri" → `/evenimente/[slug]/qa` |
+| **Înregistrarea e deschisă** (azi ≤ `registrationDeadline` sau câmpul lipsește) **și există `stripeLink`** | "Înscrie-te acum" → link Stripe |
+| **Orice altă situație** (înregistrare închisă, fără Stripe, fără Q&A) | "Contactează-ne" → WhatsApp |
+
+Al doilea buton ("Află mai multe") duce mereu la pagina detaliată a evenimentului.
+
+### Eticheta din hero
+
+- Dacă există viitoare: afișează `Evenimentul curent`
+- Dacă nu există viitoare: afișează `Ultimul eveniment` + un text italic care informează că nu sunt evenimente programate
 
 ---
 

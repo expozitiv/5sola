@@ -34,6 +34,12 @@ export function isEventFuture(endDate: string) {
   return new Date(endDate) >= today;
 }
 
+export function isEventOngoing(startDate: string, endDate: string) {
+  const d = new Date();
+  const today = `${d.getFullYear()}-${String(d.getMonth() + 1).padStart(2, "0")}-${String(d.getDate()).padStart(2, "0")}`;
+  return startDate <= today && today <= endDate;
+}
+
 export function isRegistrationOpen(registrationDeadline?: string) {
   if (!registrationDeadline) return true;
   const today = new Date();
