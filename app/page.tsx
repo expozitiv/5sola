@@ -3,7 +3,7 @@ import Link from "next/link";
 import { ChevronRight } from "lucide-react";
 import eventsData from "@/data/events.json";
 import type { Event } from "@/types";
-import { isEventFuture, isRegistrationOpen, isEventOngoing } from "@/lib/utils";
+import { isEventFuture } from "@/lib/utils";
 import { HomeHeroSection } from "./HomeHeroSection";
 import { AnimateIn } from "@/components/AnimateIn";
 import { EventCard } from "@/components/EventCard";
@@ -53,8 +53,6 @@ export default function Home() {
       <HomeHeroSection
         event={featuredEvent}
         hasFutureEvents={hasFutureEvents}
-        registrationOpen={isRegistrationOpen(featuredEvent.registrationDeadline)}
-        isOngoing={isEventOngoing(featuredEvent.startDate, featuredEvent.endDate)}
       />
 
       {/* Cine Suntem Preview */}
