@@ -3,16 +3,17 @@ import Link from "next/link";
 import { motion } from "motion/react";
 import { ArrowRight, Play, Calendar, MessageCircle } from "lucide-react";
 import type { Event } from "@/types";
-import { formatDateRange } from "@/lib/utils";
+import { formatDateRange, isEventOngoing, isRegistrationOpen } from "@/lib/utils";
 
 interface Props {
   event: Event;
   hasFutureEvents: boolean;
-  registrationOpen: boolean;
-  isOngoing: boolean;
 }
 
-export function HomeHeroSection({ event, hasFutureEvents, registrationOpen, isOngoing }: Props) {
+export function HomeHeroSection({ event, hasFutureEvents }: Props) {
+  const registrationOpen = isRegistrationOpen(event.registrationDeadline);
+  const isOngoing = isEventOngoing(event.startDate, event.endDate);
+
   return (
     <section className="relative min-h-[90vh] flex items-center overflow-hidden bg-surface-low">
       <div className="absolute inset-0 z-0">
