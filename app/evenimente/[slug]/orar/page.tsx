@@ -3,7 +3,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { ArrowLeft, Calendar, MapPin } from "lucide-react";
 import eventsData from "@/data/events.json";
-import type { Event } from "@/types";
+import type { Event, ParallelSession } from "@/types";
 import { formatDateRange } from "@/lib/utils";
 import { cn } from "@/lib/utils";
 
@@ -154,6 +154,43 @@ export default async function OrarPage({
                             />
                           </div>
                           <span className="text-xs text-muted font-medium">{speakerObj.name}</span>
+                        </div>
+                      )}
+                      {/* Parallel sessions (workshops) */}
+                      {item.parallel && item.parallel.length > 0 && (
+                        <div className="mt-2 space-y-2">
+                          {(item.parallel as ParallelSession[]).map((session, j) => {
+                            const sessionSpeaker = event.speakers.find(
+                              (s) => s.name.toLowerCase() === session.speaker.toLowerCase()
+                            );
+                            return (
+                              <div key={j} className="flex items-start gap-2 pl-2 border-l-2 border-primary/30">
+                                <div className="flex-1 min-w-0">
+                                  <span className="text-xs font-mono text-primary font-semibold uppercase tracking-wide">
+                                    {session.room}
+                                  </span>
+                                  <span className="block text-xs sm:text-sm text-ink font-semibold leading-snug">
+                                    {session.speaker}
+                                  </span>
+                                  <span className="block text-xs text-muted leading-snug">
+                                    {session.topic}
+                                  </span>
+                                </div>
+                                {sessionSpeaker && (
+                                  <div className="shrink-0">
+                                    <div className="w-8 h-8 rounded-full overflow-hidden ring-1 ring-primary/40 bg-surface-high">
+                                      <img
+                                        src={sessionSpeaker.image}
+                                        alt={sessionSpeaker.name}
+                                        className="w-full h-full object-cover"
+                                        referrerPolicy="no-referrer"
+                                      />
+                                    </div>
+                                  </div>
+                                )}
+                              </div>
+                            );
+                          })}
                         </div>
                       )}
                     </div>

@@ -5,11 +5,18 @@ export interface Speaker {
   bio?: string;
 }
 
+export interface ParallelSession {
+  room: string;
+  speaker: string;
+  topic: string;
+}
+
 export interface ScheduleItem {
   time: string;
   activity: string;
   topic?: string;
   speaker?: string;
+  parallel?: ParallelSession[];
 }
 
 export interface DaySchedule {
