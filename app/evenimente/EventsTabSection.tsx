@@ -8,9 +8,14 @@ import type { Event } from "@/types";
 export function EventsTabSection({ events }: { events: Event[] }) {
   const [activeTab, setActiveTab] = useState<"future" | "archive">("future");
 
-  const filteredEvents = events.filter((e) =>
-    activeTab === "future" ? isEventFuture(e.endDate) : !isEventFuture(e.endDate)
-  );
+  const filteredEvents = events
+    .filter((e) =>
+      activeTab === "future" ? isEventFuture(e.endDate) : !isEventFuture(e.endDate)
+    )
+    .sort((a, b) => {
+      const diff = new Date(b.endDate).getTime() - new Date(a.endDate).getTime();
+      return activeTab === "future" ? -diff : diff;
+    });
 
   return (
     <section className="px-6 mb-32">

@@ -117,6 +117,57 @@ export function EvenimentDetailContent({ event, isFuture, registrationOpen }: { 
         <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-3 gap-10 md:gap-16">
           {/* Main Content */}
           <div className="lg:col-span-2 space-y-16">
+            {/* YouTube Playlist — shown first for past events */}
+            {!isFuture && (
+              event.youtubePlaylist ? (
+                <div className="bento-card p-8 bg-surface-low border-primary/20">
+                  <div className="flex flex-col sm:flex-row items-center gap-8">
+                    <div className="flex-1">
+                      <div className="flex items-center gap-3 mb-3">
+                        <Youtube className="text-primary" size={28} />
+                        <span className="label-caps text-primary">Arhivă Video</span>
+                      </div>
+                      <h2 className="text-2xl font-serif font-black mb-3 uppercase leading-tight">
+                        Urmărește <span className="text-primary">înregistrările</span>
+                      </h2>
+                      <p className="text-muted mb-6">
+                        Toate sesiunile sunt disponibile gratuit pe YouTube.
+                      </p>
+                      <a
+                        href={getYoutubePlaylistUrl(event.youtubePlaylist)}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="btn-primary inline-flex px-8 py-3"
+                      >
+                        <span>Vezi pe YouTube</span>
+                        <ExternalLink className="ml-2" size={16} />
+                      </a>
+                    </div>
+                    <a
+                      href={getYoutubePlaylistUrl(event.youtubePlaylist)}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="w-40 h-28 bg-bg border border-outline-variant flex items-center justify-center shrink-0 group"
+                    >
+                      <div className="w-14 h-14 bg-primary flex items-center justify-center rounded-full group-hover:scale-110 transition-transform duration-300">
+                        <Youtube size={28} className="text-white fill-white" />
+                      </div>
+                    </a>
+                  </div>
+                </div>
+              ) : (
+                <div className="bento-card p-8 bg-surface-low flex items-center gap-4">
+                  <div className="w-12 h-12 border border-outline-variant flex items-center justify-center shrink-0">
+                    <Youtube size={22} className="text-muted opacity-40" />
+                  </div>
+                  <div>
+                    <span className="label-caps text-xs text-muted block mb-1">Arhivă Video</span>
+                    <p className="text-muted italic text-sm">Înregistrările vor fi disponibile în curând.</p>
+                  </div>
+                </div>
+              )
+            )}
+
             {/* Description */}
             <div>
               <span className="label-caps text-primary mb-4 block">Despre Eveniment</span>
@@ -160,45 +211,6 @@ export function EvenimentDetailContent({ event, isFuture, registrationOpen }: { 
                       )}
                     </div>
                   ))}
-                </div>
-              </div>
-            )}
-
-            {/* YouTube Playlist */}
-            {!isFuture && event.youtubePlaylist && (
-              <div className="bento-card p-8 bg-surface-low border-primary/20">
-                <div className="flex flex-col sm:flex-row items-center gap-8">
-                  <div className="flex-1">
-                    <div className="flex items-center gap-3 mb-3">
-                      <Youtube className="text-primary" size={28} />
-                      <span className="label-caps text-primary">Arhivă Video</span>
-                    </div>
-                    <h2 className="text-2xl font-serif font-black mb-3 uppercase leading-tight">
-                      Urmărește <span className="text-primary">înregistrările</span>
-                    </h2>
-                    <p className="text-muted mb-6">
-                      Toate sesiunile sunt disponibile gratuit pe YouTube.
-                    </p>
-                    <a
-                      href={getYoutubePlaylistUrl(event.youtubePlaylist!)}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="btn-primary inline-flex px-8 py-3"
-                    >
-                      <span>Vezi pe YouTube</span>
-                      <ExternalLink className="ml-2" size={16} />
-                    </a>
-                  </div>
-                  <a
-                    href={getYoutubePlaylistUrl(event.youtubePlaylist!)}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="w-40 h-28 bg-bg border border-outline-variant flex items-center justify-center shrink-0 group"
-                  >
-                    <div className="w-14 h-14 bg-primary flex items-center justify-center rounded-full group-hover:scale-110 transition-transform duration-300">
-                      <Youtube size={28} className="text-white fill-white" />
-                    </div>
-                  </a>
                 </div>
               </div>
             )}

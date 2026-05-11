@@ -454,7 +454,7 @@
         ]
       }
     ],
-    "youtubePlaylist": ""
+    "youtubePlaylist": "https://www.youtube.com/playlist?list=PLT1HlO3pk6C0StQPlhmA5CM0DB07DFRfq"
   },
   {
     "id": "7",
@@ -529,18 +529,42 @@
             "time": "14:00",
             "activity": "Ateliere I",
             "parallel": [
-              { "room": "Sala Rose", "speaker": "Andrei Sava", "topic": "Diavolul m-a pus să fac asta? Cum să biruim în lupta spirituală" },
-              { "room": "Sala Luxuriant", "speaker": "David Lavric", "topic": "Păcatele generaționale" },
-              { "room": "Sala Vert Charmante", "speaker": "Iosua Faur", "topic": "Doamne, mai vrem Rusalii? Cum învățătura corectă despre Duhul Sfânt duce la o închinare corectă." }
+              {
+                "room": "Sala Rose",
+                "speaker": "Andrei Sava",
+                "topic": "Diavolul m-a pus să fac asta? Cum să biruim în lupta spirituală"
+              },
+              {
+                "room": "Sala Luxuriant",
+                "speaker": "David Lavric",
+                "topic": "Păcatele generaționale"
+              },
+              {
+                "room": "Sala Vert Charmante",
+                "speaker": "Iosua Faur",
+                "topic": "Doamne, mai vrem Rusalii? Cum învățătura corectă despre Duhul Sfânt duce la o închinare corectă."
+              }
             ]
           },
           {
             "time": "16:00",
             "activity": "Ateliere II",
             "parallel": [
-              { "room": "Sala Rose", "speaker": "Alex Ghiță", "topic": "Stăruințe, batiste și alte practici puse pe seama Duhului Sfânt." },
-              { "room": "Sala Luxuriant", "speaker": "Andrei Croitoru", "topic": "Fețele carismatismului" },
-              { "room": "Sala Vert Charmante", "speaker": "Lucian Bălănescu", "topic": "Idolul experienței: Pericolul unei credințe dependente de emoție." }
+              {
+                "room": "Sala Rose",
+                "speaker": "Alex Ghiță",
+                "topic": "Stăruințe, batiste și alte practici puse pe seama Duhului Sfânt."
+              },
+              {
+                "room": "Sala Luxuriant",
+                "speaker": "Andrei Croitoru",
+                "topic": "Fețele carismatismului"
+              },
+              {
+                "room": "Sala Vert Charmante",
+                "speaker": "Lucian Bălănescu",
+                "topic": "Idolul experienței: Pericolul unei credințe dependente de emoție."
+              }
             ]
           },
           { "time": "17:30", "activity": "Pauza de cină" },

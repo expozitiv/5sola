@@ -1,3 +1,5 @@
+export const dynamic = "force-dynamic";
+
 import type { Metadata } from "next";
 import Link from "next/link";
 import { ChevronRight } from "lucide-react";
@@ -11,22 +13,6 @@ import { BiblicalQuote } from "@/components/BiblicalQuote";
 import { NewsletterForm } from "@/components/NewsletterForm";
 
 const events = eventsData as Event[];
-const hasFutureEvents = events.some((e) => isEventFuture(e.endDate));
-const featuredEvent = hasFutureEvents
-  ? events.find((e) => isEventFuture(e.endDate))!
-  : [...events].sort(
-      (a, b) => new Date(b.endDate).getTime() - new Date(a.endDate).getTime(),
-    )[0];
-const upcomingEvents = hasFutureEvents
-  ? events
-      .filter((e) => isEventFuture(e.endDate) && e.id !== featuredEvent.id)
-      .slice(0, 3)
-  : [...events]
-      .filter((e) => e.id !== featuredEvent.id)
-      .sort(
-        (a, b) => new Date(b.endDate).getTime() - new Date(a.endDate).getTime(),
-      )
-      .slice(0, 3);
 
 export const metadata: Metadata = {
   title: {
@@ -47,6 +33,24 @@ export const metadata: Metadata = {
 };
 
 export default function Home() {
+  const hasFutureEvents = events.some((e) => isEventFuture(e.endDate));
+  const featuredEvent = hasFutureEvents
+    ? events.find((e) => isEventFuture(e.endDate))!
+    : [...events].sort(
+        (a, b) => new Date(b.endDate).getTime() - new Date(a.endDate).getTime(),
+      )[0];
+  const upcomingEvents = hasFutureEvents
+    ? events
+        .filter((e) => isEventFuture(e.endDate) && e.id !== featuredEvent.id)
+        .slice(0, 3)
+    : [...events]
+        .filter((e) => e.id !== featuredEvent.id)
+        .sort(
+          (a, b) =>
+            new Date(b.endDate).getTime() - new Date(a.endDate).getTime(),
+        )
+        .slice(0, 3);
+
   return (
     <div className="pt-20">
       {/* Hero — client, uses animate */}

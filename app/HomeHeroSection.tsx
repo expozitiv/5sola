@@ -76,11 +76,16 @@ export function HomeHeroSection({ event, hasFutureEvents }: Props) {
                   <ArrowRight className="ml-2" size={16} />
                 </a>
               )
-            ) : (
+            ) : event.youtubePlaylist ? (
               <Link href={`/evenimente/${event.slug}`} className="btn-primary">
                 <span>Urmărește Înregistrările</span>
                 <Play className="ml-2" size={16} fill="currentColor" />
               </Link>
+            ) : (
+              <span className="inline-flex items-center gap-2 text-sm text-muted italic">
+                <Play size={14} className="opacity-40" />
+                Înregistrările vor fi disponibile în curând
+              </span>
             )}
             <Link href={`/evenimente/${event.slug}`} className="btn-outline">
               <span>Află mai multe</span>
