@@ -44,7 +44,6 @@ export default function Home() {
         .filter((e) => isEventFuture(e.endDate) && e.id !== featuredEvent.id)
         .slice(0, 3)
     : [...events]
-        .filter((e) => e.id !== featuredEvent.id)
         .sort(
           (a, b) =>
             new Date(b.endDate).getTime() - new Date(a.endDate).getTime(),
