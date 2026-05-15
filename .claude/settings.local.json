@@ -1,7 +1,8 @@
 {
   "permissions": {
     "allow": [
-      "Bash(npx tsc *)"
+      "Bash(npx tsc *)",
+      "Bash(node -e \"const e = require\\('./data/events.json'\\); e.forEach\\(ev => console.log\\(ev.id, ev.slug, ev.endDate\\)\\)\")"
     ]
   }
 }
