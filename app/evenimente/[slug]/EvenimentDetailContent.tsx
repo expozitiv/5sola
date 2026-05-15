@@ -13,7 +13,7 @@ import {
   MessageCircle,
 } from "lucide-react";
 import type { Event } from "@/types";
-import { formatDateRange } from "@/lib/utils";
+import { formatDateRange, isEventOngoing } from "@/lib/utils";
 import { cn } from "@/lib/utils";
 
 function getYoutubePlaylistUrl(value: string): string {
@@ -23,6 +23,7 @@ function getYoutubePlaylistUrl(value: string): string {
 
 export function EvenimentDetailContent({ event, isFuture, registrationOpen }: { event: Event; isFuture: boolean; registrationOpen: boolean }) {
   const [activeDay, setActiveDay] = useState(0);
+  const isOngoing = isEventOngoing(event.startDate, event.endDate);
 
   return (
     <div className="pt-20">
@@ -98,7 +99,7 @@ export function EvenimentDetailContent({ event, isFuture, registrationOpen }: { 
                   </Link>
                 </>
               )}
-              {event.qaDetails?.formId && (
+              {isOngoing && event.qaDetails?.formId && (
                 <Link
                   href={`/evenimente/${event.slug}/qa`}
                   className="btn-outline px-10 py-4 inline-flex items-center gap-3"

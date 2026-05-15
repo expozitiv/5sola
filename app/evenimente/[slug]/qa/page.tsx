@@ -4,7 +4,7 @@ import Link from "next/link";
 import { ArrowLeft, Calendar, MapPin } from "lucide-react";
 import eventsData from "@/data/events.json";
 import type { Event } from "@/types";
-import { formatDateRange } from "@/lib/utils";
+import { formatDateRange, isEventOngoing } from "@/lib/utils";
 import QAForm from "./QAForm";
 
 const events = eventsData as Event[];
@@ -39,6 +39,7 @@ export default async function QAPage({
 
   if (!event) notFound();
   if (!event.qaDetails?.formId) redirect(`/evenimente/${slug}`);
+  if (!isEventOngoing(event.startDate, event.endDate)) redirect(`/evenimente/${slug}`);
 
   return (
     <div className="pt-24 md:pt-28 pb-10 md:pb-20 min-h-screen">

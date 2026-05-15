@@ -4,7 +4,7 @@ import Link from "next/link";
 import { ArrowLeft, Calendar, MapPin } from "lucide-react";
 import eventsData from "@/data/events.json";
 import type { Event, ParallelSession } from "@/types";
-import { formatDateRange } from "@/lib/utils";
+import { formatDateRange, isEventOngoing } from "@/lib/utils";
 import { cn } from "@/lib/utils";
 
 const events = eventsData as Event[];
@@ -41,6 +41,8 @@ export default async function OrarPage({
   if (!event) notFound();
   if (!event.schedule.length) redirect(`/evenimente/${slug}`);
 
+  const isOngoing = isEventOngoing(event.startDate, event.endDate);
+
   return (
     <div className="pt-28 pb-20 min-h-screen">
       {/* Header */}
@@ -53,7 +55,7 @@ export default async function OrarPage({
             <ArrowLeft size={15} className="group-hover:-translate-x-0.5 transition-transform" />
             <span>Înapoi la eveniment</span>
           </Link>
-          {event.qaDetails?.formId && (
+          {isOngoing && event.qaDetails?.formId && (
             <Link
               href={`/evenimente/${slug}/qa`}
               className="inline-flex items-center gap-2 text-sm font-medium text-muted hover:text-ink transition-colors duration-200 bg-surface-low border border-outline-variant hover:border-outline px-4 py-2 rounded-xs w-fit"
