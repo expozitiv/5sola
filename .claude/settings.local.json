@@ -2,7 +2,9 @@
   "permissions": {
     "allow": [
       "Bash(npx tsc *)",
-      "Bash(node -e \"const e = require\\('./data/events.json'\\); e.forEach\\(ev => console.log\\(ev.id, ev.slug, ev.endDate\\)\\)\")"
+      "Bash(node -e \"const e = require\\('./data/events.json'\\); e.forEach\\(ev => console.log\\(ev.id, ev.slug, ev.endDate\\)\\)\")",
+      "Bash(cp /root/.claude/uploads/ea1d4db5-3f83-5b2c-ae71-967cf2b551a0/1186aa26-grafica_2026_noiembrie.png public/images/events/doctrina-familiei.png)",
+      "Bash(cp /root/.claude/uploads/ea1d4db5-3f83-5b2c-ae71-967cf2b551a0/7faabd48-Beni_Costea.png public/images/echipa/beniamin-costea.png)"
     ]
   }
 }

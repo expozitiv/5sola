@@ -56,15 +56,28 @@ export function HomeHeroSection({ event, hasFutureEvents }: Props) {
                   <span>Întrebări & Răspunsuri</span>
                 </Link>
               ) : registrationOpen && event.stripeLink ? (
-                <a
-                  href={event.stripeLink}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="btn-primary"
-                >
-                  <span>Înscrie-te acum</span>
-                  <ArrowRight className="ml-2" size={16} />
-                </a>
+                <>
+                  <a
+                    href={event.stripeLink}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="btn-primary"
+                  >
+                    <span>{event.stripeLinkFamily ? "Înscriere individuală" : "Înscrie-te acum"}</span>
+                    <ArrowRight className="ml-2" size={16} />
+                  </a>
+                  {event.stripeLinkFamily && (
+                    <a
+                      href={event.stripeLinkFamily}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="btn-primary"
+                    >
+                      <span>Înscriere familie</span>
+                      <ArrowRight className="ml-2" size={16} />
+                    </a>
+                  )}
+                </>
               ) : (
                 <a
                   href="https://wa.me/40742215569"
