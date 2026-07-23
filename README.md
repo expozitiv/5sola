@@ -193,6 +193,7 @@ Deschide `data/events.json` și adaugă un obiect nou în array. **Evenimentele 
 | `registrationDeadline` | Nu | Data limită de înregistrare, format `YYYY-MM-DD`; dacă lipsește, înregistrarea e mereu considerată deschisă |
 | `stripeLink` | Nu | URL Stripe pentru cumpărare bilete (înscriere individuală); dacă lipsește, butonul de bilete nu apare |
 | `stripeLinkFamily` | Nu | URL Stripe pentru înscrierea de familie; dacă există, apar două butoane: "Înscriere individuală" și "Înscriere familie" |
+| `registrationNote` | Nu | Notă afișată sub butoanele de înscriere pe pagina evenimentului (ex. "Prețul nu include mesele de prânz și cina.") |
 | `youtubePlaylist` | Nu | ID-ul playlist-ului YouTube (ex. `PLxxxxxxxx`); dacă lipsește, secțiunea video nu apare |
 | `qaDetails` | Nu | Activează pagina Q&A live (`/evenimente/[slug]/qa`) în timpul conferinței |
 | `qaDetails.formId` | — | ID-ul formularului Tally folosit pentru întrebări |

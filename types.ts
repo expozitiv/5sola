@@ -40,6 +40,7 @@ export interface Event {
   youtubePlaylist?: string;
   stripeLink?: string;
   stripeLinkFamily?: string;
+  registrationNote?: string;
   registrationDeadline?: string;
   qaDetails?: {
     formId: string;
