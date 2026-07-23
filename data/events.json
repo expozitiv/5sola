@@ -611,8 +611,9 @@
     "speakers": [
       {
         "name": "Beniamin Costea",
-        "role": "Pastor",
-        "image": "/images/echipa/beniamin-costea.jpg"
+        "role": "Pastor, Biserica Baptistă Emanuel, Arad",
+        "image": "/images/echipa/beniamin-costea.jpg",
+        "bio": "Cu peste trei decenii de slujire pastorală, o bogată experiență în predicare și formarea slujitorilor, precum și o pregătire teologică aprofundată, pastorul Beniamin Costea slujește în prezent în biserica baptistă „Emanuel” din Arad."
       },
       {
         "name": "Alex Ghiță",
