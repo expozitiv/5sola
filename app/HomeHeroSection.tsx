@@ -13,6 +13,12 @@ interface Props {
 export function HomeHeroSection({ event, hasFutureEvents }: Props) {
   const registrationOpen = isRegistrationOpen(event.registrationDeadline);
   const isOngoing = isEventOngoing(event.startDate, event.endDate);
+  const dayCount =
+    Math.round(
+      (new Date(event.endDate).getTime() - new Date(event.startDate).getTime()) / 86_400_000
+    ) + 1;
+  const daysLabel =
+    dayCount <= 1 ? "O zi dedicată" : dayCount === 2 ? "Două zile dedicate" : `${dayCount} zile dedicate`;
 
   return (
     <section className="relative min-h-[90vh] flex items-center overflow-hidden bg-surface-low">
@@ -130,7 +136,7 @@ export function HomeHeroSection({ event, hasFutureEvents }: Props) {
               {event.location}
             </h3>
             <p className="text-sm opacity-90 leading-relaxed">
-              O zi dedicată studiului aprofundat al Scripturii și părtășiei creștine.
+              {daysLabel} studiului aprofundat al Scripturii și părtășiei creștine.
             </p>
           </div>
         </motion.div>

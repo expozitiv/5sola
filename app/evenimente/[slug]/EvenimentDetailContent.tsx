@@ -11,6 +11,7 @@ import {
   Clock,
   CheckCircle2,
   MessageCircle,
+  Info,
 } from "lucide-react";
 import type { Event } from "@/types";
 import { formatDateRange, isEventOngoing } from "@/lib/utils";
@@ -122,6 +123,12 @@ export function EvenimentDetailContent({ event, isFuture, registrationOpen }: { 
                 </Link>
               )}
             </div>
+            {isFuture && registrationOpen && event.stripeLink && event.registrationNote && (
+              <p className="flex items-center gap-2 mt-5 text-sm text-muted">
+                <Info size={15} className="text-primary shrink-0" />
+                <span>{event.registrationNote}</span>
+              </p>
+            )}
           </motion.div>
         </div>
       </section>
