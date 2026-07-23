@@ -130,6 +130,7 @@ Deschide `data/events.json` și adaugă un obiect nou în array. **Evenimentele 
   "image": "/images/events/sola-gratia-2027.jpg",
   "registrationDeadline": "2027-04-05",
   "stripeLink": "https://buy.stripe.com/...",
+  "stripeLinkFamily": "https://buy.stripe.com/...",
   "youtubePlaylist": "PLxxxxxxxxxxxxxxxx",
   "qaDetails": {
     "formId": "ID_FORMULAR_TALLY",
@@ -190,7 +191,8 @@ Deschide `data/events.json` și adaugă un obiect nou în array. **Evenimentele 
 | `locationUrl` | Nu | Link Google Maps; dacă lipsește, locația apare ca text simplu |
 | `image` | Nu | Imaginea principală a evenimentului, afișată în hero și pe carduri |
 | `registrationDeadline` | Nu | Data limită de înregistrare, format `YYYY-MM-DD`; dacă lipsește, înregistrarea e mereu considerată deschisă |
-| `stripeLink` | Nu | URL Stripe pentru cumpărare bilete; dacă lipsește, butonul de bilete nu apare |
+| `stripeLink` | Nu | URL Stripe pentru cumpărare bilete (înscriere individuală); dacă lipsește, butonul de bilete nu apare |
+| `stripeLinkFamily` | Nu | URL Stripe pentru înscrierea de familie; dacă există, apar două butoane: "Înscriere individuală" și "Înscriere familie" |
 | `youtubePlaylist` | Nu | ID-ul playlist-ului YouTube (ex. `PLxxxxxxxx`); dacă lipsește, secțiunea video nu apare |
 | `qaDetails` | Nu | Activează pagina Q&A live (`/evenimente/[slug]/qa`) în timpul conferinței |
 | `qaDetails.formId` | — | ID-ul formularului Tally folosit pentru întrebări |
@@ -254,7 +256,7 @@ Butonul principal din hero se schimbă dinamic în funcție de starea evenimentu
 |---|---|
 | **Nu există evenimente viitoare** | "Urmărește Înregistrările" → pagina evenimentului |
 | **Evenimentul e în desfășurare** (`startDate <= azi <= endDate`) **și are `qaDetails`** | "Întrebări & Răspunsuri" → `/evenimente/[slug]/qa` |
-| **Înregistrarea e deschisă** (azi ≤ `registrationDeadline` sau câmpul lipsește) **și există `stripeLink`** | "Înscrie-te acum" → link Stripe |
+| **Înregistrarea e deschisă** (azi ≤ `registrationDeadline` sau câmpul lipsește) **și există `stripeLink`** | "Înscrie-te acum" → link Stripe; dacă există și `stripeLinkFamily`, apar două butoane: "Înscriere individuală" și "Înscriere familie" |
 | **Orice altă situație** (înregistrare închisă, fără Stripe, fără Q&A) | "Contactează-ne" → WhatsApp |
 
 Al doilea buton ("Află mai multe") duce mereu la pagina detaliată a evenimentului.

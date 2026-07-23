@@ -74,15 +74,28 @@ export function EvenimentDetailContent({ event, isFuture, registrationOpen }: { 
               {isFuture && (event.stripeLink || event.registrationDeadline) && (
                 <>
                   {registrationOpen && event.stripeLink ? (
-                    <a
-                      href={event.stripeLink}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="btn-primary px-10 py-4"
-                    >
-                      <span>Înscrie-te acum</span>
-                      <ExternalLink className="ml-3" size={18} />
-                    </a>
+                    <>
+                      <a
+                        href={event.stripeLink}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="btn-primary px-10 py-4"
+                      >
+                        <span>{event.stripeLinkFamily ? "Înscriere individuală" : "Înscrie-te acum"}</span>
+                        <ExternalLink className="ml-3" size={18} />
+                      </a>
+                      {event.stripeLinkFamily && (
+                        <a
+                          href={event.stripeLinkFamily}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="btn-primary px-10 py-4"
+                        >
+                          <span>Înscriere familie</span>
+                          <ExternalLink className="ml-3" size={18} />
+                        </a>
+                      )}
+                    </>
                   ) : (
                     <a
                       href="https://wa.me/40742215569"

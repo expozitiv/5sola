@@ -39,6 +39,7 @@ export interface Event {
   schedule: DaySchedule[];
   youtubePlaylist?: string;
   stripeLink?: string;
+  stripeLinkFamily?: string;
   registrationDeadline?: string;
   qaDetails?: {
     formId: string;
