@@ -2,8 +2,11 @@
 import { useState } from "react";
 import { motion } from "motion/react";
 import { Mail, ArrowRight, CheckCircle2, AlertCircle } from "lucide-react";
+import { useDictionary } from "@/lib/i18n/client";
 
 export function NewsletterForm() {
+  const dict = useDictionary();
+  const t = dict.newsletter;
   const [email, setEmail] = useState("");
   const [status, setStatus] = useState<"idle" | "loading" | "success" | "error">("idle");
 
@@ -23,13 +26,12 @@ export function NewsletterForm() {
 
   return (
     <div className="max-w-3xl mx-auto text-center">
-      <div className="label-caps mb-6 text-primary">Newsletter</div>
+      <div className="label-caps mb-6 text-primary">{t.label}</div>
       <h3 className="font-serif text-4xl md:text-6xl lg:text-7xl font-black mb-6 md:mb-8 leading-tight">
-        Rămâi conectat
+        {t.title}
       </h3>
       <p className="text-muted mb-8 md:mb-10 text-lg md:text-xl leading-relaxed font-medium">
-        Abonează-te la newsletter-ul nostru pentru a primi noutăți despre evenimente, conferințe și
-        resurse teologice.
+        {t.text}
       </p>
 
       <form onSubmit={handleSubmit} className="relative group max-w-xl mx-auto">
@@ -41,7 +43,7 @@ export function NewsletterForm() {
             />
             <input
               type="email"
-              placeholder="Adresa ta de email"
+              placeholder={t.placeholder}
               required
               value={email}
               onChange={(e) => setEmail(e.target.value)}
@@ -58,11 +60,11 @@ export function NewsletterForm() {
             ) : status === "success" ? (
               <>
                 <CheckCircle2 size={20} />
-                <span>Te-ai abonat</span>
+                <span>{t.subscribed}</span>
               </>
             ) : (
               <>
-                <span>Abonează-te acum</span>
+                <span>{dict.common.subscribeNow}</span>
                 <ArrowRight size={18} />
               </>
             )}
@@ -76,7 +78,7 @@ export function NewsletterForm() {
             className="mt-4 text-primary flex items-center justify-center gap-2"
           >
             <CheckCircle2 size={16} />
-            <span>Te-ai abonat cu succes! Verifică-ți email-ul.</span>
+            <span>{t.success}</span>
           </motion.p>
         )}
 
@@ -87,7 +89,7 @@ export function NewsletterForm() {
             className="mt-4 text-red-500 flex items-center justify-center gap-2"
           >
             <AlertCircle size={16} />
-            <span>A apărut o eroare. Te rugăm să încerci mai târziu.</span>
+            <span>{t.error}</span>
           </motion.p>
         )}
       </form>

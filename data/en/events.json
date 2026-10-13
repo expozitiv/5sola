@@ -1,0 +1,701 @@
+{
+  "1": {
+    "title": "The Holiness of God",
+    "location": "Aurum Palace, Bucharest",
+    "description": "The first 5 Sola national conference, devoted to the holiness of God — the foundation from which all His other divine attributes flow, and the ground of His call to His people to be holy.",
+    "topics": [
+      "The Holiness of God in Scripture",
+      "The Call to Holiness",
+      "Holiness and the Gospel"
+    ],
+    "speakers": [
+      {
+        "role": "Pastor, Buna Vestire Baptist Church, Bucharest"
+      },
+      {
+        "role": "Pastor, Stoborăști"
+      },
+      {
+        "role": "Pastor, Sfânta Treime Baptist Church, Brăila"
+      },
+      {
+        "role": "Church Worker, Sășa, Gorj"
+      }
+    ],
+    "schedule": [
+      {
+        "day": "Day 1 — Thursday, May 18",
+        "items": [
+          {
+            "activity": "Registration & Welcome"
+          },
+          {
+            "activity": "Session 1"
+          },
+          {
+            "activity": "Free Time"
+          }
+        ]
+      },
+      {
+        "day": "Day 2 — Friday, May 19",
+        "items": [
+          {
+            "activity": "Morning Devotional"
+          },
+          {
+            "activity": "Session 2"
+          },
+          {
+            "activity": "Lunch"
+          },
+          {
+            "activity": "Session 3"
+          },
+          {
+            "activity": "Q&A Panel"
+          },
+          {
+            "activity": "Session 4"
+          }
+        ]
+      },
+      {
+        "day": "Day 3 — Saturday, May 20",
+        "items": [
+          {
+            "activity": "Morning Devotional"
+          },
+          {
+            "activity": "Session 5"
+          },
+          {
+            "activity": "Lunch"
+          },
+          {
+            "activity": "Session 6"
+          },
+          {
+            "activity": "Closing Service"
+          }
+        ]
+      }
+    ]
+  },
+  "2": {
+    "title": "Be Holy!",
+    "location": "Filocalia Church Amphitheater, Iași",
+    "description": "A regional conference devoted to the practical call to holiness in the life of the Christian and of the local church, grounded in the apostolic command of 1 Peter 1:16.",
+    "topics": [
+      "Holiness in Everyday Life",
+      "Holiness and Community",
+      "Holiness and the Word of God"
+    ],
+    "speakers": [
+      {
+        "role": "Pastor"
+      },
+      {
+        "role": "Pastor, Sfânta Treime Baptist Church, Brăila"
+      },
+      {
+        "role": "Church Worker, Sășa, Gorj"
+      },
+      {
+        "role": "Pastor, Stoborăști"
+      },
+      {
+        "role": "Pastor, Buna Vestire Baptist Church, Bucharest"
+      }
+    ],
+    "schedule": [
+      {
+        "day": "Day 1 — Friday, November 17",
+        "items": [
+          {
+            "activity": "Registration"
+          },
+          {
+            "activity": "Session 1"
+          },
+          {
+            "activity": "Session 2"
+          }
+        ]
+      },
+      {
+        "day": "Day 2 — Saturday, November 18",
+        "items": [
+          {
+            "activity": "Morning Devotional"
+          },
+          {
+            "activity": "Session 3"
+          },
+          {
+            "activity": "Lunch"
+          },
+          {
+            "activity": "Session 4"
+          },
+          {
+            "activity": "Session 5 & Closing Service"
+          }
+        ]
+      }
+    ]
+  },
+  "3": {
+    "title": "The Gospel of Christ",
+    "location": "Bucharest",
+    "description": "The 2024 national conference, devoted to the gospel of Christ — its content, its power, and its faithful proclamation in today's world.",
+    "topics": [
+      "The Content of the Gospel",
+      "The Power of the Gospel",
+      "The Proclamation of the Gospel"
+    ],
+    "speakers": [
+      {
+        "role": "Pastor, ProNobis Baptist Church, Timișoara"
+      },
+      {
+        "role": "Pastor, Sfânta Treime Baptist Church, Brăila"
+      },
+      {
+        "role": "Church Worker, Sășa, Gorj"
+      },
+      {
+        "role": "Pastor, Stoborăști"
+      },
+      {
+        "role": "Pastor, Buna Vestire Baptist Church, Bucharest"
+      }
+    ],
+    "schedule": [
+      {
+        "day": "Day 1 — Thursday, May 9",
+        "items": [
+          {
+            "activity": "Registration & Welcome"
+          },
+          {
+            "activity": "Session 1"
+          },
+          {
+            "activity": "Free Time"
+          }
+        ]
+      },
+      {
+        "day": "Day 2 — Friday, May 10",
+        "items": [
+          {
+            "activity": "Morning Devotional"
+          },
+          {
+            "activity": "Session 2"
+          },
+          {
+            "activity": "Lunch"
+          },
+          {
+            "activity": "Session 3"
+          },
+          {
+            "activity": "Q&A Panel"
+          },
+          {
+            "activity": "Session 4"
+          }
+        ]
+      },
+      {
+        "day": "Day 3 — Saturday, May 11",
+        "items": [
+          {
+            "activity": "Morning Devotional"
+          },
+          {
+            "activity": "Session 5"
+          },
+          {
+            "activity": "Lunch"
+          },
+          {
+            "activity": "Session 6"
+          },
+          {
+            "activity": "Closing Service"
+          }
+        ]
+      }
+    ]
+  },
+  "4": {
+    "title": "Holy Scripture",
+    "location": "Cluj-Napoca",
+    "description": "A national conference devoted to the authority and sufficiency of Holy Scripture — the foundation on which the Church of God is built.",
+    "topics": [
+      "The Authority of Scripture",
+      "The Sufficiency of the Word of God",
+      "Scripture as the Foundation of the Church"
+    ],
+    "speakers": [
+      {
+        "role": "Pastor, Stoborăști"
+      },
+      {
+        "role": "Pastor, Sfânta Treime Baptist Church, Brăila"
+      },
+      {
+        "role": "Pastor, ProNobis Baptist Church, Timișoara"
+      },
+      {
+        "role": "Church Worker, Sășa, Gorj"
+      },
+      {
+        "role": "Pastor, Buna Vestire Baptist Church, Bucharest"
+      }
+    ],
+    "schedule": [
+      {
+        "day": "Day 1 — Friday, November 15",
+        "items": [
+          {
+            "activity": "Registration"
+          },
+          {
+            "activity": "Session 1"
+          },
+          {
+            "activity": "Session 2"
+          }
+        ]
+      },
+      {
+        "day": "Day 2 — Saturday, November 16",
+        "items": [
+          {
+            "activity": "Morning Devotional"
+          },
+          {
+            "activity": "Session 3"
+          },
+          {
+            "activity": "Lunch"
+          },
+          {
+            "activity": "Session 4"
+          },
+          {
+            "activity": "Session 5 & Closing Service"
+          }
+        ]
+      }
+    ]
+  },
+  "5": {
+    "title": "The Church of Christ — How One Ought to Behave in the Household of God",
+    "location": "Iulius Congress Hall, Timișoara",
+    "description": "The 2025 national conference, devoted to biblical ecclesiology — what the Church is, how it functions, and how believers are called to live together in the household of God.",
+    "topics": [
+      "The Nature and Mission of the Church",
+      "Church Discipline",
+      "Life Together in Christ"
+    ],
+    "speakers": [
+      {
+        "role": "Church Worker, Sășa, Gorj"
+      },
+      {
+        "role": "Pastor"
+      },
+      {
+        "role": "Pastor, Stoborăști"
+      },
+      {
+        "role": "Pastor, Buna Vestire Baptist Church, Bucharest"
+      },
+      {
+        "role": "Pastor, Sfânta Treime Baptist Church, Brăila"
+      }
+    ],
+    "schedule": [
+      {
+        "day": "Day 1 — Thursday, May 8",
+        "items": [
+          {
+            "activity": "Registration & Welcome"
+          },
+          {
+            "activity": "Session 1"
+          },
+          {
+            "activity": "Free Time"
+          }
+        ]
+      },
+      {
+        "day": "Day 2 — Friday, May 9",
+        "items": [
+          {
+            "activity": "Morning Devotional"
+          },
+          {
+            "activity": "Session 2"
+          },
+          {
+            "activity": "Lunch"
+          },
+          {
+            "activity": "Session 3"
+          },
+          {
+            "activity": "Q&A Panel"
+          },
+          {
+            "activity": "Session 4"
+          }
+        ]
+      },
+      {
+        "day": "Day 3 — Saturday, May 10",
+        "items": [
+          {
+            "activity": "Morning Devotional"
+          },
+          {
+            "activity": "Session 5"
+          },
+          {
+            "activity": "Lunch"
+          },
+          {
+            "activity": "Session 6"
+          },
+          {
+            "activity": "Closing Service"
+          }
+        ]
+      }
+    ]
+  },
+  "6": {
+    "title": "The Grace of God",
+    "location": "Emaus Impact Center, Plopeni-Salcea, Suceava",
+    "description": "A conference devoted to the doctrine of the grace of God — the source, nature, and transforming effects of divine grace in the life of the believer and of the Church.",
+    "topics": [
+      "The Doctrine of Grace in Scripture",
+      "Grace in Salvation",
+      "Grace in Sanctification"
+    ],
+    "speakers": [
+      {
+        "role": "Pastor"
+      },
+      {
+        "role": "Pastor, Stoborăști"
+      },
+      {
+        "role": "Church Worker, Sășa, Gorj"
+      },
+      {
+        "role": "Pastor, ProNobis Baptist Church, Timișoara"
+      },
+      {
+        "role": "Pastor, Sfânta Treime Baptist Church, Brăila"
+      },
+      {
+        "role": "Pastor, Buna Vestire Baptist Church, Bucharest"
+      }
+    ],
+    "schedule": [
+      {
+        "day": "Day 1 — Friday, November 21",
+        "items": [
+          {
+            "activity": "Registration"
+          },
+          {
+            "activity": "Welcome"
+          },
+          {
+            "activity": "Session I",
+            "topic": "Grace Defined"
+          },
+          {
+            "activity": "Break"
+          },
+          {
+            "activity": "Session II",
+            "topic": "Relational Grace"
+          }
+        ]
+      },
+      {
+        "day": "Day 2 — Saturday, November 22",
+        "items": [
+          {
+            "activity": "Arrival & Welcome"
+          },
+          {
+            "activity": "Session III",
+            "topic": "Common Grace"
+          },
+          {
+            "activity": "Break"
+          },
+          {
+            "activity": "Session IV",
+            "topic": "Glorious Grace"
+          },
+          {
+            "activity": "Workshops I"
+          },
+          {
+            "activity": "Lunch"
+          },
+          {
+            "activity": "Workshops II"
+          },
+          {
+            "activity": "Session V",
+            "topic": "Saving Grace"
+          },
+          {
+            "activity": "Break"
+          },
+          {
+            "activity": "Session VI",
+            "topic": "Transforming Grace"
+          },
+          {
+            "activity": "Dinner"
+          },
+          {
+            "activity": "Q&A Session"
+          },
+          {
+            "activity": "Conference Close"
+          }
+        ]
+      }
+    ]
+  },
+  "7": {
+    "title": "The Person and Work of the Holy Spirit",
+    "location": "Aurum Palace, Bucharest",
+    "description": "The 2026 national conference, devoted to the person and work of the Holy Spirit — who is He, and what does He truly do?",
+    "topics": [],
+    "speakers": [
+      {
+        "role": "Pastor, Stoborăști"
+      },
+      {
+        "role": "Church Worker, Sășa, Gorj"
+      },
+      {
+        "role": "Pastor"
+      },
+      {
+        "role": "Pastor, ProNobis Baptist Church, Timișoara"
+      },
+      {
+        "role": "Pastor, Sfânta Treime Baptist Church, Brăila"
+      },
+      {
+        "role": "Pastor, Buna Vestire Baptist Church, Bucharest"
+      }
+    ],
+    "schedule": [
+      {
+        "day": "Day 1 — Thursday, May 7",
+        "items": [
+          {
+            "activity": "Registration"
+          },
+          {
+            "activity": "Panel Session"
+          },
+          {
+            "activity": "Break"
+          },
+          {
+            "activity": "Session I — The Holy Spirit and Salvation"
+          }
+        ]
+      },
+      {
+        "day": "Day 2 — Friday, May 8",
+        "items": [
+          {
+            "activity": "Session II — The Holy Spirit and the Word"
+          },
+          {
+            "activity": "Break"
+          },
+          {
+            "activity": "Session III — Sin Against the Holy Spirit"
+          },
+          {
+            "activity": "Lunch Break"
+          },
+          {
+            "activity": "Workshops I",
+            "parallel": [
+              {
+                "room": "Rose Room",
+                "topic": "The Devil Made Me Do It? How to Stand Firm in Spiritual Warfare"
+              },
+              {
+                "room": "Luxuriant Room",
+                "topic": "Generational Sins"
+              },
+              {
+                "room": "Vert Charmante Room",
+                "topic": "Lord, Do We Want Another Pentecost? How Right Teaching on the Holy Spirit Leads to Right Worship."
+              }
+            ]
+          },
+          {
+            "activity": "Workshops II",
+            "parallel": [
+              {
+                "room": "Rose Room",
+                "topic": "Tarrying Meetings, Handkerchiefs, and Other Practices Attributed to the Holy Spirit."
+              },
+              {
+                "room": "Luxuriant Room",
+                "topic": "The Faces of the Charismatic Movement"
+              },
+              {
+                "room": "Vert Charmante Room",
+                "topic": "The Idol of Experience: The Danger of an Emotion-Driven Faith."
+              }
+            ]
+          },
+          {
+            "activity": "Dinner Break"
+          },
+          {
+            "activity": "Session IV — The Baptism with the Holy Spirit"
+          }
+        ]
+      },
+      {
+        "day": "Day 3 — Saturday, May 9",
+        "items": [
+          {
+            "activity": "Session V — The Holy Spirit and Miracles"
+          },
+          {
+            "activity": "Break"
+          },
+          {
+            "activity": "Session VI — The Guidance of the Holy Spirit"
+          },
+          {
+            "activity": "Break"
+          },
+          {
+            "activity": "Q&A"
+          }
+        ]
+      }
+    ]
+  },
+  "8": {
+    "title": "The Doctrine of the Family",
+    "location": "Centrul Creștin Brașov",
+    "description": "A biblical perspective for every generation.",
+    "registrationNote": "The price does not include lunch or dinner.",
+    "topics": [],
+    "speakers": [
+      {
+        "role": "Pastor, Emanuel Baptist Church, Arad",
+        "bio": "With more than three decades of pastoral ministry, rich experience in preaching and in training those who serve, and thorough theological preparation, Pastor Beniamin Costea currently serves at Emanuel Baptist Church in Arad."
+      },
+      {
+        "role": "Pastor, Stoborăști"
+      },
+      {
+        "role": "Church Worker, Sășa, Gorj"
+      },
+      {
+        "role": "Pastor, ProNobis Baptist Church, Timișoara"
+      },
+      {
+        "role": "Pastor, Sfânta Treime Baptist Church, Brăila"
+      },
+      {
+        "role": "Pastor, Buna Vestire Baptist Church, Bucharest"
+      }
+    ],
+    "schedule": [
+      {
+        "day": "Day 1 — Friday, November 20",
+        "items": [
+          {
+            "activity": "Registration"
+          },
+          {
+            "activity": "Welcome"
+          },
+          {
+            "activity": "Panel"
+          },
+          {
+            "activity": "Break"
+          },
+          {
+            "activity": "Session I"
+          },
+          {
+            "activity": "Break"
+          },
+          {
+            "activity": "Session II"
+          }
+        ]
+      },
+      {
+        "day": "Day 2 — Saturday, November 21",
+        "items": [
+          {
+            "activity": "Session III"
+          },
+          {
+            "activity": "Break"
+          },
+          {
+            "activity": "Session IV"
+          },
+          {
+            "activity": "Workshop I"
+          },
+          {
+            "activity": "Lunch Break"
+          },
+          {
+            "activity": "Workshop II"
+          },
+          {
+            "activity": "Session V"
+          },
+          {
+            "activity": "Break"
+          },
+          {
+            "activity": "Session VI"
+          },
+          {
+            "activity": "Dinner"
+          },
+          {
+            "activity": "Q&A"
+          }
+        ]
+      }
+    ]
+  }
+}

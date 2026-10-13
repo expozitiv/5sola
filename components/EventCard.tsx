@@ -4,6 +4,8 @@ import { Calendar, MapPin, ArrowRight } from "lucide-react";
 import type { Event } from "@/types";
 import { formatDateRange, isEventFuture } from "@/lib/utils";
 import { motion } from "motion/react";
+import { localizePath } from "@/lib/i18n/config";
+import { useDictionary, useLocale } from "@/lib/i18n/client";
 
 interface EventCardProps {
   event: Event;
@@ -12,6 +14,8 @@ interface EventCardProps {
 
 export function EventCard({ event, index = 0 }: EventCardProps) {
   const isFuture = isEventFuture(event.endDate);
+  const lang = useLocale();
+  const t = useDictionary().common;
 
   return (
     <motion.div
@@ -41,11 +45,11 @@ export function EventCard({ event, index = 0 }: EventCardProps) {
       <div className="mb-8 flex items-center justify-between">
         <div className="flex items-center gap-2 text-primary label-caps">
           <Calendar size={14} />
-          <span>{formatDateRange(event.startDate, event.endDate)}</span>
+          <span>{formatDateRange(event.startDate, event.endDate, lang)}</span>
         </div>
         {isFuture && (
           <span className="px-3 py-1 bg-primary/10 text-primary label-caps border border-primary/20 rounded-xs">
-            În curând
+            {t.comingSoon}
           </span>
         )}
       </div>
@@ -62,10 +66,10 @@ export function EventCard({ event, index = 0 }: EventCardProps) {
       <p className="text-muted line-clamp-3 mb-10 flex-1 leading-relaxed">{event.description}</p>
 
       <Link
-        href={`/evenimente/${event.slug}`}
+        href={localizePath(lang, `/evenimente/${event.slug}`)}
         className="inline-flex items-center gap-3 text-primary label-caps group/btn"
       >
-        <span>Vezi detalii</span>
+        <span>{t.seeDetails}</span>
         <ArrowRight
           size={16}
           className="group-hover/btn:translate-x-1 transition-transform duration-300"

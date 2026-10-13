@@ -7,6 +7,8 @@ import {
   MapPin,
   Phone,
 } from "lucide-react";
+import { localizePath, type Locale } from "@/lib/i18n/config";
+import { getDictionary } from "@/lib/i18n";
 
 function WhatsAppIcon() {
   return (
@@ -16,12 +18,22 @@ function WhatsAppIcon() {
   );
 }
 
-export function Footer() {
+export function Footer({ lang }: { lang: Locale }) {
+  const dict = getDictionary(lang);
+  const t = dict.footer;
+  const links = [
+    { name: dict.nav.about, path: "/cine-suntem" },
+    { name: dict.nav.beliefs, path: "/ce-credem" },
+    { name: dict.nav.events, path: "/evenimente" },
+    { name: dict.nav.resources, path: "/resurse" },
+    { name: dict.nav.contact, path: "/contact" },
+  ];
+
   return (
     <footer className="bg-bg border-t border-outline-variant pt-32 pb-16">
       <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-4 gap-20">
         <div className="col-span-1 md:col-span-2">
-          <Link href="/" className="flex items-center gap-3 mb-10 group">
+          <Link href={localizePath(lang, "/")} className="flex items-center gap-3 mb-10 group">
             <img
               src="/images/social_logo.jpg"
               alt="5 Sola"
@@ -32,9 +44,7 @@ export function Footer() {
             </span>
           </Link>
           <p className="text-muted max-w-md leading-relaxed mb-10 text-lg font-medium">
-            „În sprijinul Bisericii" prin resurse teologice, învățătură fidelă
-            Scripturii și conferințe cu vorbitori experimentați, Asociația 5
-            Sola sprijină comunități și credincioși în creșterea lor spirituală.
+            {t.tagline}
           </p>
           <div className="flex gap-6">
             <a
@@ -79,53 +89,23 @@ export function Footer() {
         </div>
 
         <div>
-          <h4 className="label-caps text-primary mb-10">Link-uri utile</h4>
+          <h4 className="label-caps text-primary mb-10">{t.usefulLinks}</h4>
           <ul className="flex flex-col gap-6">
-            <li>
-              <Link
-                href="/cine-suntem"
-                className="text-muted hover:text-ink transition-colors duration-300 font-medium"
-              >
-                Cine suntem
-              </Link>
-            </li>
-            <li>
-              <Link
-                href="/ce-credem"
-                className="text-muted hover:text-ink transition-colors duration-300 font-medium"
-              >
-                Ce credem
-              </Link>
-            </li>
-            <li>
-              <Link
-                href="/evenimente"
-                className="text-muted hover:text-ink transition-colors duration-300 font-medium"
-              >
-                Evenimente
-              </Link>
-            </li>
-            <li>
-              <Link
-                href="/resurse"
-                className="text-muted hover:text-ink transition-colors duration-300 font-medium"
-              >
-                Resurse
-              </Link>
-            </li>
-            <li>
-              <Link
-                href="/contact"
-                className="text-muted hover:text-ink transition-colors duration-300 font-medium"
-              >
-                Contact
-              </Link>
-            </li>
+            {links.map((link) => (
+              <li key={link.path}>
+                <Link
+                  href={localizePath(lang, link.path)}
+                  className="text-muted hover:text-ink transition-colors duration-300 font-medium"
+                >
+                  {link.name}
+                </Link>
+              </li>
+            ))}
           </ul>
         </div>
 
         <div>
-          <h4 className="label-caps text-primary mb-10">Contact</h4>
+          <h4 className="label-caps text-primary mb-10">{t.contact}</h4>
           <ul className="flex flex-col gap-6">
             <li className="flex items-center gap-4 text-muted font-medium">
               <Mail size={20} className="text-primary" />
@@ -151,11 +131,10 @@ export function Footer() {
 
       <div className="max-w-7xl mx-auto px-6 mt-32 pt-10 border-t border-outline-variant flex flex-col md:flex-row justify-between items-center gap-6">
         <p className="label-caps text-[10px]">
-          © {new Date().getFullYear()} Asociația 5 Sola. Toate drepturile
-          rezervate.
+          © {new Date().getFullYear()} {t.rights}
         </p>
         <p className="text-muted text-sm font-medium">
-          Realizat cu bune intenții de către{" "}
+          {t.madeBy}{" "}
           <a
             href="https://expozitiv.ro"
             target="_blank"
@@ -167,6 +146,11 @@ export function Footer() {
           </a>
         </p>
       </div>
+      {t.scriptureNotice && (
+        <p className="max-w-7xl mx-auto px-6 mt-6 text-muted/70 text-xs leading-relaxed">
+          {t.scriptureNotice}
+        </p>
+      )}
     </footer>
   );
 }

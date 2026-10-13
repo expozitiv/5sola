@@ -1,0 +1,26 @@
+{
+  "1": {
+    "role": "Pastor",
+    "bio": "Alex is married to Manuela, and they have two children. He serves as pastor of the Baptist church in Stoborăști."
+  },
+  "2": {
+    "role": "Pastor",
+    "bio": "Andrei is married to Cristina, and they have three boys. He serves as a church worker in Sașa, Gorj County."
+  },
+  "3": {
+    "role": "Elder",
+    "bio": "Cristi is married to Bianca, and they have three daughters. He serves as an elder at ProNobis Baptist Church in Timișoara."
+  },
+  "4": {
+    "role": "Pastor",
+    "bio": "David is married to Manana, and they have three children. He serves as pastor of ProNobis Baptist Church in Timișoara."
+  },
+  "5": {
+    "role": "Pastor",
+    "bio": "Iosua is married to Cristiana, and they have three children. He serves as pastor of Sfânta Treime Baptist Church in Brăila."
+  },
+  "6": {
+    "role": "Pastor",
+    "bio": "Lucian is married to Rodi, and they have two daughters. He serves as pastor of Buna Vestire Baptist Church in Bucharest."
+  }
+}
