@@ -2,9 +2,11 @@
 import { useTheme } from "next-themes";
 import { Moon, Sun } from "lucide-react";
 import { useEffect, useState } from "react";
+import { useDictionary } from "@/lib/i18n/client";
 
 export function ThemeToggle() {
   const { theme, setTheme } = useTheme();
+  const t = useDictionary();
   const [mounted, setMounted] = useState(false);
 
   useEffect(() => setMounted(true), []);
@@ -15,7 +17,7 @@ export function ThemeToggle() {
     <button
       onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
       className="w-9 h-9 flex items-center justify-center rounded-xs border border-outline-variant text-muted hover:text-ink hover:border-muted transition-colors duration-300"
-      aria-label="Schimba tema"
+      aria-label={t.nav.toggleTheme}
     >
       {theme === "dark" ? <Sun size={16} /> : <Moon size={16} />}
     </button>

@@ -1,5 +1,6 @@
 import { type ClassValue, clsx } from "clsx";
 import { twMerge } from "tailwind-merge";
+import { dateLocales, type Locale } from "@/lib/i18n/config";
 
 export function cn(...inputs: ClassValue[]) {
   return twMerge(clsx(inputs));
@@ -7,8 +8,8 @@ export function cn(...inputs: ClassValue[]) {
 
 // Date-only strings ("2026-11-20") parse as UTC midnight, so all formatting
 // and comparisons must use UTC — otherwise visitors west of UTC see the previous day.
-export function formatDate(dateString: string) {
-  return new Date(dateString).toLocaleDateString("ro-RO", {
+export function formatDate(dateString: string, lang: Locale = "ro") {
+  return new Date(dateString).toLocaleDateString(dateLocales[lang], {
     day: "numeric",
     month: "long",
     year: "numeric",
@@ -16,7 +17,8 @@ export function formatDate(dateString: string) {
   });
 }
 
-export function formatDateRange(startDate: string, endDate: string) {
+export function formatDateRange(startDate: string, endDate: string, lang: Locale = "ro") {
+  const locale = dateLocales[lang];
   const start = new Date(startDate);
   const end = new Date(endDate);
   const fullOpts: Intl.DateTimeFormatOptions = {
@@ -29,11 +31,11 @@ export function formatDateRange(startDate: string, endDate: string) {
     start.getUTCFullYear() === end.getUTCFullYear() &&
     start.getUTCMonth() === end.getUTCMonth()
   ) {
-    const startDay = start.toLocaleDateString("ro-RO", { day: "numeric", timeZone: "UTC" });
-    const endFull = end.toLocaleDateString("ro-RO", fullOpts);
+    const startDay = start.toLocaleDateString(locale, { day: "numeric", timeZone: "UTC" });
+    const endFull = end.toLocaleDateString(locale, fullOpts);
     return `${startDay}–${endFull}`;
   }
-  return `${start.toLocaleDateString("ro-RO", fullOpts)} – ${end.toLocaleDateString("ro-RO", fullOpts)}`;
+  return `${start.toLocaleDateString(locale, fullOpts)} – ${end.toLocaleDateString(locale, fullOpts)}`;
 }
 
 function localTodayISO() {

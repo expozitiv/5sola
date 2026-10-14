@@ -20,6 +20,7 @@ Site-ul oficial al **Asociației 5 Sola** (_"În sprijinul Bisericii"_), o organ
 10. [Teme și stiluri](#teme-și-stiluri)
 11. [Variabile de mediu](#variabile-de-mediu)
 12. [Deployment](#deployment)
+13. [Versiunea în limba engleză](#versiunea-în-limba-engleză)
 
 ---
 
@@ -337,17 +338,17 @@ Ordinea în array determină ordinea de afișare pe pagina `/ce-credem`.
 
 | URL | Fișier sursă | Descriere |
 |---|---|---|
-| `/` | `app/page.tsx` | Pagina principală cu hero, eveniment featured și lista de viitoare |
-| `/cine-suntem` | `app/cine-suntem/page.tsx` | Misiune, viziune, valori, echipă |
-| `/ce-credem` | `app/ce-credem/page.tsx` | Prezentarea celor 5 Sola |
-| `/evenimente` | `app/evenimente/page.tsx` | Lista tuturor evenimentelor (tab Viitoare / Arhivă) |
-| `/evenimente/[slug]` | `app/evenimente/[slug]/page.tsx` | Pagina detaliată a unui eveniment |
-| `/contact` | `app/contact/page.tsx` | Formular de contact și informații |
+| `/` | `app/[lang]/page.tsx` | Pagina principală cu hero, eveniment featured și lista de viitoare |
+| `/cine-suntem` | `app/[lang]/cine-suntem/page.tsx` | Misiune, viziune, valori, echipă |
+| `/ce-credem` | `app/[lang]/ce-credem/page.tsx` | Prezentarea celor 5 Sola |
+| `/evenimente` | `app/[lang]/evenimente/page.tsx` | Lista tuturor evenimentelor (tab Viitoare / Arhivă) |
+| `/evenimente/[slug]` | `app/[lang]/evenimente/[slug]/page.tsx` | Pagina detaliată a unui eveniment |
+| `/contact` | `app/[lang]/contact/page.tsx` | Formular de contact și informații |
 
 ### Adăugarea unei pagini noi
 
-1. Creează directorul: `app/[nume-pagina]/`
-2. Adaugă fișierul: `app/[nume-pagina]/page.tsx`
+1. Creează directorul: `app/[lang]/[nume-pagina]/`
+2. Adaugă fișierul: `app/[lang]/[nume-pagina]/page.tsx` (textele în `lib/i18n/dictionaries/ro.ts` și `en.ts`)
 3. Exportă un component React default din acel fișier
 4. Adaugă link-ul în `components/Navbar.tsx` și/sau `components/Footer.tsx`
 
@@ -420,3 +421,24 @@ npm run build
 - **YouTube:** [@Asociatia5sola](https://youtube.com/@Asociatia5sola)
 - **Instagram:** [@conferinta5sola](https://instagram.com/conferinta5sola)
 - **Facebook:** [Asociatia 5 Sola](https://facebook.com/p/5-Sola-100089754032341)
+
+
+---
+
+## Versiunea în limba engleză
+
+Site-ul este bilingv. Româna rămâne pe URL-urile existente (`/ce-credem`), engleza este
+servită cu prefixul `/en` (`/en/ce-credem`). Comutatorul **RO / EN** din navbar duce la
+aceeași pagină în cealaltă limbă.
+
+- **Rutare:** toate paginile stau în `app/[lang]/`. `proxy.ts` rescrie intern URL-urile fără
+  prefix către `/ro/...` și redirecționează `/ro/...` către varianta fără prefix.
+- **Textele interfeței:** `lib/i18n/dictionaries/ro.ts` și `en.ts` (TypeScript verifică să
+  existe aceleași chei în ambele).
+- **Conținutul din `data/`:** traducerile stau în `data/en/` și conțin doar câmpurile traduse,
+  identificate după `id`. Un eveniment nou adăugat doar în `data/events.json` apare și pe
+  `/en`, dar în română, până când adaugi traducerea în `data/en/events.json`.
+- **Ghid de stil pentru traducere** (terminologie reformată, citate ESV etc.):
+  [`data/en/README.md`](data/en/README.md).
+- **SEO:** fiecare pagină are `canonical` și `hreflang` pentru ambele limbi, iar
+  `sitemap.xml` include ambele variante.
