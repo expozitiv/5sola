@@ -1,6 +1,7 @@
 import { notFound, redirect } from "next/navigation";
 import eventsData from "@/data/events.json";
 import type { Event } from "@/types";
+import { isRegistrationOpen } from "@/lib/utils";
 import { locales, localizePath, toLocale } from "@/lib/i18n/config";
 
 const events = eventsData as Event[];
@@ -19,7 +20,7 @@ export default async function InscrierePage({
 
   if (!event) notFound();
 
-  if (event.stripeLink) {
+  if (event.stripeLink && isRegistrationOpen(event.registrationDeadline)) {
     redirect(event.stripeLink);
   }
 
