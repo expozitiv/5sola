@@ -36,6 +36,7 @@ const ro = {
     events: "Evenimente",
     resources: "Resurse",
     contact: "Contact",
+    donate: "Donează",
     toggleMenu: "Deschide meniul",
     toggleTheme: "Schimbă tema",
     switchLanguage: "Switch to English",
@@ -358,11 +359,10 @@ Credem că mântuirea este prin har, prin credință, doar în Isus Cristos, pe 
     phone: "Telefon",
     follow: "Urmărește-ne",
     supportLabel: "Susține lucrarea",
-    bankTitle: "Conturi Bancare",
-    holder: "Titular",
-    onlineDonation: "Donație online",
-    onlineDonationText: "Poți dona rapid și sigur prin card bancar via Stripe.",
-    donate: (currency: string) => `Donează (${currency})`,
+    supportTitle: "Vrei să susții lucrarea 5 Sola?",
+    supportText:
+      "Toate modalitățile de donație — online, cu cardul, sau prin transfer bancar — sunt adunate pe pagina de donații.",
+    supportCta: "Vezi modalitățile de donație",
     form: {
       sentTitle: "Mesaj Trimis!",
       sentText:
@@ -379,6 +379,47 @@ Credem că mântuirea este prin har, prin credință, doar în Isus Cristos, pe 
       submit: "Trimite Mesajul",
       error: "A apărut o eroare. Te rugăm să încerci din nou.",
     },
+  },
+
+  donate: {
+    metaTitle: "Donează — Susține Lucrarea",
+    metaDescription:
+      "Susține lucrarea Asociației 5 Sola: conferințe biblice și resurse teologice în spiritul Reformei. Donează online cu cardul sau prin transfer bancar în RON, EUR sau USD.",
+    keywords: [
+      "donație 5 sola",
+      "donează asociatia 5 sola",
+      "susține lucrarea",
+      "iban asociatia 5 sola",
+      "donație creștină",
+      "5sola.ro donează",
+    ],
+    ogTitle: "Donează | 5SOLA.RO",
+    ogDescription:
+      "Susține conferințele biblice și resursele teologice ale Asociației 5 Sola — online sau prin transfer bancar.",
+    breadcrumb: "Donează",
+    headingA: "Susține",
+    headingB: "Lucrarea",
+    lead: "Conferințele, revista Ad Fontes și resursele pe care le oferim sunt posibile prin generozitatea celor care cred în importanța învățăturii biblice sănătoase.",
+    body: "Orice dar, mic sau mare, ne ajută să echipăm credincioșii și să slujim bisericile locale din România și din diaspora. Îți mulțumim că ești alături de noi.",
+    onlineLabel: "Donație online",
+    onlineTitle: "Cu cardul",
+    onlineText:
+      "Cea mai rapidă cale: donezi în câteva secunde, cu orice card bancar. Plata este procesată securizat prin Stripe.",
+    donateIn: (currency: string) => `Donează (${currency})`,
+    bankLabel: "Transfer bancar",
+    bankTitle: "Conturi bancare",
+    bankText: "Poți face o donație prin transfer direct în contul asociației, în lei, euro sau dolari.",
+    bank: "Bancă",
+    swift: "Cod SWIFT/BIC",
+    holder: "Titular",
+    copy: "Copiază",
+    copied: "Copiat",
+    questionsTitle: "Ai întrebări?",
+    questionsText:
+      "Dacă vrei să susții un proiect anume, ai nevoie de o confirmare a donației sau de alte detalii, scrie-ne și îți răspundem cu drag.",
+    quoteText:
+      "Fiecare să dea după cum a hotărât în inima lui, nu cu părere de rău sau de silă, căci pe cine dă cu bucurie îl iubește Dumnezeu.",
+    quoteRef: "2 Corinteni 9:7",
   },
 
   notFound: {

@@ -24,8 +24,9 @@ export function Navbar() {
     { name: t.beliefs, path: "/ce-credem" },
     { name: t.events, path: "/evenimente" },
     { name: t.resources, path: "/resurse" },
+    { name: t.contact, path: "/contact" },
   ];
-  const contactPath = localizePath(lang, "/contact");
+  const donatePath = localizePath(lang, "/doneaza");
 
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 glass-nav">
@@ -42,7 +43,7 @@ export function Navbar() {
         </Link>
 
         {/* Desktop Nav */}
-        <div className="hidden lg:flex items-center gap-8 xl:gap-10">
+        <div className="hidden xl:flex items-center gap-8 2xl:gap-10">
           {navLinks.map((link) => (
             <Link
               key={link.path}
@@ -65,13 +66,16 @@ export function Navbar() {
             <LanguageSwitcher />
             <ThemeToggle />
           </div>
-          <Link href={contactPath} className="btn-primary">
-            {t.contact}
+          <Link href={donatePath} className="btn-primary">
+            {t.donate}
           </Link>
         </div>
 
         {/* Mobile Toggle */}
-        <div className="lg:hidden flex items-center gap-3">
+        <div className="xl:hidden flex items-center gap-3">
+          <Link href={donatePath} className="btn-primary hidden sm:inline-flex px-5 py-2.5">
+            {t.donate}
+          </Link>
           <LanguageSwitcher />
           <button
             className="text-ink"
@@ -88,7 +92,7 @@ export function Navbar() {
         <motion.div
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}
-          className="lg:hidden bg-bg border-b border-white/5 p-6 flex flex-col gap-6"
+          className="xl:hidden bg-bg border-b border-white/5 p-6 flex flex-col gap-6"
         >
           {navLinks.map((link) => (
             <Link
@@ -104,11 +108,11 @@ export function Navbar() {
             </Link>
           ))}
           <Link
-            href={contactPath}
+            href={donatePath}
             onClick={() => setIsOpen(false)}
             className="btn-primary py-3 text-center"
           >
-            {t.contact}
+            {t.donate}
           </Link>
         </motion.div>
       )}

@@ -27,6 +27,7 @@ export function Footer({ lang }: { lang: Locale }) {
     { name: dict.nav.events, path: "/evenimente" },
     { name: dict.nav.resources, path: "/resurse" },
     { name: dict.nav.contact, path: "/contact" },
+    { name: dict.nav.donate, path: "/doneaza" },
   ];
 
   return (
