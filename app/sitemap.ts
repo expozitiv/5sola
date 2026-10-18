@@ -24,6 +24,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     ["/evenimente", "weekly", 0.9],
     ["/resurse", "monthly", 0.7],
     ["/contact", "yearly", 0.6],
+    ["/doneaza", "yearly", 0.6],
   ];
 
   return [

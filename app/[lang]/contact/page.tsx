@@ -1,9 +1,10 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import { Mail, Phone, Facebook, Instagram, Youtube } from "lucide-react";
 import { PageHeading } from "@/components/PageHeading";
 import { AnimateIn } from "@/components/AnimateIn";
 import { ContactForm } from "./ContactForm";
-import { absoluteUrl, pageAlternates, toLocale } from "@/lib/i18n/config";
+import { absoluteUrl, localizePath, pageAlternates, toLocale } from "@/lib/i18n/config";
 import { getDictionary } from "@/lib/i18n";
 import { breadcrumbJsonLd } from "@/lib/i18n/seo";
 
@@ -130,61 +131,23 @@ export default async function Contact({ params }: Props) {
         </div>
       </section>
 
-      {/* Conturi bancare */}
-      <section className="bg-surface-low py-12 md:py-20 px-6 mb-12 md:mb-20">
+      {/* Donații — detaliile complete sunt pe /doneaza */}
+      <section className="px-6 mb-12 md:mb-20">
         <div className="max-w-7xl mx-auto">
-          <AnimateIn direction="up">
-            <div className="mb-10">
+          <AnimateIn
+            direction="up"
+            className="bento-card p-8 md:p-12 bg-primary/5 border-primary/20 flex flex-col md:flex-row md:items-center justify-between gap-8"
+          >
+            <div className="max-w-2xl">
               <span className="label-caps text-primary mb-4 block">{t.supportLabel}</span>
-              <h2 className="text-4xl md:text-5xl font-serif font-black leading-tight">
-                {t.bankTitle}
+              <h2 className="text-3xl md:text-4xl font-serif font-black leading-tight mb-4">
+                {t.supportTitle}
               </h2>
+              <p className="text-muted text-lg leading-relaxed">{t.supportText}</p>
             </div>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-              <div className="bento-card p-8 md:p-10">
-                <p className="label-caps text-muted mb-6">Banca Transilvania · SWIFT: BTRLRO22</p>
-                <p className="label-caps text-xs text-muted mb-1">{t.holder}</p>
-                <p className="font-serif font-bold text-lg mb-8">ASOCIATIA 5 SOLA</p>
-                <div className="space-y-5">
-                  {[
-                    { currency: "RON", iban: "RO48BTRLRONCRT0CO9567401" },
-                    { currency: "EUR", iban: "RO22BTRLEURCRT0CO9567401" },
-                    { currency: "USD", iban: "RO34BTRLUSDCRT0CO9567401" },
-                  ].map(({ currency, iban }) => (
-                    <div key={currency} className="flex items-center justify-between gap-4 py-4 border-t border-outline-variant">
-                      <span className="label-caps text-primary w-10 shrink-0">{currency}</span>
-                      <span className="font-mono text-sm text-muted tracking-wide break-all">{iban}</span>
-                    </div>
-                  ))}
-                </div>
-              </div>
-              <div className="bento-card p-8 md:p-10 flex flex-col justify-between">
-                <div>
-                  <p className="label-caps text-muted mb-4">{t.onlineDonation}</p>
-                  <p className="text-lg text-muted leading-relaxed mb-8">
-                    {t.onlineDonationText}
-                  </p>
-                </div>
-                <div className="flex flex-col gap-4">
-                  <a
-                    href="https://donate.stripe.com/5kAbJ80h2cjM9oY289"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="btn-primary w-full justify-center py-5"
-                  >
-                    {t.donate("RON")}
-                  </a>
-                  <a
-                    href="https://donate.stripe.com/3cIdR9aZBgqU9Y03SReAg0a"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="btn-outline w-full justify-center py-5"
-                  >
-                    {t.donate("USD")}
-                  </a>
-                </div>
-              </div>
-            </div>
+            <Link href={localizePath(lang, "/doneaza")} className="btn-primary px-10 py-5 shrink-0 justify-center">
+              {t.supportCta}
+            </Link>
           </AnimateIn>
         </div>
       </section>

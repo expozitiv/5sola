@@ -38,6 +38,7 @@ const en: Dictionary = {
     events: "Events",
     resources: "Resources",
     contact: "Contact",
+    donate: "Donate",
     toggleMenu: "Open menu",
     toggleTheme: "Toggle theme",
     switchLanguage: "Treci la română",
@@ -359,11 +360,10 @@ We believe that salvation is by grace, through faith, in Jesus Christ alone, on 
     phone: "Phone",
     follow: "Follow Us",
     supportLabel: "Support the ministry",
-    bankTitle: "Bank Accounts",
-    holder: "Account holder",
-    onlineDonation: "Online donation",
-    onlineDonationText: "You can give quickly and securely by card via Stripe.",
-    donate: (currency: string) => `Give (${currency})`,
+    supportTitle: "Would you like to support the work of 5 Sola?",
+    supportText:
+      "All the ways to give — online by card or by bank transfer — are gathered on our donations page.",
+    supportCta: "See ways to give",
     form: {
       sentTitle: "Message Sent!",
       sentText: "Thank you for your message. Our team will get back to you as soon as possible.",
@@ -379,6 +379,47 @@ We believe that salvation is by grace, through faith, in Jesus Christ alone, on 
       submit: "Send Message",
       error: "Something went wrong. Please try again.",
     },
+  },
+
+  donate: {
+    metaTitle: "Donate — Support the Ministry",
+    metaDescription:
+      "Support the work of the 5 Sola Association: Bible conferences and theological resources in the spirit of the Reformation. Give online by card or by bank transfer in RON, EUR, or USD.",
+    keywords: [
+      "donate 5 sola",
+      "give to 5 sola association",
+      "support the ministry",
+      "5 sola association iban",
+      "christian giving romania",
+      "5sola.ro donate",
+    ],
+    ogTitle: "Donate | 5SOLA.RO",
+    ogDescription:
+      "Support the Bible conferences and theological resources of the 5 Sola Association — online or by bank transfer.",
+    breadcrumb: "Donate",
+    headingA: "Support",
+    headingB: "the Ministry",
+    lead: "Our conferences, the Ad Fontes journal, and the resources we provide are made possible by the generosity of those who believe in the importance of sound biblical teaching.",
+    body: "Every gift, small or large, helps us equip believers and serve local churches in Romania and in the diaspora. Thank you for standing with us.",
+    onlineLabel: "Online donation",
+    onlineTitle: "By card",
+    onlineText:
+      "The quickest way: give in a few seconds with any bank card. Payments are processed securely by Stripe.",
+    donateIn: (currency: string) => `Donate (${currency})`,
+    bankLabel: "Bank transfer",
+    bankTitle: "Bank accounts",
+    bankText: "You can give by direct transfer to the association’s account, in Romanian lei, euros, or US dollars.",
+    bank: "Bank",
+    swift: "SWIFT/BIC code",
+    holder: "Account holder",
+    copy: "Copy",
+    copied: "Copied",
+    questionsTitle: "Have questions?",
+    questionsText:
+      "If you would like to support a particular project, need a receipt for your gift, or want more details, write to us and we will gladly reply.",
+    quoteText:
+      "Each one must give as he has decided in his heart, not reluctantly or under compulsion, for God loves a cheerful giver.",
+    quoteRef: "2 Corinthians 9:7",
   },
 
   notFound: {
