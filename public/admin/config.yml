@@ -10,6 +10,8 @@ backend:
   # base_url și branch sunt ajustate per deployment de app/api/cms-config (pe preview: branch-ul preview-ului).
   base_url: https://www.5sola.ro
   auth_endpoint: api/auth
+  # Doar „Sign In with GitHub”; fără login cu token personal.
+  auth_methods: [oauth]
 
 app_title: Administrare 5 Sola
 site_url: https://www.5sola.ro

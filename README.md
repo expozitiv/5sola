@@ -490,10 +490,6 @@ are nevoie de un al doilea OAuth App, pentru că GitHub acceptă un singur callb
 - În Vercel, `GITHUB_CLIENT_ID` / `GITHUB_CLIENT_SECRET` ale acestei aplicații, pe mediul **Preview**
 - Deschide `/admin` pe exact acea adresă (cea cu `-git-<branch>-`), apoi redeploy după ce setezi variabilele.
 
-**Alternativă fără configurare:** pe ecranul de login, *Sign In Using Access Token*, cu un
-[fine-grained token](https://github.com/settings/personal-access-tokens/new) pe repo, cu
-permisiunea *Contents: Read and write*.
-
 ### Test local
 
 `npm run dev`, apoi deschide `http://localhost:3000/admin` în Chrome sau Edge și alege
