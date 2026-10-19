@@ -458,7 +458,7 @@ aceeași pagină în cealaltă limbă.
 
 ## Administrare (`/admin`)
 
-Evenimentele se pot edita din browser la [5sola.ro/admin](https://5sola.ro/admin), cu
+Evenimentele se pot edita din browser la [www.5sola.ro/admin](https://www.5sola.ro/admin), cu
 [Sveltia CMS](https://sveltiacms.app/en/docs). Nu există bază de date: la salvare, CMS-ul face un
 commit în `data/events/` (și urcă imaginile în `public/images/`), iar Vercel publică site-ul în ~2 minute.
 
@@ -475,8 +475,9 @@ Editorii au nevoie de un cont GitHub cu drept de scriere pe `expozitiv/5sola`.
 
 **Login cu GitHub (recomandat)** — configurare, o singură dată:
 1. GitHub → *Settings → Developer settings → OAuth Apps → New OAuth App*
-   - Homepage URL: `https://5sola.ro`
-   - Authorization callback URL: `https://5sola.ro/api/auth/callback`
+   - Homepage URL: `https://www.5sola.ro`
+   - Authorization callback URL: `https://www.5sola.ro/api/auth/callback` (cu `www` — `5sola.ro` redirecționează acolo)
+   - Creează aplicația în organizația `expozitiv` (Settings → Developer settings → OAuth Apps), ca să nu fie nevoie de aprobare separată
 2. Copiază *Client ID* și generează un *Client Secret*.
 3. În Vercel → *Settings → Environment Variables* adaugă `GITHUB_CLIENT_ID` și `GITHUB_CLIENT_SECRET`, apoi redeploy.
 
