@@ -483,6 +483,13 @@ Editorii au nevoie de un cont GitHub cu drept de scriere pe `expozitiv/5sola`.
 
 Fluxul de login e implementat în `app/api/auth/` (compatibil cu Sveltia/Decap CMS).
 
+**Pe preview-urile Vercel** `/admin` salvează pe branch-ul preview-ului, nu pe `main` (config-ul e
+servit de `app/api/cms-config`), deci testele nu ating site-ul live. Login-ul cu GitHub pe preview
+are nevoie de un al doilea OAuth App, pentru că GitHub acceptă un singur callback per aplicație:
+- Homepage / callback: `https://5sola-git-<branch>-oprojects.vercel.app` / `…/api/auth/callback`
+- În Vercel, `GITHUB_CLIENT_ID` / `GITHUB_CLIENT_SECRET` ale acestei aplicații, pe mediul **Preview**
+- Deschide `/admin` pe exact acea adresă (cea cu `-git-<branch>-`), apoi redeploy după ce setezi variabilele.
+
 **Alternativă fără configurare:** pe ecranul de login, *Sign In Using Access Token*, cu un
 [fine-grained token](https://github.com/settings/personal-access-tokens/new) pe repo, cu
 permisiunea *Contents: Read and write*.

@@ -6,9 +6,11 @@
     <meta name="robots" content="noindex" />
     <title>Administrare 5 Sola</title>
     <link rel="stylesheet" href="/admin/admin.css" />
+    <!-- config.yml adjusted per deployment (login URL, preview branch); see app/api/cms-config. -->
+    <link rel="cms-config-url" type="text/yaml" href="/api/cms-config" />
   </head>
   <body>
-    <!-- Sveltia CMS, pinned; config is read from ./config.yml. -->
+    <!-- Sveltia CMS, pinned. -->
     <script src="https://unpkg.com/@sveltia/cms@0.227.4/dist/sveltia-cms.js"></script>
   </body>
 </html>

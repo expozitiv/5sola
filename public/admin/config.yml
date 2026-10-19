@@ -7,6 +7,7 @@ backend:
   repo: expozitiv/5sola
   branch: main
   # Login „Sign In with GitHub” prin app/api/auth (are nevoie de GITHUB_CLIENT_ID/SECRET pe Vercel).
+  # base_url și branch sunt ajustate per deployment de app/api/cms-config (pe preview: branch-ul preview-ului).
   base_url: https://www.5sola.ro
   auth_endpoint: api/auth
 
