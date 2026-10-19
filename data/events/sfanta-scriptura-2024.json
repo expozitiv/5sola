@@ -1,0 +1,93 @@
+{
+  "id": "4",
+  "slug": "sfanta-scriptura-2024",
+  "title": "Sfânta Scriptură",
+  "startDate": "2024-11-15",
+  "endDate": "2024-11-16",
+  "location": "Cluj-Napoca",
+  "image": "/images/events/sfanta-scriptura.png",
+  "locationUrl": "https://maps.google.com/?q=Cluj-Napoca+Romania",
+  "description": "Conferință națională dedicată autorității și suficienței Sfintei Scripturi — temelia pe care este zidită Biserica lui Dumnezeu.",
+  "speakers": [
+    {
+      "name": "Alex Ghiță",
+      "role": "Pastor, Stoborăști",
+      "image": "https://images.ctfassets.net/w312hx68oyyc/5FGBap5Wdn7jrHeRosBXt5/f55b2b75d2073ef4309d39d9766bd373/alex__1_.jpg"
+    },
+    {
+      "name": "Iosua Faur",
+      "role": "Pastor, Biserica Baptistă Sfânta Treime, Brăila",
+      "image": "https://images.ctfassets.net/w312hx68oyyc/33jH336BN57yASLlVertP1/3974db092584b8d3aec60e325b1577e6/iosua__1_.jpg"
+    },
+    {
+      "name": "David Lavric",
+      "role": "Pastor, Biserica Baptistă ProNobis, Timișoara",
+      "image": "https://images.ctfassets.net/w312hx68oyyc/eE0YhkcPYcIP05bbD9rxv/d26be6d7a535c4de7095ae5ffa88ba45/david.jpg"
+    },
+    {
+      "name": "Andrei Croitoru",
+      "role": "Lucrător în Biserică, Sășa, Gorj",
+      "image": "https://images.ctfassets.net/w312hx68oyyc/5stjIVUNPpPeA5gqVWWPkG/ac97666249effd996268526f9c894e22/andrei.jpg"
+    },
+    {
+      "name": "Lucian Bălănescu",
+      "role": "Pastor, Biserica Baptistă Buna Vestire, București",
+      "image": "https://images.ctfassets.net/w312hx68oyyc/7epFMKYfPROfvp4DC4yZYl/a9740dfe9a5663d99153034ed7546e66/luci__1_.jpg"
+    }
+  ],
+  "topics": [
+    "Autoritatea Scripturii",
+    "Suficiența Cuvântului lui Dumnezeu",
+    "Scriptura ca temelie a Bisericii"
+  ],
+  "schedule": [
+    {
+      "day": "Ziua 1 — Vineri, 15 Noiembrie",
+      "items": [
+        {
+          "time": "16:00",
+          "activity": "Înregistrare"
+        },
+        {
+          "time": "17:00",
+          "activity": "Sesiunea 1"
+        },
+        {
+          "time": "19:00",
+          "activity": "Sesiunea 2"
+        }
+      ]
+    },
+    {
+      "day": "Ziua 2 — Sâmbătă, 16 Noiembrie",
+      "items": [
+        {
+          "time": "09:00",
+          "activity": "Devotional de dimineață"
+        },
+        {
+          "time": "10:00",
+          "activity": "Sesiunea 3"
+        },
+        {
+          "time": "12:30",
+          "activity": "Prânz"
+        },
+        {
+          "time": "14:30",
+          "activity": "Sesiunea 4"
+        },
+        {
+          "time": "16:30",
+          "activity": "Sesiunea 5 & Slujbă de încheiere"
+        }
+      ]
+    }
+  ],
+  "youtubePlaylist": "https://www.youtube.com/playlist?list=PLT1HlO3pk6C3PW0H2w3xgTHwdLZWO_IcY",
+  "en": {
+    "title": "Holy Scripture",
+    "location": "Cluj-Napoca",
+    "description": "A national conference devoted to the authority and sufficiency of Holy Scripture — the foundation on which the Church of God is built."
+  }
+}

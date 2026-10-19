@@ -84,7 +84,8 @@ npm run lint     # Verificare cod cu ESLint
 │   └── ThemeToggle.tsx
 │
 ├── data/                       # Fișierele cu date (conținut editabil)
-│   ├── events.json             # ⭐ Conferințe și evenimente
+│   ├── events/                 # ⭐ Conferințe și evenimente — un fișier per eveniment
+│   │   └── <slug>.json
 │   ├── team.json               # ⭐ Membrii echipei
 │   └── beliefs.json            # ⭐ Cele 5 Sola (credințe)
 │
@@ -102,11 +103,11 @@ npm run lint     # Verificare cod cu ESLint
 
 ## Cum funcționează conținutul
 
-Cele trei fișiere JSON din `data/` controlează conținutul principal al site-ului:
+Fișierele JSON din `data/` controlează conținutul principal al site-ului:
 
 | Fișier | Pagini afectate | Ce conține |
 |---|---|---|
-| `data/events.json` | `/evenimente`, `/evenimente/[slug]`, `/` (homepage) | Conferințe, vorbitori, program, linkuri |
+| `data/events/<slug>.json` | `/evenimente`, `/evenimente/[slug]`, `/` (homepage) | Câte un fișier per conferință: vorbitori, program, linkuri, traducerea EN |
 | `data/team.json` | `/cine-suntem` | Membrii echipei |
 | `data/beliefs.json` | `/ce-credem` | Descrierile celor 5 Sola |
 
@@ -114,13 +115,13 @@ Cele trei fișiere JSON din `data/` controlează conținutul principal al site-u
 
 ## Adăugarea unui eveniment nou
 
-Deschide `data/events.json` și adaugă un obiect nou în array. **Evenimentele viitoare apar automat în tab-ul "Viitoare"**, iar cele trecute în "Arhivă" — diferența se face pe baza câmpului `endDate`.
+Creează un fișier nou `data/events/<slug>.json` (ex. `data/events/sola-gratia-2027.json`). Ordinea pe site se face automat după `startDate`. **Evenimentele viitoare apar automat în tab-ul "Viitoare"**, iar cele trecute în "Arhivă" — diferența se face pe baza câmpului `endDate`.
 
 ### Toate câmpurile unui eveniment
 
 ```json
 {
-  "id": "3",
+  "id": "9",
   "slug": "sola-gratia-2027",
   "title": "Sola Gratia: Harul lui Dumnezeu",
   "startDate": "2027-04-10",
@@ -171,7 +172,13 @@ Deschide `data/events.json` și adaugă un obiect nou în array. **Evenimentele 
         { "time": "17:00", "activity": "Slujbă de închidere" }
       ]
     }
-  ]
+  ],
+  "en": {
+    "title": "Sola Gratia: The Grace of God",
+    "location": "Cluj-Napoca, Student Culture House",
+    "description": "A conference on God's sovereign grace in salvation.",
+    "registrationNote": "The price does not include lunch or dinner."
+  }
 }
 ```
 
@@ -179,19 +186,20 @@ Deschide `data/events.json` și adaugă un obiect nou în array. **Evenimentele 
 
 | Câmp | Obligatoriu | Descriere |
 |---|---|---|
-| `id` | Da | Număr unic, incrementat față de ultimul eveniment |
+| `id` | Nu | Identificator unic; dacă lipsește se folosește `slug`-ul |
 | `slug` | Da | Identificator URL; litere mici, cifre, cratime (`sola-gratia-2027`) → `/evenimente/sola-gratia-2027` |
 | `title` | Da | Titlul conferinței, afișat mare pe hero și pe carduri |
 | `startDate` | Da | Data de început, format `YYYY-MM-DD` |
 | `endDate` | Da | Data de sfârșit, format `YYYY-MM-DD`; determină dacă evenimentul e viitor sau arhivat |
 | `location` | Da | Textul locației afișat pe site |
 | `description` | Da | Descriere scurtă (1-2 propoziții), apare pe hero și pe carduri |
-| `speakers` | Da | Array cu vorbitorii (poate fi gol `[]`) |
-| `topics` | Da | Array de teme/subiecte abordate (poate fi gol `[]`) |
-| `schedule` | Da | Array cu zilele și programul (poate fi gol `[]`) |
+| `speakers` | Nu | Array cu vorbitorii; dacă lipsește, e tratat ca gol |
+| `topics` | Nu | Array de teme/subiecte abordate; dacă lipsește, e tratat ca gol |
+| `schedule` | Nu | Array cu zilele și programul; dacă lipsește, e tratat ca gol |
 | `locationUrl` | Nu | Link Google Maps; dacă lipsește, locația apare ca text simplu |
 | `image` | Nu | Imaginea principală a evenimentului, afișată în hero și pe carduri |
-| `registrationDeadline` | Nu | Data limită de înregistrare, format `YYYY-MM-DD`; dacă lipsește, înregistrarea e mereu considerată deschisă |
+| `registrationDeadline` | Nu | Data limită de înregistrare, format `YYYY-MM-DD`; după această dată înscrierile se închid automat |
+| `registrationClosed` | Nu | `true` închide înscrierile imediat, indiferent de termen; `false` sau lipsă = deschise (până la termen) |
 | `stripeLink` | Nu | URL Stripe pentru cumpărare bilete (înscriere individuală); dacă lipsește, butonul de bilete nu apare |
 | `stripeLinkFamily` | Nu | URL Stripe pentru înscrierea de familie; dacă există, apar două butoane: "Înscriere individuală" și "Înscriere familie" |
 | `registrationNote` | Nu | Notă afișată sub butoanele de înscriere pe pagina evenimentului (ex. "Prețul nu include mesele de prânz și cina.") |
@@ -199,6 +207,9 @@ Deschide `data/events.json` și adaugă un obiect nou în array. **Evenimentele 
 | `qaDetails` | Nu | Activează pagina Q&A live (`/evenimente/[slug]/qa`) în timpul conferinței |
 | `qaDetails.formId` | — | ID-ul formularului Tally folosit pentru întrebări |
 | `qaDetails.entryField` | — | Numele câmpului din formular în care se trimite întrebarea |
+| `en` | Nu | Traducerea pentru `/en`: doar `title`, `location`, `description`, `registrationNote`. Orice câmp lipsă sau gol rămâne în română; programul, vorbitorii și temele rămân mereu în română |
+
+> Câmpurile opționale lăsate goale (`""` sau `null`) sunt ignorate, ca și cum n-ar exista. Dacă un fișier e invalid (JSON stricat, câmp obligatoriu lipsă, dată în alt format decât `YYYY-MM-DD`, `slug` duplicat), build-ul se oprește cu un mesaj care numește fișierul — site-ul live nu este afectat.
 
 ### Câmpurile unui vorbitor (`speakers[]`)
 
@@ -222,6 +233,7 @@ Deschide `data/events.json` și adaugă un obiect nou în array. **Evenimentele 
 
 - Folosește doar litere mici, cifre și cratime: `sola-gratia-2027`
 - Trebuie să fie **unic** (nu repeta slug-uri)
+- Numele fișierului ar trebui să fie același cu slug-ul: `data/events/sola-gratia-2027.json`
 - Slug-ul devine URL-ul paginii: `/evenimente/sola-gratia-2027`
 
 ### Imagini
@@ -239,10 +251,8 @@ Poți folosi:
 
 Pagina principală afișează **un singur eveniment featured** în secțiunea hero, ales automat astfel:
 
-1. **Dacă există cel puțin un eveniment viitor** (adică `endDate >= azi`): se afișează **primul eveniment viitor** din `events.json` (în ordinea în care apare în fișier).
+1. **Dacă există cel puțin un eveniment viitor** (adică `endDate >= azi`): se afișează **cel mai apropiat eveniment viitor** (cel cu `startDate` cel mai mic).
 2. **Dacă nu există niciun eveniment viitor**: se afișează **ultimul eveniment din arhivă** (cel cu `endDate` cel mai recent).
-
-> Ordinea în `events.json` contează: dacă ai mai multe viitoare, primul din fișier e cel afișat în hero.
 
 ### Grila de sub hero ("Evenimente viitoare" / "Evenimente recente")
 
@@ -258,7 +268,7 @@ Butonul principal din hero se schimbă dinamic în funcție de starea evenimentu
 |---|---|
 | **Nu există evenimente viitoare** | "Urmărește Înregistrările" → pagina evenimentului |
 | **Evenimentul e în desfășurare** (`startDate <= azi <= endDate`) **și are `qaDetails`** | "Întrebări & Răspunsuri" → `/evenimente/[slug]/qa` |
-| **Înregistrarea e deschisă** (azi ≤ `registrationDeadline` sau câmpul lipsește) **și există `stripeLink`** | "Înscrie-te acum" → link Stripe; dacă există și `stripeLinkFamily`, apar două butoane: "Înscriere individuală" și "Înscriere familie" |
+| **Înregistrarea e deschisă** (`registrationClosed` nu e `true` și azi ≤ `registrationDeadline` sau câmpul lipsește) **și există `stripeLink`** | "Înscrie-te acum" → link Stripe; dacă există și `stripeLinkFamily`, apar două butoane: "Înscriere individuală" și "Înscriere familie" |
 | **Orice altă situație** (înregistrare închisă, fără Stripe, fără Q&A) | "Contactează-ne" → WhatsApp |
 
 Al doilea buton ("Află mai multe") duce mereu la pagina detaliată a evenimentului.
@@ -272,10 +282,9 @@ Al doilea buton ("Află mai multe") duce mereu la pagina detaliată a evenimentu
 
 ## Modificarea unui eveniment existent
 
-1. Deschide `data/events.json`
-2. Găsește evenimentul după `"slug"` sau `"title"`
-3. Editează câmpurile dorite
-4. Salvează — modificările se reflectă imediat în dev (`npm run dev`)
+1. Deschide `data/events/<slug>.json`
+2. Editează câmpurile dorite
+3. Salvează — modificările se reflectă imediat în dev (`npm run dev`)
 
 **Exemple comune:**
 
@@ -291,7 +300,7 @@ Al doilea buton ("Află mai multe") duce mereu la pagina detaliată a evenimentu
 
 Nu trebuie să faci nimic manual. Evenimentul trece **automat** în tab-ul "Arhivă" de pe pagina `/evenimente` atunci când `endDate` devine o dată din trecut.
 
-Dacă vrei totuși să ștergi complet un eveniment: elimină obiectul din `data/events.json`.
+Dacă vrei totuși să ștergi complet un eveniment: șterge fișierul `data/events/<slug>.json`.
 
 ---
 
@@ -436,8 +445,9 @@ aceeași pagină în cealaltă limbă.
 - **Textele interfeței:** `lib/i18n/dictionaries/ro.ts` și `en.ts` (TypeScript verifică să
   existe aceleași chei în ambele).
 - **Conținutul din `data/`:** traducerile stau în `data/en/` și conțin doar câmpurile traduse,
-  identificate după `id`. Un eveniment nou adăugat doar în `data/events.json` apare și pe
-  `/en`, dar în română, până când adaugi traducerea în `data/en/events.json`.
+  identificate după `id`.
+- **Evenimentele** își au traducerea în propriul fișier, în blocul `"en"` (doar titlu, locație,
+  descriere, notă de înscriere). Fără bloc `"en"`, evenimentul apare pe `/en` în română.
 - **Ghid de stil pentru traducere** (terminologie reformată, citate ESV etc.):
   [`data/en/README.md`](data/en/README.md).
 - **SEO:** fiecare pagină are `canonical` și `hreflang` pentru ambele limbi, iar

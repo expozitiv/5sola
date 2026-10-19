@@ -1,0 +1,93 @@
+{
+  "id": "2",
+  "slug": "fiti-sfinti-2023",
+  "title": "Fiți Sfinți!",
+  "startDate": "2023-11-17",
+  "endDate": "2023-11-18",
+  "location": "Amfiteatrul Bisericii Filocalia, Iași",
+  "image": "/images/events/fiti-sfinti.jpg",
+  "locationUrl": "https://maps.google.com/?q=Strada+Smardan+13+Iasi",
+  "description": "Conferință regională dedicată chemării practice la sfințenie în viața creștinului și a bisericii locale, bazată pe porunca apostolică din 1 Petru 1:16.",
+  "speakers": [
+    {
+      "name": "Iosif Marica",
+      "role": "Pastor",
+      "image": "https://images.ctfassets.net/w312hx68oyyc/6XfBkm58lmY4ovoLuNFado/8f3198aba023f7e6b77a953f7267c07a/marica__1_.png"
+    },
+    {
+      "name": "Iosua Faur",
+      "role": "Pastor, Biserica Baptistă Sfânta Treime, Brăila",
+      "image": "https://images.ctfassets.net/w312hx68oyyc/33jH336BN57yASLlVertP1/3974db092584b8d3aec60e325b1577e6/iosua__1_.jpg"
+    },
+    {
+      "name": "Andrei Croitoru",
+      "role": "Lucrător în Biserică, Sășa, Gorj",
+      "image": "https://images.ctfassets.net/w312hx68oyyc/5stjIVUNPpPeA5gqVWWPkG/ac97666249effd996268526f9c894e22/andrei.jpg"
+    },
+    {
+      "name": "Alex Ghiță",
+      "role": "Pastor, Stoborăști",
+      "image": "https://images.ctfassets.net/w312hx68oyyc/5FGBap5Wdn7jrHeRosBXt5/f55b2b75d2073ef4309d39d9766bd373/alex__1_.jpg"
+    },
+    {
+      "name": "Lucian Bălănescu",
+      "role": "Pastor, Biserica Baptistă Buna Vestire, București",
+      "image": "https://images.ctfassets.net/w312hx68oyyc/7epFMKYfPROfvp4DC4yZYl/a9740dfe9a5663d99153034ed7546e66/luci__1_.jpg"
+    }
+  ],
+  "topics": [
+    "Sfințenia în viața de zi cu zi",
+    "Sfințenie și comunitate",
+    "Sfințenie și Cuvântul lui Dumnezeu"
+  ],
+  "schedule": [
+    {
+      "day": "Ziua 1 — Vineri, 17 Noiembrie",
+      "items": [
+        {
+          "time": "16:00",
+          "activity": "Înregistrare"
+        },
+        {
+          "time": "17:00",
+          "activity": "Sesiunea 1"
+        },
+        {
+          "time": "19:00",
+          "activity": "Sesiunea 2"
+        }
+      ]
+    },
+    {
+      "day": "Ziua 2 — Sâmbătă, 18 Noiembrie",
+      "items": [
+        {
+          "time": "09:00",
+          "activity": "Devotional de dimineață"
+        },
+        {
+          "time": "10:00",
+          "activity": "Sesiunea 3"
+        },
+        {
+          "time": "12:30",
+          "activity": "Prânz"
+        },
+        {
+          "time": "14:30",
+          "activity": "Sesiunea 4"
+        },
+        {
+          "time": "16:30",
+          "activity": "Sesiunea 5 & Slujbă de încheiere"
+        }
+      ]
+    }
+  ],
+  "youtubePlaylist": "https://www.youtube.com/playlist?list=PLT1HlO3pk6C0J4u4jHF-xkfPiiVJtWt4m",
+  "en": {
+    "title": "Be Holy!",
+    "location": "Filocalia Church Amphitheater, Iași",
+    "description": "A regional conference devoted to the practical call to holiness in the life of the Christian and of the local church, grounded in the apostolic command of 1 Peter 1:16."
+  }
+}

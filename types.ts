@@ -42,6 +42,7 @@ export interface Event {
   stripeLinkFamily?: string;
   registrationNote?: string;
   registrationDeadline?: string;
+  registrationClosed?: boolean;
   qaDetails?: {
     formId: string;
     entryField: string;

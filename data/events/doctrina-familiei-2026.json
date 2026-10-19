@@ -1,0 +1,143 @@
+{
+  "id": "8",
+  "slug": "doctrina-familiei-2026",
+  "title": "Doctrina Familiei",
+  "startDate": "2026-11-20",
+  "endDate": "2026-11-21",
+  "location": "Centrul Creștin Brașov",
+  "image": "/images/events/doctrina-familiei.jpg",
+  "locationUrl": "https://maps.app.goo.gl/k5MSkVopXTjU9Vaf7",
+  "description": "O perspectivă biblică pentru fiecare generație.",
+  "speakers": [
+    {
+      "name": "Beniamin Costea",
+      "role": "Pastor, Biserica Baptistă Emanuel, Arad",
+      "image": "/images/echipa/beniamin-costea.jpg",
+      "bio": "Cu peste trei decenii de slujire pastorală, o bogată experiență în predicare și formarea slujitorilor, precum și o pregătire teologică aprofundată, pastorul Beniamin Costea slujește în prezent în biserica baptistă „Emanuel” din Arad."
+    },
+    {
+      "name": "Alex Ghiță",
+      "role": "Pastor, Stoborăști",
+      "image": "/images/echipa/alex.jpg"
+    },
+    {
+      "name": "Andrei Croitoru",
+      "role": "Lucrător în Biserică, Sășa, Gorj",
+      "image": "/images/echipa/andrei.jpg"
+    },
+    {
+      "name": "David Lavric",
+      "role": "Pastor, Biserica Baptistă ProNobis, Timișoara",
+      "image": "/images/echipa/david.jpg"
+    },
+    {
+      "name": "Iosua Faur",
+      "role": "Pastor, Biserica Baptistă Sfânta Treime, Brăila",
+      "image": "/images/echipa/iosua.jpg"
+    },
+    {
+      "name": "Lucian Bălănescu",
+      "role": "Pastor, Biserica Baptistă Buna Vestire, București",
+      "image": "/images/echipa/lucian.jpeg"
+    }
+  ],
+  "topics": [],
+  "schedule": [
+    {
+      "day": "Ziua 1 — Vineri, 20 Noiembrie",
+      "items": [
+        {
+          "time": "15:00",
+          "activity": "Înregistrare"
+        },
+        {
+          "time": "17:00",
+          "activity": "Bun-venit"
+        },
+        {
+          "time": "17:15",
+          "activity": "Panel"
+        },
+        {
+          "time": "18:15",
+          "activity": "Pauză"
+        },
+        {
+          "time": "18:30",
+          "activity": "Sesiunea I"
+        },
+        {
+          "time": "19:45",
+          "activity": "Pauză"
+        },
+        {
+          "time": "20:00",
+          "activity": "Sesiunea II"
+        }
+      ]
+    },
+    {
+      "day": "Ziua 2 — Sâmbătă, 21 Noiembrie",
+      "items": [
+        {
+          "time": "09:00",
+          "activity": "Sesiunea III"
+        },
+        {
+          "time": "10:20",
+          "activity": "Pauză"
+        },
+        {
+          "time": "10:45",
+          "activity": "Sesiunea IV"
+        },
+        {
+          "time": "12:00",
+          "activity": "Atelier I"
+        },
+        {
+          "time": "13:10",
+          "activity": "Pauza de prânz"
+        },
+        {
+          "time": "14:30",
+          "activity": "Atelier II"
+        },
+        {
+          "time": "15:45",
+          "activity": "Sesiunea V"
+        },
+        {
+          "time": "17:00",
+          "activity": "Pauză"
+        },
+        {
+          "time": "17:15",
+          "activity": "Sesiunea VI"
+        },
+        {
+          "time": "18:30",
+          "activity": "Cina"
+        },
+        {
+          "time": "19:45",
+          "activity": "Q&A"
+        }
+      ]
+    }
+  ],
+  "stripeLink": "https://buy.stripe.com/7sYbJ12t5b6A8TWexveAg0d?prefilled_promo_code=EARLYBIRDBRASOV&locale=ro",
+  "stripeLinkFamily": "https://buy.stripe.com/8x29AT9Vxb6Adac4WVeAg0f?prefilled_promo_code=EARLYBIRDFAMILYBRASOV&locale=ro",
+  "registrationDeadline": "2026-10-16",
+  "registrationNote": "Prețul nu include mesele de prânz și cina.",
+  "qaDetails": {
+    "formId": "1FAIpQLScL8MDqXyyWN8Sw2dJZuDMNihjhj_Woq2dus1JHLrbnd005ag",
+    "entryField": "entry.1859035300"
+  },
+  "en": {
+    "title": "The Doctrine of the Family",
+    "location": "Centrul Creștin Brașov",
+    "description": "A biblical perspective for every generation.",
+    "registrationNote": "The price does not include lunch or dinner."
+  }
+}

@@ -2,14 +2,17 @@
 
 Fișierele din `data/en/` conțin **doar câmpurile traduse** ale fișierelor din `data/`.
 Site-ul le suprapune peste varianta românească (`lib/i18n/content.ts`): orice câmp lipsă
-din traducere rămâne automat în română. Astfel, un eveniment nou adăugat doar în
-`data/events.json` apare imediat și pe `/en`, în română, până când este tradus.
+din traducere rămâne automat în română.
+
+**Excepție — evenimentele:** traducerea stă chiar în fișierul evenimentului
+(`data/events/<slug>.json`), în blocul `"en"`, și acoperă doar `title`, `location`,
+`description` și `registrationNote`. Programul, vorbitorii și temele rămân în română și pe `/en`.
+Un câmp lipsă sau gol din `"en"` se afișează în română.
 
 ## Structura fișierelor
 
 | Fișier | Cheie | Câmpuri traductibile |
 |---|---|---|
-| `events.json` | `id`-ul evenimentului | `title`, `location`, `description`, `registrationNote`, `topics[]`, `speakers[].role`, `speakers[].bio`, `schedule[].day`, `schedule[].items[].activity`, `schedule[].items[].topic`, `schedule[].items[].parallel[].room`, `schedule[].items[].parallel[].topic` |
 | `beliefs.json` | `id` | `subtitle`, `description`, `longDescription`, `verses[]` |
 | `team.json` | `id` | `role`, `bio` |
 | `resources.json` | `id` | `title`, `description` |

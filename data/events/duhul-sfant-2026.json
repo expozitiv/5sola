@@ -1,0 +1,174 @@
+{
+  "id": "7",
+  "slug": "duhul-sfant-2026",
+  "title": "Persoana și lucrarea Duhului Sfânt",
+  "startDate": "2026-05-07",
+  "endDate": "2026-05-09",
+  "location": "Aurum Palace, București",
+  "image": "/images/events/duhul-sfant.png",
+  "locationUrl": "https://maps.google.com/?q=Aurum+Palace+Sos+Electronicii+Bucuresti",
+  "description": "Conferința națională 2026 dedicată persoanei și lucrării Duhului Sfânt — cine este El și ce face El cu adevărat?",
+  "speakers": [
+    {
+      "name": "Alex Ghiță",
+      "role": "Pastor, Stoborăști",
+      "image": "/images/echipa/alex.jpg"
+    },
+    {
+      "name": "Andrei Croitoru",
+      "role": "Lucrător în Biserică, Sășa, Gorj",
+      "image": "/images/echipa/andrei.jpg"
+    },
+    {
+      "name": "Andrei Sava",
+      "role": "Pastor",
+      "image": "/images/echipa/andrei-sava.png"
+    },
+    {
+      "name": "David Lavric",
+      "role": "Pastor, Biserica Baptistă ProNobis, Timișoara",
+      "image": "/images/echipa/david.jpg"
+    },
+    {
+      "name": "Iosua Faur",
+      "role": "Pastor, Biserica Baptistă Sfânta Treime, Brăila",
+      "image": "/images/echipa/iosua.jpg"
+    },
+    {
+      "name": "Lucian Bălănescu",
+      "role": "Pastor, Biserica Baptistă Buna Vestire, București",
+      "image": "/images/echipa/lucian.jpeg"
+    }
+  ],
+  "topics": [],
+  "schedule": [
+    {
+      "day": "Ziua 1 — Joi, 7 Mai",
+      "items": [
+        {
+          "time": "16:00",
+          "activity": "Înregistrare"
+        },
+        {
+          "time": "18:00",
+          "activity": "Sesiune panel"
+        },
+        {
+          "time": "19:00",
+          "activity": "Pauză"
+        },
+        {
+          "time": "19:30",
+          "activity": "Sesiunea I — Duhul Sfânt și mântuirea"
+        }
+      ]
+    },
+    {
+      "day": "Ziua 2 — Vineri, 8 Mai",
+      "items": [
+        {
+          "time": "09:00",
+          "activity": "Sesiunea II — Duhul Sfânt și Cuvântul"
+        },
+        {
+          "time": "10:20",
+          "activity": "Pauză"
+        },
+        {
+          "time": "10:45",
+          "activity": "Sesiunea III — Păcat împotriva Duhului Sfânt"
+        },
+        {
+          "time": "12:00",
+          "activity": "Pauza de prânz"
+        },
+        {
+          "time": "14:00",
+          "activity": "Ateliere I",
+          "parallel": [
+            {
+              "room": "Sala Rose",
+              "speaker": "Andrei Sava",
+              "topic": "Diavolul m-a pus să fac asta? Cum să biruim în lupta spirituală"
+            },
+            {
+              "room": "Sala Luxuriant",
+              "speaker": "David Lavric",
+              "topic": "Păcatele generaționale"
+            },
+            {
+              "room": "Sala Vert Charmante",
+              "speaker": "Iosua Faur",
+              "topic": "Doamne, mai vrem Rusalii? Cum învățătura corectă despre Duhul Sfânt duce la o închinare corectă."
+            }
+          ]
+        },
+        {
+          "time": "16:00",
+          "activity": "Ateliere II",
+          "parallel": [
+            {
+              "room": "Sala Rose",
+              "speaker": "Alex Ghiță",
+              "topic": "Stăruințe, batiste și alte practici puse pe seama Duhului Sfânt."
+            },
+            {
+              "room": "Sala Luxuriant",
+              "speaker": "Andrei Croitoru",
+              "topic": "Fețele carismatismului"
+            },
+            {
+              "room": "Sala Vert Charmante",
+              "speaker": "Lucian Bălănescu",
+              "topic": "Idolul experienței: Pericolul unei credințe dependente de emoție."
+            }
+          ]
+        },
+        {
+          "time": "17:30",
+          "activity": "Pauza de cină"
+        },
+        {
+          "time": "19:00",
+          "activity": "Sesiunea IV — Botezul cu Duhul Sfânt"
+        }
+      ]
+    },
+    {
+      "day": "Ziua 3 — Sâmbătă, 9 Mai",
+      "items": [
+        {
+          "time": "09:00",
+          "activity": "Sesiunea V — Duhul Sfânt și minunile"
+        },
+        {
+          "time": "10:20",
+          "activity": "Pauză"
+        },
+        {
+          "time": "10:45",
+          "activity": "Sesiunea VI — Călăuzirea Duhului Sfânt"
+        },
+        {
+          "time": "12:00",
+          "activity": "Pauză"
+        },
+        {
+          "time": "12:10",
+          "activity": "Q&A"
+        }
+      ]
+    }
+  ],
+  "stripeLink": "https://buy.stripe.com/6oU00jgjV7Uoc68ahfeAg0c",
+  "registrationDeadline": "2026-05-04",
+  "qaDetails": {
+    "formId": "1FAIpQLScL8MDqXyyWN8Sw2dJZuDMNihjhj_Woq2dus1JHLrbnd005ag",
+    "entryField": "entry.1859035300"
+  },
+  "en": {
+    "title": "The Person and Work of the Holy Spirit",
+    "location": "Aurum Palace, Bucharest",
+    "description": "The 2026 national conference, devoted to the person and work of the Holy Spirit — who is He, and what does He truly do?"
+  }
+}

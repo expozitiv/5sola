@@ -2,8 +2,6 @@ import { notFound, redirect } from "next/navigation";
 import type { Metadata } from "next";
 import Link from "next/link";
 import { ArrowLeft, Calendar, MapPin } from "lucide-react";
-import eventsData from "@/data/events.json";
-import type { Event } from "@/types";
 import { formatDateRange, isEventOngoing } from "@/lib/utils";
 import QAForm from "./QAForm";
 import { locales, localizePath, pageAlternates, toLocale } from "@/lib/i18n/config";
@@ -14,7 +12,7 @@ type Props = { params: Promise<{ lang: string; slug: string }> };
 
 export function generateStaticParams() {
   return locales.flatMap((lang) =>
-    (eventsData as Event[])
+    getEvents("ro")
       .filter((e) => e.qaDetails?.formId)
       .map((e) => ({ lang, slug: e.slug }))
   );

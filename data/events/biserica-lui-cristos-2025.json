@@ -1,0 +1,122 @@
+{
+  "id": "5",
+  "slug": "biserica-lui-cristos-2025",
+  "title": "Biserica lui Cristos — Cum să te porți în casa lui Dumnezeu",
+  "startDate": "2025-05-08",
+  "endDate": "2025-05-10",
+  "location": "Iulius Congress Hall, Timișoara",
+  "image": "/images/events/biserica-lui-cristos.png",
+  "locationUrl": "https://maps.google.com/?q=Iulius+Congress+Hall+Timisoara",
+  "description": "Conferința națională 2025 dedicată eclesiologiei biblice — ce este Biserica, cum funcționează și cum sunt chemați credincioșii să trăiască împreună în casa lui Dumnezeu.",
+  "speakers": [
+    {
+      "name": "Andrei Croitoru",
+      "role": "Lucrător în Biserică, Sășa, Gorj",
+      "image": "https://images.ctfassets.net/w312hx68oyyc/5stjIVUNPpPeA5gqVWWPkG/ac97666249effd996268526f9c894e22/andrei.jpg"
+    },
+    {
+      "name": "Marius Birgean",
+      "role": "Pastor",
+      "image": "https://images.ctfassets.net/w312hx68oyyc/5aPv1sjPUMDSvMME5QLFFk/0147e6286703664a4a86a7c1dbf97e28/birgean__1_.jpg"
+    },
+    {
+      "name": "Alex Ghiță",
+      "role": "Pastor, Stoborăști",
+      "image": "https://images.ctfassets.net/w312hx68oyyc/5FGBap5Wdn7jrHeRosBXt5/f55b2b75d2073ef4309d39d9766bd373/alex__1_.jpg"
+    },
+    {
+      "name": "Lucian Bălănescu",
+      "role": "Pastor, Biserica Baptistă Buna Vestire, București",
+      "image": "https://images.ctfassets.net/w312hx68oyyc/7epFMKYfPROfvp4DC4yZYl/a9740dfe9a5663d99153034ed7546e66/luci__1_.jpg"
+    },
+    {
+      "name": "Iosua Faur",
+      "role": "Pastor, Biserica Baptistă Sfânta Treime, Brăila",
+      "image": "https://images.ctfassets.net/w312hx68oyyc/33jH336BN57yASLlVertP1/3974db092584b8d3aec60e325b1577e6/iosua__1_.jpg"
+    }
+  ],
+  "topics": [
+    "Natura și misiunea Bisericii",
+    "Disciplina bisericească",
+    "Viața de comunitate în Hristos"
+  ],
+  "schedule": [
+    {
+      "day": "Ziua 1 — Joi, 8 Mai",
+      "items": [
+        {
+          "time": "17:00",
+          "activity": "Înregistrare & Primire"
+        },
+        {
+          "time": "18:00",
+          "activity": "Sesiunea 1"
+        },
+        {
+          "time": "20:00",
+          "activity": "Timp liber"
+        }
+      ]
+    },
+    {
+      "day": "Ziua 2 — Vineri, 9 Mai",
+      "items": [
+        {
+          "time": "09:00",
+          "activity": "Devotional de dimineață"
+        },
+        {
+          "time": "10:00",
+          "activity": "Sesiunea 2"
+        },
+        {
+          "time": "12:30",
+          "activity": "Prânz"
+        },
+        {
+          "time": "14:30",
+          "activity": "Sesiunea 3"
+        },
+        {
+          "time": "17:00",
+          "activity": "Panel de întrebări și răspunsuri"
+        },
+        {
+          "time": "19:00",
+          "activity": "Sesiunea 4"
+        }
+      ]
+    },
+    {
+      "day": "Ziua 3 — Sâmbătă, 10 Mai",
+      "items": [
+        {
+          "time": "09:00",
+          "activity": "Devotional de dimineață"
+        },
+        {
+          "time": "10:00",
+          "activity": "Sesiunea 5"
+        },
+        {
+          "time": "12:30",
+          "activity": "Prânz"
+        },
+        {
+          "time": "14:30",
+          "activity": "Sesiunea 6"
+        },
+        {
+          "time": "17:00",
+          "activity": "Slujbă de încheiere"
+        }
+      ]
+    }
+  ],
+  "youtubePlaylist": "https://www.youtube.com/playlist?list=PLT1HlO3pk6C3q0I_dBVdVc7aee23PcCfR",
+  "en": {
+    "title": "The Church of Christ — How One Ought to Behave in the Household of God",
+    "location": "Iulius Congress Hall, Timișoara",
+    "description": "The 2025 national conference, devoted to biblical ecclesiology — what the Church is, how it functions, and how believers are called to live together in the household of God."
+  }
+}

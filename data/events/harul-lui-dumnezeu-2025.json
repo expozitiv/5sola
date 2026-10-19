@@ -1,0 +1,150 @@
+{
+  "id": "6",
+  "slug": "harul-lui-dumnezeu-2025",
+  "title": "Harul lui Dumnezeu",
+  "startDate": "2025-11-21",
+  "endDate": "2025-11-22",
+  "location": "Centrul Emaus Impact, Plopeni-Salcea, Suceava",
+  "image": "/images/events/harul-lui-dumnezeu.jpg",
+  "locationUrl": "https://maps.google.com/?q=Calea+Sucevei+261A+Plopeni-Salcea+Suceava",
+  "description": "Conferință dedicată doctrinei harului lui Dumnezeu — sursa, natura și efectele transformatoare ale harului divin în viața credinciosului și a Bisericii.",
+  "speakers": [
+    {
+      "name": "Beni Cruceru",
+      "role": "Pastor",
+      "image": "https://images.ctfassets.net/w312hx68oyyc/3BoEGAeRJ4JvuknfSNqLJ2/9924ec79ca96881e2c59ae69606eed96/cruceru.jpeg"
+    },
+    {
+      "name": "Alex Ghiță",
+      "role": "Pastor, Stoborăști",
+      "image": "https://images.ctfassets.net/w312hx68oyyc/5FGBap5Wdn7jrHeRosBXt5/f55b2b75d2073ef4309d39d9766bd373/alex__1_.jpg"
+    },
+    {
+      "name": "Andrei Croitoru",
+      "role": "Lucrător în Biserică, Sășa, Gorj",
+      "image": "https://images.ctfassets.net/w312hx68oyyc/5stjIVUNPpPeA5gqVWWPkG/ac97666249effd996268526f9c894e22/andrei.jpg"
+    },
+    {
+      "name": "David Lavric",
+      "role": "Pastor, Biserica Baptistă ProNobis, Timișoara",
+      "image": "https://images.ctfassets.net/w312hx68oyyc/eE0YhkcPYcIP05bbD9rxv/d26be6d7a535c4de7095ae5ffa88ba45/david.jpg"
+    },
+    {
+      "name": "Iosua Faur",
+      "role": "Pastor, Biserica Baptistă Sfânta Treime, Brăila",
+      "image": "https://images.ctfassets.net/w312hx68oyyc/33jH336BN57yASLlVertP1/3974db092584b8d3aec60e325b1577e6/iosua__1_.jpg"
+    },
+    {
+      "name": "Lucian Bălănescu",
+      "role": "Pastor, Biserica Baptistă Buna Vestire, București",
+      "image": "https://images.ctfassets.net/w312hx68oyyc/7epFMKYfPROfvp4DC4yZYl/a9740dfe9a5663d99153034ed7546e66/luci__1_.jpg"
+    }
+  ],
+  "topics": [
+    "Doctrina harului în Scriptură",
+    "Harul în mântuire",
+    "Harul în sfințire"
+  ],
+  "schedule": [
+    {
+      "day": "Ziua 1 — Vineri, 21 Noiembrie",
+      "items": [
+        {
+          "time": "16:00",
+          "activity": "Înregistrare"
+        },
+        {
+          "time": "18:00",
+          "activity": "Bun venit"
+        },
+        {
+          "time": "18:15",
+          "activity": "Sesiunea I",
+          "topic": "Harul Definit",
+          "speaker": "Iosua Faur"
+        },
+        {
+          "time": "19:30",
+          "activity": "Pauză"
+        },
+        {
+          "time": "19:45",
+          "activity": "Sesiunea II",
+          "topic": "Harul Relațional",
+          "speaker": "Beni Cruceru"
+        }
+      ]
+    },
+    {
+      "day": "Ziua 2 — Sâmbătă, 22 Noiembrie",
+      "items": [
+        {
+          "time": "08:00",
+          "activity": "Primire"
+        },
+        {
+          "time": "09:00",
+          "activity": "Sesiunea III",
+          "topic": "Harul Comun",
+          "speaker": "Andrei Croitoru"
+        },
+        {
+          "time": "10:15",
+          "activity": "Pauză"
+        },
+        {
+          "time": "10:40",
+          "activity": "Sesiunea IV",
+          "topic": "Harul Măreț",
+          "speaker": "Alex Ghiță"
+        },
+        {
+          "time": "11:55",
+          "activity": "Ateliere I"
+        },
+        {
+          "time": "13:05",
+          "activity": "Prânz"
+        },
+        {
+          "time": "14:05",
+          "activity": "Ateliere II"
+        },
+        {
+          "time": "15:25",
+          "activity": "Sesiunea V",
+          "topic": "Harul Mântuitor",
+          "speaker": "David Lavric"
+        },
+        {
+          "time": "16:40",
+          "activity": "Pauză"
+        },
+        {
+          "time": "17:10",
+          "activity": "Sesiunea VI",
+          "topic": "Harul Transformator",
+          "speaker": "Lucian Bălănescu"
+        },
+        {
+          "time": "18:25",
+          "activity": "Cină"
+        },
+        {
+          "time": "19:30",
+          "activity": "Sesiune Q&A"
+        },
+        {
+          "time": "21:00",
+          "activity": "Finalul Conferinței"
+        }
+      ]
+    }
+  ],
+  "youtubePlaylist": "https://www.youtube.com/playlist?list=PLT1HlO3pk6C0StQPlhmA5CM0DB07DFRfq",
+  "en": {
+    "title": "The Grace of God",
+    "location": "Emaus Impact Center, Plopeni-Salcea, Suceava",
+    "description": "A conference devoted to the doctrine of the grace of God — the source, nature, and transforming effects of divine grace in the life of the believer and of the Church."
+  }
+}

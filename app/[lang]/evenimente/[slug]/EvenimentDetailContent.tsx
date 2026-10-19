@@ -79,7 +79,7 @@ export function EvenimentDetailContent({ event, isFuture, registrationOpen }: { 
             </h1>
 
             <div className="flex flex-col sm:flex-row flex-wrap gap-4">
-              {isFuture && (event.stripeLink || event.registrationDeadline) && (
+              {isFuture && (event.stripeLink || event.registrationDeadline || event.registrationClosed) && (
                 <>
                   {registrationOpen && event.stripeLink ? (
                     <>
@@ -115,10 +115,12 @@ export function EvenimentDetailContent({ event, isFuture, registrationOpen }: { 
                       <ExternalLink className="ml-3" size={18} />
                     </a>
                   )}
-                  <Link href={`${eventPath}/orar`} className="btn-outline px-10 py-4">
-                    {t.seeProgram}
-                  </Link>
                 </>
+              )}
+              {event.schedule.length > 0 && (
+                <Link href={`${eventPath}/orar`} className="btn-outline px-10 py-4">
+                  {t.seeProgram}
+                </Link>
               )}
               {isOngoing && event.qaDetails?.formId && (
                 <Link

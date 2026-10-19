@@ -52,7 +52,9 @@ export function isEventOngoing(startDate: string, endDate: string) {
   return startDate <= today && today <= endDate;
 }
 
-export function isRegistrationOpen(registrationDeadline?: string) {
-  if (!registrationDeadline) return true;
-  return registrationDeadline >= localTodayISO();
+// Closed by the explicit switch, or automatically once the deadline has passed.
+export function isRegistrationOpen(event: { registrationClosed?: boolean; registrationDeadline?: string }) {
+  if (event.registrationClosed) return false;
+  if (!event.registrationDeadline) return true;
+  return event.registrationDeadline >= localTodayISO();
 }

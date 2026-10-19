@@ -1,13 +1,13 @@
-import eventsData from "@/data/events.json";
 import beliefsData from "@/data/beliefs.json";
 import teamData from "@/data/team.json";
 import resourcesData from "@/data/resources.json";
-import eventsEn from "@/data/en/events.json";
 import beliefsEn from "@/data/en/beliefs.json";
 import teamEn from "@/data/en/team.json";
 import resourcesEn from "@/data/en/resources.json";
-import type { Belief, Event, Resource, TeamMember } from "@/types";
+import type { Belief, Resource, TeamMember } from "@/types";
 import type { Locale } from "./config";
+
+export { getEvents } from "@/lib/events";
 
 type Overlay = Record<string, unknown>;
 
@@ -40,10 +40,6 @@ function translateById<T extends { id: string }>(
 }
 
 const resources = resourcesData as unknown as { magazines: Resource[]; books: Resource[] };
-
-export function getEvents(lang: Locale): Event[] {
-  return translateById(eventsData as Event[], lang, eventsEn as Record<string, Overlay>);
-}
 
 export function getBeliefs(lang: Locale): Belief[] {
   return translateById(beliefsData as Belief[], lang, beliefsEn as Record<string, Overlay>);

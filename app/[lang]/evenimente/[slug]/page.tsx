@@ -125,7 +125,7 @@ export default async function EvenimentDetailPage({ params }: Props) {
       <EvenimentDetailContent
         event={event}
         isFuture={isEventFuture(event.endDate)}
-        registrationOpen={isRegistrationOpen(event.registrationDeadline)}
+        registrationOpen={isRegistrationOpen(event)}
       />
     </>
   );

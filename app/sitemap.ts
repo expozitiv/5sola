@@ -1,5 +1,5 @@
 import type { MetadataRoute } from "next";
-import eventsData from "@/data/events.json";
+import { getEvents } from "@/lib/events";
 import { absoluteUrl, locales } from "@/lib/i18n/config";
 
 type Entry = MetadataRoute.Sitemap[number];
@@ -31,7 +31,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     ...staticRoutes.flatMap(([path, changeFrequency, priority]) =>
       localizedEntries(path, { lastModified: new Date(), changeFrequency, priority })
     ),
-    ...eventsData.flatMap((event) =>
+    ...getEvents("ro").flatMap((event) =>
       localizedEntries(`/evenimente/${event.slug}`, {
         lastModified: new Date(event.endDate),
         changeFrequency: "monthly",

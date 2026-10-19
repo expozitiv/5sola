@@ -1,0 +1,122 @@
+{
+  "id": "3",
+  "slug": "evanghelia-lui-cristos-2024",
+  "title": "Evanghelia lui Cristos",
+  "startDate": "2024-05-09",
+  "endDate": "2024-05-11",
+  "location": "București",
+  "image": "/images/events/evanghelia-lui-cristos.jpg",
+  "locationUrl": "https://maps.google.com/?q=Bucuresti+Romania",
+  "description": "Conferința națională 2024 dedicată Evangheliei lui Cristos — conținutul, puterea și proclamarea ei fidelă în contextul contemporan.",
+  "speakers": [
+    {
+      "name": "David Lavric",
+      "role": "Pastor, Biserica Baptistă ProNobis, Timișoara",
+      "image": "https://images.ctfassets.net/w312hx68oyyc/eE0YhkcPYcIP05bbD9rxv/d26be6d7a535c4de7095ae5ffa88ba45/david.jpg"
+    },
+    {
+      "name": "Iosua Faur",
+      "role": "Pastor, Biserica Baptistă Sfânta Treime, Brăila",
+      "image": "https://images.ctfassets.net/w312hx68oyyc/33jH336BN57yASLlVertP1/3974db092584b8d3aec60e325b1577e6/iosua__1_.jpg"
+    },
+    {
+      "name": "Andrei Croitoru",
+      "role": "Lucrător în Biserică, Sășa, Gorj",
+      "image": "https://images.ctfassets.net/w312hx68oyyc/5stjIVUNPpPeA5gqVWWPkG/ac97666249effd996268526f9c894e22/andrei.jpg"
+    },
+    {
+      "name": "Alex Ghiță",
+      "role": "Pastor, Stoborăști",
+      "image": "https://images.ctfassets.net/w312hx68oyyc/5FGBap5Wdn7jrHeRosBXt5/f55b2b75d2073ef4309d39d9766bd373/alex__1_.jpg"
+    },
+    {
+      "name": "Lucian Bălănescu",
+      "role": "Pastor, Biserica Baptistă Buna Vestire, București",
+      "image": "https://images.ctfassets.net/w312hx68oyyc/7epFMKYfPROfvp4DC4yZYl/a9740dfe9a5663d99153034ed7546e66/luci__1_.jpg"
+    }
+  ],
+  "topics": [
+    "Conținutul Evangheliei",
+    "Puterea Evangheliei",
+    "Proclamarea Evangheliei"
+  ],
+  "schedule": [
+    {
+      "day": "Ziua 1 — Joi, 9 Mai",
+      "items": [
+        {
+          "time": "17:00",
+          "activity": "Înregistrare & Primire"
+        },
+        {
+          "time": "18:00",
+          "activity": "Sesiunea 1"
+        },
+        {
+          "time": "20:00",
+          "activity": "Timp liber"
+        }
+      ]
+    },
+    {
+      "day": "Ziua 2 — Vineri, 10 Mai",
+      "items": [
+        {
+          "time": "09:00",
+          "activity": "Devotional de dimineață"
+        },
+        {
+          "time": "10:00",
+          "activity": "Sesiunea 2"
+        },
+        {
+          "time": "12:30",
+          "activity": "Prânz"
+        },
+        {
+          "time": "14:30",
+          "activity": "Sesiunea 3"
+        },
+        {
+          "time": "17:00",
+          "activity": "Panel de întrebări și răspunsuri"
+        },
+        {
+          "time": "19:00",
+          "activity": "Sesiunea 4"
+        }
+      ]
+    },
+    {
+      "day": "Ziua 3 — Sâmbătă, 11 Mai",
+      "items": [
+        {
+          "time": "09:00",
+          "activity": "Devotional de dimineață"
+        },
+        {
+          "time": "10:00",
+          "activity": "Sesiunea 5"
+        },
+        {
+          "time": "12:30",
+          "activity": "Prânz"
+        },
+        {
+          "time": "14:30",
+          "activity": "Sesiunea 6"
+        },
+        {
+          "time": "17:00",
+          "activity": "Slujbă de încheiere"
+        }
+      ]
+    }
+  ],
+  "youtubePlaylist": "https://www.youtube.com/playlist?list=PLT1HlO3pk6C1huUIOLeZPVOKDruMxmtVw",
+  "en": {
+    "title": "The Gospel of Christ",
+    "location": "Bucharest",
+    "description": "The 2024 national conference, devoted to the gospel of Christ — its content, its power, and its faithful proclamation in today's world."
+  }
+}

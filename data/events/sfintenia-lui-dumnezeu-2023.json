@@ -1,0 +1,117 @@
+{
+  "id": "1",
+  "slug": "sfintenia-lui-dumnezeu-2023",
+  "title": "Sfințenia lui Dumnezeu",
+  "startDate": "2023-05-18",
+  "endDate": "2023-05-20",
+  "location": "Aurum Palace, București",
+  "image": "/images/events/sfintenia-lui-dumnezeu.jpg",
+  "locationUrl": "https://maps.google.com/?q=Aurum+Palace+Sos+Electronicii+19+Bucuresti",
+  "description": "Prima conferință națională 5 Sola, dedicată sfințeniei lui Dumnezeu — temelia din care izvorăsc toate celelalte atribute divine și chemarea la sfințenie a poporului Său.",
+  "speakers": [
+    {
+      "name": "Lucian Bălănescu",
+      "role": "Pastor, Biserica Baptistă Buna Vestire, București",
+      "image": "/images/echipa/lucian.jpg"
+    },
+    {
+      "name": "Alex Ghiță",
+      "role": "Pastor, Stoborăști",
+      "image": "/images/echipa/alex.jpg"
+    },
+    {
+      "name": "Iosua Faur",
+      "role": "Pastor, Biserica Baptistă Sfânta Treime, Brăila",
+      "image": "/images/echipa/iosua.jpg"
+    },
+    {
+      "name": "Andrei Croitoru",
+      "role": "Lucrător în Biserică, Sășa, Gorj",
+      "image": "/images/echipa/andrei.jpg"
+    }
+  ],
+  "topics": [
+    "Sfințenia lui Dumnezeu în Scriptură",
+    "Chemarea la sfințenie",
+    "Sfințenie și Evanghelie"
+  ],
+  "schedule": [
+    {
+      "day": "Ziua 1 — Joi, 18 Mai",
+      "items": [
+        {
+          "time": "17:00",
+          "activity": "Înregistrare & Primire"
+        },
+        {
+          "time": "18:00",
+          "activity": "Sesiunea 1"
+        },
+        {
+          "time": "20:00",
+          "activity": "Timp liber"
+        }
+      ]
+    },
+    {
+      "day": "Ziua 2 — Vineri, 19 Mai",
+      "items": [
+        {
+          "time": "09:00",
+          "activity": "Devotional de dimineață"
+        },
+        {
+          "time": "10:00",
+          "activity": "Sesiunea 2"
+        },
+        {
+          "time": "12:30",
+          "activity": "Prânz"
+        },
+        {
+          "time": "14:30",
+          "activity": "Sesiunea 3"
+        },
+        {
+          "time": "17:00",
+          "activity": "Panel de întrebări și răspunsuri"
+        },
+        {
+          "time": "19:00",
+          "activity": "Sesiunea 4"
+        }
+      ]
+    },
+    {
+      "day": "Ziua 3 — Sâmbătă, 20 Mai",
+      "items": [
+        {
+          "time": "09:00",
+          "activity": "Devotional de dimineață"
+        },
+        {
+          "time": "10:00",
+          "activity": "Sesiunea 5"
+        },
+        {
+          "time": "12:30",
+          "activity": "Prânz"
+        },
+        {
+          "time": "14:30",
+          "activity": "Sesiunea 6"
+        },
+        {
+          "time": "17:00",
+          "activity": "Slujbă de încheiere"
+        }
+      ]
+    }
+  ],
+  "youtubePlaylist": "https://www.youtube.com/playlist?list=PLT1HlO3pk6C2NR_ulsFbgVR1pwonGlTHQ",
+  "en": {
+    "title": "The Holiness of God",
+    "location": "Aurum Palace, Bucharest",
+    "description": "The first 5 Sola national conference, devoted to the holiness of God — the foundation from which all His other divine attributes flow, and the ground of His call to His people to be holy."
+  }
+}

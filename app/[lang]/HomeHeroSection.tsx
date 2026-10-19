@@ -18,7 +18,7 @@ export function HomeHeroSection({ event, hasFutureEvents }: Props) {
   const t = dict.home;
   const c = dict.common;
   const eventPath = localizePath(lang, `/evenimente/${event.slug}`);
-  const registrationOpen = isRegistrationOpen(event.registrationDeadline);
+  const registrationOpen = isRegistrationOpen(event);
   const isOngoing = isEventOngoing(event.startDate, event.endDate);
   const dayCount =
     Math.round(

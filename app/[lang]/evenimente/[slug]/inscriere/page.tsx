@@ -1,13 +1,10 @@
 import { notFound, redirect } from "next/navigation";
-import eventsData from "@/data/events.json";
-import type { Event } from "@/types";
+import { getEvents } from "@/lib/events";
 import { isRegistrationOpen } from "@/lib/utils";
 import { locales, localizePath, toLocale } from "@/lib/i18n/config";
 
-const events = eventsData as Event[];
-
 export function generateStaticParams() {
-  return locales.flatMap((lang) => events.map((e) => ({ lang, slug: e.slug })));
+  return locales.flatMap((lang) => getEvents("ro").map((e) => ({ lang, slug: e.slug })));
 }
 
 export default async function InscrierePage({
@@ -16,11 +13,11 @@ export default async function InscrierePage({
   params: Promise<{ lang: string; slug: string }>;
 }) {
   const { lang, slug } = await params;
-  const event = events.find((e) => e.slug === slug);
+  const event = getEvents("ro").find((e) => e.slug === slug);
 
   if (!event) notFound();
 
-  if (event.stripeLink && isRegistrationOpen(event.registrationDeadline)) {
+  if (event.stripeLink && isRegistrationOpen(event)) {
     redirect(event.stripeLink);
   }
 
