@@ -471,7 +471,10 @@ commit în `data/events/` (și urcă imaginile în `public/images/`), iar Vercel
 
 ### Acces
 
-Editorii au nevoie de un cont GitHub cu drept de scriere pe `expozitiv/5sola`.
+Pot intra în `/admin` **doar conturile GitHub cu drept de scriere pe `expozitiv/5sola`**. Ruta de login
+verifică asta după autentificarea cu GitHub; orice alt cont primește „nu ai acces” și nu vede nimic.
+Accesul se gestionează din GitHub: *repo → Settings → Collaborators and teams* (rol **Write**) și
+*organizația → Settings → Member privileges → Base permissions* (ar trebui să fie **Read** sau **No permission**).
 
 **Login cu GitHub (recomandat)** — configurare, o singură dată:
 1. GitHub → *Settings → Developer settings → OAuth Apps → New OAuth App*

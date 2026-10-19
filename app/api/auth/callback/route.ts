@@ -1,5 +1,5 @@
 import { NextResponse, type NextRequest } from "next/server";
-import { OAUTH_STATE_COOKIE, allowedOrigins } from "../oauth";
+import { CMS_REPO, OAUTH_STATE_COOKIE, allowedOrigins } from "../oauth";
 
 // Step 2 of "Sign In with GitHub": GitHub redirects back here with a code, we
 // exchange it for a token and hand it to the CMS window that opened the popup,
@@ -24,6 +24,45 @@ async function exchangeCode(code: string): Promise<{ token?: string; error?: str
   return { error: data.error_description || data.error || `GitHub returned ${res.status}` };
 }
 
+const githubHeaders = (auth: string) => ({
+  Authorization: auth,
+  Accept: "application/vnd.github+json",
+  "User-Agent": "5sola-admin",
+});
+
+// Only accounts that can push to the content repository may use /admin; anyone
+// else gets no token, so they can't even read the CMS. Who can edit is managed
+// in the repository's collaborators and the organization's base permissions.
+async function canEdit(token: string): Promise<boolean> {
+  const res = await fetch(`https://api.github.com/repos/${CMS_REPO}`, {
+    headers: githubHeaders(`Bearer ${token}`),
+    cache: "no-store",
+  });
+  if (!res.ok) return false;
+  const repo = (await res.json()) as { permissions?: { push?: boolean } };
+  return repo.permissions?.push === true;
+}
+
+// Best effort: invalidate a token we are not going to hand out.
+async function revoke(token: string) {
+  const basic = Buffer.from(
+    `${process.env.GITHUB_CLIENT_ID}:${process.env.GITHUB_CLIENT_SECRET}`
+  ).toString("base64");
+  await fetch(`https://api.github.com/applications/${process.env.GITHUB_CLIENT_ID}/token`, {
+    method: "DELETE",
+    headers: githubHeaders(`Basic ${basic}`),
+    body: JSON.stringify({ access_token: token }),
+  }).catch(() => {});
+}
+
+async function authorize(code: string): Promise<{ token?: string; error?: string }> {
+  const result = await exchangeCode(code);
+  if (!result.token) return result;
+  if (await canEdit(result.token)) return result;
+  await revoke(result.token);
+  return { error: "Contul tău GitHub nu are acces la administrarea acestui site." };
+}
+
 export async function GET(request: NextRequest) {
   const code = request.nextUrl.searchParams.get("code");
   const state = request.nextUrl.searchParams.get("state");
@@ -32,7 +71,7 @@ export async function GET(request: NextRequest) {
   const result =
     !code || !state || state !== expected
       ? { error: "Sesiunea de autentificare a expirat. Încearcă din nou." }
-      : await exchangeCode(code);
+      : await authorize(code);
 
   const message = result.token
     ? `authorization:github:success:${JSON.stringify({ provider: "github", token: result.token })}`

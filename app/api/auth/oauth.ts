@@ -1,5 +1,8 @@
 export const OAUTH_STATE_COOKIE = "cms-oauth-state";
 
+// Same repository as backend.repo in public/admin/config.yml.
+export const CMS_REPO = "expozitiv/5sola";
+
 // Origins allowed to receive the GitHub token: this site itself, plus the
 // comma-separated CMS_ALLOWED_ORIGINS. A "*" matches letters and digits only (no
 // dashes), so "https://5sola-*-oprojects.vercel.app" can't be matched by a
