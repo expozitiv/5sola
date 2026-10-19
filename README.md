@@ -21,6 +21,7 @@ Site-ul oficial al **Asociației 5 Sola** (_"În sprijinul Bisericii"_), o organ
 11. [Variabile de mediu](#variabile-de-mediu)
 12. [Deployment](#deployment)
 13. [Versiunea în limba engleză](#versiunea-în-limba-engleză)
+14. [Administrare (/admin)](#administrare-admin)
 
 ---
 
@@ -121,8 +122,6 @@ Creează un fișier nou `data/events/<slug>.json` (ex. `data/events/sola-gratia-
 
 ```json
 {
-  "id": "9",
-  "slug": "sola-gratia-2027",
   "title": "Sola Gratia: Harul lui Dumnezeu",
   "startDate": "2027-04-10",
   "endDate": "2027-04-11",
@@ -135,8 +134,8 @@ Creează un fișier nou `data/events/<slug>.json` (ex. `data/events/sola-gratia-
   "stripeLinkFamily": "https://buy.stripe.com/...",
   "youtubePlaylist": "PLxxxxxxxxxxxxxxxx",
   "qaDetails": {
-    "formId": "ID_FORMULAR_TALLY",
-    "entryField": "question"
+    "formId": "ID_FORMULAR_GOOGLE",
+    "entryField": "entry.123456789"
   },
   "speakers": [
     {
@@ -186,8 +185,6 @@ Creează un fișier nou `data/events/<slug>.json` (ex. `data/events/sola-gratia-
 
 | Câmp | Obligatoriu | Descriere |
 |---|---|---|
-| `id` | Nu | Identificator unic; dacă lipsește se folosește `slug`-ul |
-| `slug` | Da | Identificator URL; litere mici, cifre, cratime (`sola-gratia-2027`) → `/evenimente/sola-gratia-2027` |
 | `title` | Da | Titlul conferinței, afișat mare pe hero și pe carduri |
 | `startDate` | Da | Data de început, format `YYYY-MM-DD` |
 | `endDate` | Da | Data de sfârșit, format `YYYY-MM-DD`; determină dacă evenimentul e viitor sau arhivat |
@@ -204,8 +201,8 @@ Creează un fișier nou `data/events/<slug>.json` (ex. `data/events/sola-gratia-
 | `stripeLinkFamily` | Nu | URL Stripe pentru înscrierea de familie; dacă există, apar două butoane: "Înscriere individuală" și "Înscriere familie" |
 | `registrationNote` | Nu | Notă afișată sub butoanele de înscriere pe pagina evenimentului (ex. "Prețul nu include mesele de prânz și cina.") |
 | `youtubePlaylist` | Nu | ID-ul playlist-ului YouTube (ex. `PLxxxxxxxx`); dacă lipsește, secțiunea video nu apare |
-| `qaDetails` | Nu | Activează pagina Q&A live (`/evenimente/[slug]/qa`) în timpul conferinței |
-| `qaDetails.formId` | — | ID-ul formularului Tally folosit pentru întrebări |
+| `qaDetails` | Nu | Activează pagina Q&A live (`/evenimente/[slug]/qa`) în timpul conferinței, printr-un formular Google Forms |
+| `qaDetails.formId` | — | ID-ul formularului Google Forms (partea dintre `/d/e/` și `/viewform`) |
 | `qaDetails.entryField` | — | Numele câmpului din formular în care se trimite întrebarea |
 | `en` | Nu | Traducerea pentru `/en`: doar `title`, `location`, `description`, `registrationNote`. Orice câmp lipsă sau gol rămâne în română; programul, vorbitorii și temele rămân mereu în română |
 
@@ -229,12 +226,12 @@ Creează un fișier nou `data/events/<slug>.json` (ex. `data/events/sola-gratia-
 | `topic` | Nu | Subiectul sesiunii, afișat pe pagina de orar |
 | `speaker` | Nu | Numele vorbitorului acelei sesiuni |
 
-### Reguli pentru `slug`
+### Numele fișierului = adresa paginii
 
-- Folosește doar litere mici, cifre și cratime: `sola-gratia-2027`
-- Trebuie să fie **unic** (nu repeta slug-uri)
-- Numele fișierului ar trebui să fie același cu slug-ul: `data/events/sola-gratia-2027.json`
-- Slug-ul devine URL-ul paginii: `/evenimente/sola-gratia-2027`
+- Numele fișierului (fără `.json`) este slug-ul evenimentului: `data/events/sola-gratia-2027.json` → `/evenimente/sola-gratia-2027`
+- Folosește doar litere mici, cifre și cratime
+- Fișierul nu conține `id` sau `slug` — se deduc din numele fișierului
+- Redenumirea fișierului schimbă URL-ul paginii (linkurile vechi nu vor mai funcționa)
 
 ### Imagini
 
@@ -401,6 +398,9 @@ Copiază `.env.example` în `.env.local` și completează:
 
 ```env
 NEXT_PUBLIC_APP_URL=https://5sola.ro   # URL-ul public al site-ului (pentru metadata SEO)
+GITHUB_CLIENT_ID=...                   # OAuth App GitHub, pentru login în /admin
+GITHUB_CLIENT_SECRET=...
+CMS_ALLOWED_ORIGINS=...                # opțional: alte origini (ex. preview-uri Vercel) care pot folosi login-ul
 ```
 
 ---
@@ -452,3 +452,42 @@ aceeași pagină în cealaltă limbă.
   [`data/en/README.md`](data/en/README.md).
 - **SEO:** fiecare pagină are `canonical` și `hreflang` pentru ambele limbi, iar
   `sitemap.xml` include ambele variante.
+
+
+---
+
+## Administrare (`/admin`)
+
+Evenimentele se pot edita din browser la [5sola.ro/admin](https://5sola.ro/admin), cu
+[Sveltia CMS](https://sveltiacms.app/en/docs). Nu există bază de date: la salvare, CMS-ul face un
+commit în `data/events/` (și urcă imaginile în `public/images/`), iar Vercel publică site-ul în ~2 minute.
+
+- **Configurația formularului:** [`public/admin/config.yml`](public/admin/config.yml). Orice câmp nou
+  adăugat în `types.ts` trebuie adăugat și aici — altfel se poate pierde la salvarea din CMS.
+- **Versiunea CMS** este fixată în [`public/admin/index.html`](public/admin/index.html).
+- **Eveniment nou:** cel mai simplu e să duplici evenimentul anterior și să modifici ce diferă.
+- **Siguranță:** dacă un fișier salvat e invalid, build-ul pe Vercel eșuează și site-ul rămâne la
+  versiunea anterioară. Orice modificare se poate anula din istoricul git.
+
+### Acces
+
+Editorii au nevoie de un cont GitHub cu drept de scriere pe `expozitiv/5sola`.
+
+**Login cu GitHub (recomandat)** — configurare, o singură dată:
+1. GitHub → *Settings → Developer settings → OAuth Apps → New OAuth App*
+   - Homepage URL: `https://5sola.ro`
+   - Authorization callback URL: `https://5sola.ro/api/auth/callback`
+2. Copiază *Client ID* și generează un *Client Secret*.
+3. În Vercel → *Settings → Environment Variables* adaugă `GITHUB_CLIENT_ID` și `GITHUB_CLIENT_SECRET`, apoi redeploy.
+
+Fluxul de login e implementat în `app/api/auth/` (compatibil cu Sveltia/Decap CMS).
+
+**Alternativă fără configurare:** pe ecranul de login, *Sign In Using Access Token*, cu un
+[fine-grained token](https://github.com/settings/personal-access-tokens/new) pe repo, cu
+permisiunea *Contents: Read and write*.
+
+### Test local
+
+`npm run dev`, apoi deschide `http://localhost:3000/admin` în Chrome sau Edge și alege
+*Work with Local Repository* → folderul repo-ului. Modificările se scriu direct în fișierele
+locale, fără commit.

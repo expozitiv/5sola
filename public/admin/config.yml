@@ -1,0 +1,192 @@
+# Configurația pentru /admin (Sveltia CMS) — https://sveltiacms.app/en/docs
+# Fiecare câmp de aici corespunde unui câmp din data/events/<slug>.json (vezi types.ts).
+# Un câmp care există în fișiere dar lipsește de aici se poate pierde la salvare.
+
+backend:
+  name: github
+  repo: expozitiv/5sola
+  branch: main
+  # Login „Sign In with GitHub” prin app/api/auth (are nevoie de GITHUB_CLIENT_ID/SECRET pe Vercel).
+  base_url: https://5sola.ro
+  auth_endpoint: api/auth
+
+app_title: Administrare 5 Sola
+site_url: https://5sola.ro
+
+media_folder: public/images
+public_folder: /images
+
+slug:
+  encoding: ascii
+  clean_accents: true
+
+editor:
+  preview: false
+
+output:
+  omit_empty_optional_fields: true
+  json:
+    indent_size: 2
+
+collections:
+  - name: evenimente
+    label: Evenimente
+    label_singular: Eveniment
+    description: >-
+      Conferințele 5 Sola. Modificările apar pe site în ~2 minute după salvare.
+      Pentru un eveniment nou, cel mai simplu e să **duplici** evenimentul anterior.
+    folder: data/events
+    format: json
+    identifier_field: title
+    slug:
+      template: "{{title}}-{{startDate | date('YYYY')}}"
+      editable: [create]
+    summary: "{{title}} · {{startDate}}"
+    sortable_fields:
+      fields: [startDate, title]
+      default:
+        field: startDate
+        direction: descending
+    fields:
+      # — Bază —
+      - name: title
+        label: Titlu
+      - name: startDate
+        label: Data de început
+        widget: datetime
+        type: date
+      - name: endDate
+        label: Data de sfârșit
+        widget: datetime
+        type: date
+        hint: După această dată evenimentul trece automat în Arhivă.
+      - name: location
+        label: Locație
+        hint: Exact cum vrei să apară pe site, ex. „Centrul Creștin Brașov”.
+      - name: locationUrl
+        label: Link Google Maps
+        required: false
+      - name: description
+        label: Descriere scurtă
+        widget: text
+        hint: 1–2 propoziții. Apare pe carduri și în partea de sus a paginii evenimentului.
+      - name: image
+        label: Imagine principală
+        widget: image
+        required: false
+        media_folder: /public/images/events
+        public_folder: /images/events
+
+      # — Înscriere —
+      - name: registrationClosed
+        label: "Înscriere · Înscrieri închise"
+        widget: boolean
+        default: false
+        required: false
+        hint: Activează ca să închizi înscrierile imediat, indiferent de termenul limită.
+      - name: registrationDeadline
+        label: "Înscriere · Termen limită"
+        widget: datetime
+        type: date
+        required: false
+        hint: După această dată, înscrierile se închid automat. Gol = fără termen.
+      - name: stripeLink
+        label: "Înscriere · Link Stripe (individual)"
+        required: false
+        hint: Fără link, butonul de înscriere nu apare.
+      - name: stripeLinkFamily
+        label: "Înscriere · Link Stripe (familie)"
+        required: false
+        hint: Dacă e completat, apar două butoane — „Înscriere individuală” și „Înscriere familie”.
+      - name: registrationNote
+        label: "Înscriere · Notă sub butoane"
+        required: false
+        hint: Ex. „Prețul nu include mesele de prânz și cina.”
+
+      # — Program și vorbitori —
+      - name: speakers
+        label: Vorbitori
+        widget: list
+        required: false
+        collapsed: auto
+        summary: "{{fields.name}}"
+        thumbnail: image
+        fields:
+          - { name: name, label: Nume }
+          - { name: role, label: Rol, hint: "Ex. „Pastor, Biserica Baptistă Sfânta Treime, Brăila”" }
+          - name: image
+            label: Fotografie
+            widget: image
+            media_folder: /public/images/echipa
+            public_folder: /images/echipa
+          - { name: bio, label: Biografie, widget: text, required: false }
+      - name: topics
+        label: Teme
+        widget: list
+        required: false
+        field: { name: topic, label: Temă }
+      - name: schedule
+        label: Program
+        widget: list
+        required: false
+        collapsed: auto
+        summary: "{{fields.day}}"
+        fields:
+          - { name: day, label: Ziua, hint: "Ex. „Ziua 1 — Vineri, 20 Noiembrie”" }
+          - name: items
+            label: Activități
+            widget: list
+            collapsed: auto
+            summary: "{{fields.time}} — {{fields.activity}}"
+            fields:
+              - { name: time, label: Ora, hint: "Format HH:MM, ex. 09:30" }
+              - { name: activity, label: Activitate, hint: "Ex. „Sesiunea 1”, „Prânz”" }
+              - { name: topic, label: Subiect, required: false }
+              - { name: speaker, label: Vorbitor, required: false }
+              - name: parallel
+                label: Sesiuni în paralel
+                widget: list
+                required: false
+                collapsed: auto
+                summary: "{{fields.room}} — {{fields.speaker}}"
+                hint: Doar dacă în același interval sunt mai multe săli.
+                fields:
+                  - { name: room, label: Sala }
+                  - { name: speaker, label: Vorbitor }
+                  - { name: topic, label: Subiect }
+
+      # — În timpul conferinței —
+      - name: qaDetails
+        label: Întrebări & Răspunsuri (Google Forms)
+        widget: object
+        required: false
+        collapsed: auto
+        hint: Pagina de întrebări apare doar în zilele conferinței și doar dacă e completat ID-ul.
+        fields:
+          - name: formId
+            label: ID formular
+            required: false
+            hint: Partea dintre /d/e/ și /viewform din linkul formularului.
+          - name: entryField
+            label: Câmpul întrebării
+            required: false
+            hint: Ex. entry.1859035300
+
+      # — După conferință —
+      - name: youtubePlaylist
+        label: Playlist YouTube
+        required: false
+        hint: Linkul playlistului cu înregistrările. Când e completat, apare secțiunea video.
+
+      # — Engleză —
+      - name: en
+        label: English (/en)
+        widget: object
+        required: false
+        collapsed: auto
+        hint: Doar aceste câmpuri se traduc. Ce rămâne gol apare în română pe /en; programul și vorbitorii rămân în română.
+        fields:
+          - { name: title, label: Title, required: false }
+          - { name: location, label: Location, required: false }
+          - { name: description, label: Description, widget: text, required: false }
+          - { name: registrationNote, label: Registration note, required: false }

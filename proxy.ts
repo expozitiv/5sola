@@ -7,6 +7,9 @@ import { defaultLocale, locales } from "@/lib/i18n/config";
 export function proxy(request: NextRequest) {
   const { pathname, search } = request.nextUrl;
 
+  // The CMS lives in public/admin and is served by a rewrite in next.config.ts.
+  if (pathname === "/admin" || pathname.startsWith("/admin/")) return NextResponse.next();
+
   if (pathname === `/${defaultLocale}` || pathname.startsWith(`/${defaultLocale}/`)) {
     const url = request.nextUrl.clone();
     url.pathname = pathname.slice(defaultLocale.length + 1) || "/";

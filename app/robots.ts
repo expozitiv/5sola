@@ -5,6 +5,7 @@ export default function robots(): MetadataRoute.Robots {
     rules: {
       userAgent: "*",
       allow: "/",
+      disallow: ["/admin", "/api/"],
     },
     sitemap: "https://5sola.ro/sitemap.xml",
     host: "https://5sola.ro",

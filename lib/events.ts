@@ -3,8 +3,9 @@ import path from "node:path";
 import type { Event } from "@/types";
 import type { Locale } from "@/lib/i18n/config";
 
-// One JSON file per event in data/events/. Files are read at request time
-// (the home page is dynamic), so next.config.ts adds the folder to the server trace.
+// One JSON file per event in data/events/; the file name is the event's slug (URL).
+// Files are read at request time (the home page is dynamic), so next.config.ts adds
+// the folder to the server trace.
 const EVENTS_DIR = path.join(process.cwd(), "data", "events");
 
 // Only these fields are translated. Everything else (schedule, speakers, topics)
@@ -15,7 +16,8 @@ export type EventTranslation = Partial<Record<(typeof TRANSLATABLE)[number], str
 type StoredEvent = Event & { en?: EventTranslation };
 
 const DATE = /^\d{4}-\d{2}-\d{2}$/;
-const REQUIRED_TEXT = ["slug", "title", "location", "description"] as const;
+const SLUG = /^[a-z0-9]+(-[a-z0-9]+)*$/;
+const REQUIRED_TEXT = ["title", "location", "description"] as const;
 const REQUIRED_DATES = ["startDate", "endDate"] as const;
 
 function fail(file: string, message: string): never {
@@ -34,6 +36,8 @@ function dropEmpty(record: Record<string, unknown>) {
 }
 
 function parseEvent(file: string, raw: unknown): StoredEvent {
+  const slug = file.replace(/\.json$/, "");
+  if (!SLUG.test(slug)) fail(file, "file name must use only lowercase letters, digits and dashes");
   if (!isRecord(raw)) fail(file, "expected a JSON object");
   const e = dropEmpty(raw);
 
@@ -69,7 +73,8 @@ function parseEvent(file: string, raw: unknown): StoredEvent {
 
   return {
     ...e,
-    id: typeof e.id === "string" && e.id ? e.id : (e.slug as string),
+    id: slug,
+    slug,
     speakers: Array.isArray(e.speakers) ? e.speakers.filter(isRecord) : [],
     topics: Array.isArray(e.topics) ? e.topics.filter((t) => typeof t === "string") : [],
     schedule: schedule.map((day) => ({
@@ -91,14 +96,6 @@ function loadEvents(): StoredEvent[] {
     }
     return parseEvent(file, raw);
   });
-
-  for (const key of ["slug", "id"] as const) {
-    const seen = new Set<string>();
-    for (const event of events) {
-      if (seen.has(event[key])) throw new Error(`data/events: duplicate ${key} "${event[key]}"`);
-      seen.add(event[key]);
-    }
-  }
 
   // Chronological order: the home page features the first upcoming event.
   return events.sort(
