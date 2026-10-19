@@ -12,6 +12,8 @@ backend:
 
 app_title: Administrare 5 Sola
 site_url: https://5sola.ro
+logo:
+  src: /icon.jpg
 
 media_folder: public/images
 public_folder: /images
@@ -32,6 +34,7 @@ collections:
   - name: evenimente
     label: Evenimente
     label_singular: Eveniment
+    icon: event
     description: >-
       Conferințele 5 Sola. Modificările apar pe site în ~2 minute după salvare.
       Pentru un eveniment nou, cel mai simplu e să **duplici** evenimentul anterior.
@@ -42,6 +45,13 @@ collections:
       template: "{{title}}-{{startDate | date('YYYY')}}"
       editable: [create]
     summary: "{{title}} · {{startDate}}"
+    view_groups:
+      groups:
+        - name: upcoming
+          label: Viitoare
+          field: endDate
+          gte: "{{today}}"
+      default: upcoming
     sortable_fields:
       fields: [startDate, title]
       default:
@@ -79,35 +89,37 @@ collections:
 
       # — Înscriere —
       - name: registrationClosed
-        label: "Înscriere · Înscrieri închise"
+        label: Înscrieri închise
         widget: boolean
         default: false
         required: false
         hint: Activează ca să închizi înscrierile imediat, indiferent de termenul limită.
       - name: registrationDeadline
-        label: "Înscriere · Termen limită"
+        label: Termen limită
         widget: datetime
         type: date
         required: false
         hint: După această dată, înscrierile se închid automat. Gol = fără termen.
       - name: stripeLink
-        label: "Înscriere · Link Stripe (individual)"
+        label: Link Stripe (individual)
         required: false
         hint: Fără link, butonul de înscriere nu apare.
       - name: stripeLinkFamily
-        label: "Înscriere · Link Stripe (familie)"
+        label: Link Stripe (familie)
         required: false
         hint: Dacă e completat, apar două butoane — „Înscriere individuală” și „Înscriere familie”.
       - name: registrationNote
-        label: "Înscriere · Notă sub butoane"
+        label: Notă sub butoane
         required: false
         hint: Ex. „Prețul nu include mesele de prânz și cina.”
 
       # — Program și vorbitori —
       - name: speakers
         label: Vorbitori
+        label_singular: vorbitor
         widget: list
         required: false
+        hint: Apasă pe un vorbitor ca să-l deschizi. Ordinea de aici e ordinea de pe site (trage de ═ ca s-o schimbi).
         collapsed: auto
         summary: "{{fields.name}}"
         thumbnail: image
@@ -122,19 +134,23 @@ collections:
           - { name: bio, label: Biografie, widget: text, required: false }
       - name: topics
         label: Teme
+        label_singular: temă
         widget: list
         required: false
         field: { name: topic, label: Temă }
       - name: schedule
         label: Program
+        label_singular: zi
         widget: list
         required: false
+        hint: Câte un bloc pentru fiecare zi; în fiecare zi, activitățile în ordine.
         collapsed: auto
         summary: "{{fields.day}}"
         fields:
           - { name: day, label: Ziua, hint: "Ex. „Ziua 1 — Vineri, 20 Noiembrie”" }
           - name: items
             label: Activități
+            label_singular: activitate
             widget: list
             collapsed: auto
             summary: "{{fields.time}} — {{fields.activity}}"
@@ -145,6 +161,7 @@ collections:
               - { name: speaker, label: Vorbitor, required: false }
               - name: parallel
                 label: Sesiuni în paralel
+                label_singular: sesiune
                 widget: list
                 required: false
                 collapsed: auto
@@ -157,7 +174,7 @@ collections:
 
       # — În timpul conferinței —
       - name: qaDetails
-        label: Întrebări & Răspunsuri (Google Forms)
+        label: Formular de întrebări (Google Forms)
         widget: object
         required: false
         collapsed: auto
@@ -180,7 +197,7 @@ collections:
 
       # — Engleză —
       - name: en
-        label: English (/en)
+        label: Traducere
         widget: object
         required: false
         collapsed: auto

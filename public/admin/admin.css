@@ -1,0 +1,128 @@
+/*
+ * Look of /admin on top of Sveltia CMS. It targets Sveltia's markup
+ * (data-key-path on each field, .item-list in lists), which can change between
+ * versions — check this page after bumping the version in index.html.
+ */
+
+/* Sveltia derives every color from one hue (default 210, blue); 358 is 5 Sola red. */
+html:root {
+  --sui-base-hue: 358;
+}
+
+/* ── Editor: the event form as a stack of section cards ───────────────────── */
+
+#first-pane-body {
+  background: hsl(var(--sui-background-color-3-hsl));
+}
+
+#first-pane-body > .content {
+  padding-bottom: 64px;
+}
+
+#first-pane-body > .content > section.field {
+  max-width: 860px;
+  margin-inline: auto;
+  padding-inline: 32px;
+  background: hsl(var(--sui-background-color-1-hsl));
+  border: 1px solid hsl(var(--sui-border-color-3-hsl));
+  border-block: 0;
+}
+
+/* Sveltia separates fields with a 1px ::after line; inside a card, spacing is enough. */
+#first-pane-body > .content > section.field::after {
+  display: none;
+}
+
+/* First field of each section: card top + section title. */
+#first-pane-body > .content > section.field:is(
+    [data-key-path="title"],
+    [data-key-path="registrationClosed"],
+    [data-key-path="speakers"],
+    [data-key-path="qaDetails"],
+    [data-key-path="youtubePlaylist"],
+    [data-key-path="en"]
+  ) {
+  margin-top: 28px;
+  border-top: 4px solid var(--sui-primary-accent-color);
+  border-radius: 14px 14px 0 0;
+}
+
+#first-pane-body > .content > section.field:is(
+    [data-key-path="title"],
+    [data-key-path="registrationClosed"],
+    [data-key-path="speakers"],
+    [data-key-path="qaDetails"],
+    [data-key-path="youtubePlaylist"],
+    [data-key-path="en"]
+  )::before {
+  display: block;
+  margin: 0 -32px 8px;
+  padding: 18px 32px 14px;
+  border-bottom: 1px solid hsl(var(--sui-border-color-3-hsl));
+  font-size: 17px;
+  font-weight: 700;
+  color: var(--sui-highlight-foreground-color);
+}
+
+[data-key-path="title"]::before { content: "1 · Despre eveniment"; }
+[data-key-path="registrationClosed"]::before { content: "2 · Înscriere"; }
+[data-key-path="speakers"]::before { content: "3 · Vorbitori și program"; }
+[data-key-path="qaDetails"]::before { content: "4 · În timpul conferinței"; }
+[data-key-path="youtubePlaylist"]::before { content: "5 · După conferință"; }
+[data-key-path="en"]::before { content: "6 · English (/en)"; }
+
+/* Last field of each section: card bottom. */
+#first-pane-body > .content > section.field:is(
+    [data-key-path="image"],
+    [data-key-path="registrationNote"],
+    [data-key-path="schedule"],
+    [data-key-path="qaDetails"],
+    [data-key-path="youtubePlaylist"],
+    [data-key-path="en"]
+  ) {
+  padding-bottom: 20px;
+  border-bottom: 1px solid hsl(var(--sui-border-color-3-hsl));
+  border-radius: 0 0 14px 14px;
+  box-shadow: 0 6px 16px -10px hsl(var(--sui-shadow-color) / 25%);
+}
+
+/* Single-field sections are both first and last. */
+#first-pane-body > .content > section.field:is(
+    [data-key-path="qaDetails"],
+    [data-key-path="youtubePlaylist"],
+    [data-key-path="en"]
+  ) {
+  border-radius: 14px;
+}
+
+/* ── Lists (speakers, schedule…): items as distinct cards ──────────────────── */
+
+section.field[data-field-type="list"] .item-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+section.field[data-field-type="list"] .item-wrapper {
+  border-left: 3px solid var(--sui-primary-accent-color-translucent-light);
+  border-radius: 8px;
+}
+
+section.field[data-field-type="list"] .item > .header {
+  background: hsl(var(--sui-background-color-4-hsl));
+}
+
+/* The "Add …" button sticks to the bottom of the screen while a long list
+   scrolls under it, so make it a solid button rather than an inline bar. */
+section.field[data-field-type="list"] .toolbar.bottom.add button {
+  min-height: 34px;
+  padding-inline: 16px;
+  border-radius: 8px;
+  background: var(--sui-primary-accent-color);
+  color: var(--sui-primary-accent-color-inverted);
+  box-shadow: 0 4px 12px -4px hsl(var(--sui-shadow-color) / 35%);
+}
+
+section.field[data-field-type="list"] .toolbar.bottom.add button:hover {
+  background: var(--sui-primary-accent-color-dark);
+}
