@@ -3,9 +3,14 @@
   "startDate": "2026-11-20",
   "endDate": "2026-11-21",
   "location": "Centrul Creștin Brașov",
-  "image": "/images/events/doctrina-familiei.jpg",
   "locationUrl": "https://maps.app.goo.gl/k5MSkVopXTjU9Vaf7",
   "description": "O perspectivă biblică pentru fiecare generație.",
+  "image": "/images/events/doctrina-familiei.jpg",
+  "registrationClosed": false,
+  "registrationDeadline": "2026-10-16",
+  "stripeLink": "https://buy.stripe.com/7sYbJ12t5b6A8TWexveAg0d?prefilled_promo_code=EARLYBIRDBRASOV&locale=ro",
+  "stripeLinkFamily": "https://buy.stripe.com/8x29AT9Vxb6Adac4WVeAg0f?prefilled_promo_code=EARLYBIRDFAMILYBRASOV&locale=ro",
+  "registrationNote": "Prețul nu include mesele de prânz și cina.",
   "speakers": [
     {
       "name": "Beniamin Costea",
@@ -35,11 +40,10 @@
     },
     {
       "name": "Lucian Bălănescu",
-      "role": "Pastor, Biserica Baptistă Buna Vestire, București",
+      "role": "Pastor, Biserica Baptistă Buna Vestire",
       "image": "/images/echipa/lucian.jpeg"
     }
   ],
-  "topics": [],
   "schedule": [
     {
       "day": "Ziua 1 — Vineri, 20 Noiembrie",
@@ -124,10 +128,6 @@
       ]
     }
   ],
-  "stripeLink": "https://buy.stripe.com/7sYbJ12t5b6A8TWexveAg0d?prefilled_promo_code=EARLYBIRDBRASOV&locale=ro",
-  "stripeLinkFamily": "https://buy.stripe.com/8x29AT9Vxb6Adac4WVeAg0f?prefilled_promo_code=EARLYBIRDFAMILYBRASOV&locale=ro",
-  "registrationDeadline": "2026-10-16",
-  "registrationNote": "Prețul nu include mesele de prânz și cina.",
   "qaDetails": {
     "formId": "1FAIpQLScL8MDqXyyWN8Sw2dJZuDMNihjhj_Woq2dus1JHLrbnd005ag",
     "entryField": "entry.1859035300"
