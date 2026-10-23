@@ -1,44 +1,44 @@
 [
   {
     "id": "1",
-    "name": "Alex Ghita",
+    "name": "Alex Ghiță",
     "role": "Pastor",
-    "bio": "Alex este casatorit cu Manuela si au doi copii. Slujeste ca pastor al bisericii baptiste din Stoborasti.",
+    "bio": "Alex este căsătorit cu Manuela și au doi copii. Slujește ca pastor al bisericii baptiste din Stoborăști.",
     "image": "/images/echipa/alex.jpg"
   },
   {
     "id": "2",
     "name": "Andrei Croitoru",
-    "role": "Pastor",
-    "bio": "Andrei este casatorit cu Cristina si au trei baieti. Slujește ca învățător în biserica baptistă Logos din Chicago.",
+    "role": "Învățător",
+    "bio": "Andrei este căsătorit cu Cristina și au trei băieți. Slujește ca învățător în biserica baptistă Logos din Chicago.",
     "image": "/images/echipa/andrei.jpg"
   },
   {
     "id": "3",
     "name": "Cristi Maritan",
     "role": "Prezbiter",
-    "bio": "Cristi este casatorit cu Bianca si au trei fete. Slujeste ca prezbiter in Biserica Baptista ProNobis din Timisoara.",
+    "bio": "Cristi este căsătorit cu Bianca și au trei fete. Slujește ca prezbiter în Biserica Baptistă ProNobis din Timișoara.",
     "image": "/images/echipa/cristi.jpg"
   },
   {
     "id": "4",
     "name": "David Lavric",
     "role": "Pastor",
-    "bio": "David este casatorit cu Manana si au trei copii. Slujeste ca pastor al Bisericii Baptiste ProNobis din Timisoara.",
+    "bio": "David este căsătorit cu Manana și au trei copii. Slujește ca pastor al Bisericii Baptiste ProNobis din Timișoara.",
     "image": "/images/echipa/david.jpg"
   },
   {
     "id": "5",
     "name": "Iosua Faur",
     "role": "Pastor",
-    "bio": "Iosua este casatorit cu Cristiana si au trei copii. Slujeste ca pastor al Bisericii Baptiste Sfanta Treime din Braila.",
+    "bio": "Iosua este căsătorit cu Cristiana și au trei copii. Slujește ca pastor al Bisericii Baptiste Sfânta Treime din Brăila.",
     "image": "/images/echipa/iosua.jpg"
   },
   {
     "id": "6",
-    "name": "Lucian Balanescu",
+    "name": "Lucian Bălănescu",
     "role": "Pastor",
-    "bio": "Lucian este casatorit cu Rodi si au doua fiice. Slujeste ca pastor al Bisericii Baptiste Buna Vestire din Bucuresti.",
+    "bio": "Lucian este căsătorit cu Rodi și au două fiice. Slujește ca pastor al Bisericii Baptiste Buna Vestire din București.",
     "image": "/images/echipa/lucian.jpeg"
   }
 ]
