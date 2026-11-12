@@ -1,6 +1,7 @@
 import { notFound, redirect } from "next/navigation";
 import type { Metadata } from "next";
 import Link from "next/link";
+import Image from "next/image";
 import { ArrowLeft, Calendar, MapPin } from "lucide-react";
 import type { ParallelSession } from "@/types";
 import { formatDateRange, isEventOngoing } from "@/lib/utils";
@@ -130,9 +131,11 @@ export default async function OrarPage({ params }: Props) {
                               className="w-9 h-9 rounded-full overflow-hidden ring-2 ring-primary/40 bg-surface-high"
                               title={speakerObj.name}
                             >
-                              <img
+                              <Image
                                 src={speakerObj.image}
                                 alt={speakerObj.name}
+                                width={36}
+                                height={36}
                                 className="w-full h-full object-cover"
                                 referrerPolicy="no-referrer"
                               />
@@ -147,9 +150,11 @@ export default async function OrarPage({ params }: Props) {
                       {speakerObj && (
                         <div className="flex sm:hidden items-center gap-2 mt-1.5">
                           <div className="w-6 h-6 rounded-full overflow-hidden ring-1 ring-primary/40 bg-surface-high shrink-0">
-                            <img
+                            <Image
                               src={speakerObj.image}
                               alt={speakerObj.name}
+                              width={24}
+                              height={24}
                               className="w-full h-full object-cover"
                               referrerPolicy="no-referrer"
                             />
@@ -180,9 +185,11 @@ export default async function OrarPage({ params }: Props) {
                                 {sessionSpeaker && (
                                   <div className="shrink-0">
                                     <div className="w-8 h-8 rounded-full overflow-hidden ring-1 ring-primary/40 bg-surface-high">
-                                      <img
+                                      <Image
                                         src={sessionSpeaker.image}
                                         alt={sessionSpeaker.name}
+                                        width={32}
+                                        height={32}
                                         className="w-full h-full object-cover"
                                         referrerPolicy="no-referrer"
                                       />

@@ -1,5 +1,6 @@
 "use client";
 import Link from "next/link";
+import Image from "next/image";
 import { motion } from "motion/react";
 import { ArrowRight, Play, Calendar, MessageCircle } from "lucide-react";
 import type { Event } from "@/types";
@@ -28,10 +29,13 @@ export function HomeHeroSection({ event, hasFutureEvents }: Props) {
   return (
     <section className="relative min-h-[90vh] flex items-center overflow-hidden bg-surface-low">
       <div className="absolute inset-0 z-0">
-        <img
-          src="/images/hero.png"
+        <Image
+          src="/images/hero.webp"
           alt={t.heroBgAlt}
-          className="w-full h-full object-cover opacity-20 grayscale"
+          fill
+          priority
+          sizes="100vw"
+          className="object-cover opacity-20 grayscale"
         />
         <div className="absolute inset-0 bg-gradient-to-t from-bg via-bg/40 to-transparent" />
       </div>
@@ -125,11 +129,16 @@ export function HomeHeroSection({ event, hasFutureEvents }: Props) {
         >
           <div className="aspect-[4/5] bg-surface-high p-4 relative group rounded-lg">
             {event.image && (
-              <img
-                src={event.image}
-                alt={event.title}
-                className="w-full h-full object-cover transition-all duration-700 rounded-sm"
-              />
+              <div className="relative w-full h-full">
+                <Image
+                  src={event.image}
+                  alt={event.title}
+                  fill
+                  priority
+                  sizes="(min-width: 1024px) 40vw, 0px"
+                  className="object-cover transition-all duration-700 rounded-sm"
+                />
+              </div>
             )}
           </div>
           <div className="absolute -bottom-10 -left-10 bg-primary p-10 text-white max-w-xs shadow-2xl rounded-xs">

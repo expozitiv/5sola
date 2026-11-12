@@ -2,6 +2,7 @@ export const dynamic = "force-dynamic";
 
 import type { Metadata } from "next";
 import Link from "next/link";
+import Image from "next/image";
 import { ChevronRight } from "lucide-react";
 import { isEventFuture } from "@/lib/utils";
 import { HomeHeroSection } from "./HomeHeroSection";
@@ -65,21 +66,25 @@ export default async function Home({ params }: Props) {
         <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-24 items-center">
           <div className="order-2 lg:order-1 relative">
             <div className="grid grid-cols-2 gap-8">
-              <AnimateIn className="aspect-square bg-surface-high overflow-hidden rounded-lg">
-                <img
-                  src="/images/main1.jpg"
+              <AnimateIn className="relative aspect-square bg-surface-high overflow-hidden rounded-lg">
+                <Image
+                  src="/images/main1.webp"
                   alt={`${t.galleryAlt} 1`}
-                  className="w-full h-full object-cover transition-all duration-500"
+                  fill
+                  sizes="(min-width: 1024px) 25vw, 50vw"
+                  className="object-cover transition-all duration-500"
                 />
               </AnimateIn>
               <AnimateIn
-                className="aspect-square bg-surface-high overflow-hidden mt-16 rounded-lg"
+                className="relative aspect-square bg-surface-high overflow-hidden mt-16 rounded-lg"
                 delay={0.1}
               >
-                <img
-                  src="/images/main2.jpg"
+                <Image
+                  src="/images/main2.webp"
                   alt={`${t.galleryAlt} 2`}
-                  className="w-full h-full object-cover transition-all duration-500"
+                  fill
+                  sizes="(min-width: 1024px) 25vw, 50vw"
+                  className="object-cover transition-all duration-500"
                 />
               </AnimateIn>
             </div>

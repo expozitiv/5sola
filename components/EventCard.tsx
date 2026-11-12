@@ -1,5 +1,6 @@
 "use client";
 import Link from "next/link";
+import Image from "next/image";
 import { Calendar, MapPin, ArrowRight } from "lucide-react";
 import type { Event } from "@/types";
 import { formatDateRange, isEventFuture } from "@/lib/utils";
@@ -28,10 +29,13 @@ export function EventCard({ event, index = 0 }: EventCardProps) {
       {/* Poster Image */}
       {event.image && (
         <div className="relative -mx-[1px] -mt-[1px] mb-8 overflow-hidden aspect-[4/3]">
-          <img
+          <Image
             src={event.image}
             alt={event.title}
-            className="w-full h-full object-cover transition-all duration-700 scale-105 group-hover:scale-100"
+            fill
+            priority={index < 2}
+            sizes="(min-width: 1024px) 33vw, (min-width: 768px) 50vw, 100vw"
+            className="object-cover transition-all duration-700 scale-105 group-hover:scale-100"
           />
           <div className="absolute inset-0 bg-gradient-to-t from-bg/60 to-transparent" />
         </div>

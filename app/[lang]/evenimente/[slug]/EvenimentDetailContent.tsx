@@ -1,6 +1,7 @@
 "use client";
 import { useState } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { motion } from "motion/react";
 import {
   Calendar,
@@ -39,10 +40,13 @@ export function EvenimentDetailContent({ event, isFuture, registrationOpen }: { 
       <section className="relative overflow-hidden px-6 pt-10 pb-12">
         <div className="absolute inset-0 z-0">
           {event.image ? (
-            <img
+            <Image
               src={event.image}
               alt={event.title}
-              className="w-full h-full object-cover object-top opacity-20"
+              fill
+              priority
+              sizes="100vw"
+              className="object-cover object-top opacity-20"
             />
           ) : null}
           <div className="absolute inset-0 bg-gradient-to-t from-bg via-bg/80 to-transparent" />
@@ -223,10 +227,12 @@ export function EvenimentDetailContent({ event, isFuture, registrationOpen }: { 
                     <div key={i} className="group">
                       <div className="aspect-square bg-surface-low mb-4 overflow-hidden relative">
                         {speaker.image && (
-                          <img
+                          <Image
                             src={speaker.image}
                             alt={speaker.name}
-                            className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700 scale-110 group-hover:scale-100"
+                            fill
+                            sizes="(min-width: 768px) 33vw, 50vw"
+                            className="object-cover grayscale group-hover:grayscale-0 transition-all duration-700 scale-110 group-hover:scale-100"
                             referrerPolicy="no-referrer"
                           />
                         )}

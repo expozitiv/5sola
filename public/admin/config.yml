@@ -16,7 +16,7 @@ backend:
 app_title: Administrare 5 Sola
 site_url: https://www.5sola.ro
 logo:
-  src: /icon.jpg
+  src: /images/icon-192.png
 
 media_folder: public/images
 public_folder: /images

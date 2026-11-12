@@ -1,5 +1,6 @@
 "use client";
 import Link from "next/link";
+import Image from "next/image";
 import { usePathname } from "next/navigation";
 import { cn } from "@/lib/utils";
 import { motion } from "motion/react";
@@ -32,9 +33,11 @@ export function Navbar() {
     <nav className="fixed top-0 left-0 right-0 z-50 glass-nav">
       <div className="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
         <Link href={localizePath(lang, "/")} className="flex items-center gap-3 group">
-          <img
+          <Image
             src="/images/social_logo.jpg"
             alt="5 Sola"
+            width={40}
+            height={40}
             className="w-10 h-10 rounded-xs object-cover"
           />
           <span className="font-serif text-2xl font-black tracking-tighter group-hover:text-primary transition-colors duration-300">

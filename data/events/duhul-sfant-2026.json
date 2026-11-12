@@ -3,39 +3,39 @@
   "startDate": "2026-05-07",
   "endDate": "2026-05-09",
   "location": "Aurum Palace, București",
-  "image": "/images/events/duhul-sfant.png",
+  "image": "/images/events/duhul-sfant.webp",
   "locationUrl": "https://maps.google.com/?q=Aurum+Palace+Sos+Electronicii+Bucuresti",
   "description": "Conferința națională 2026 dedicată persoanei și lucrării Duhului Sfânt — cine este El și ce face El cu adevărat?",
   "speakers": [
     {
       "name": "Alex Ghiță",
       "role": "Pastor, Stoborăști",
-      "image": "/images/echipa/alex.jpg"
+      "image": "/images/echipa/alex.webp"
     },
     {
       "name": "Andrei Croitoru",
       "role": "Lucrător în Biserică, Sășa, Gorj",
-      "image": "/images/echipa/andrei.jpg"
+      "image": "/images/echipa/andrei.webp"
     },
     {
       "name": "Andrei Sava",
       "role": "Pastor",
-      "image": "/images/echipa/andrei-sava.png"
+      "image": "/images/echipa/andrei-sava.webp"
     },
     {
       "name": "David Lavric",
       "role": "Pastor, Biserica Baptistă ProNobis, Timișoara",
-      "image": "/images/echipa/david.jpg"
+      "image": "/images/echipa/david.webp"
     },
     {
       "name": "Iosua Faur",
       "role": "Pastor, Biserica Baptistă Sfânta Treime, Brăila",
-      "image": "/images/echipa/iosua.jpg"
+      "image": "/images/echipa/iosua.webp"
     },
     {
       "name": "Lucian Bălănescu",
       "role": "Pastor, Biserica Baptistă Buna Vestire, București",
-      "image": "/images/echipa/lucian.jpeg"
+      "image": "/images/echipa/lucian.webp"
     }
   ],
   "topics": [],

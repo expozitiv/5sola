@@ -12,10 +12,12 @@ const nextConfig: NextConfig = {
     return [{ source: "/admin", destination: "/admin/index.html" }];
   },
   images: {
-    remotePatterns: [
-      { protocol: "https", hostname: "picsum.photos" },
-      { protocol: "https", hostname: "img.youtube.com" },
-    ],
+    // Editors can paste any https image URL in the CMS; next/image resizes and
+    // re-encodes it (WebP/AVIF) like the local ones.
+    remotePatterns: [{ protocol: "https", hostname: "**" }],
+    // Optimized variants are cached on the CDN for 30 days (keeps Vercel image
+    // transformations low). Replace an image under a NEW file name to bust it.
+    minimumCacheTTL: 60 * 60 * 24 * 30,
   },
 };
 

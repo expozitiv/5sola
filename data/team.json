@@ -4,41 +4,41 @@
     "name": "Alex Ghiță",
     "role": "Pastor",
     "bio": "Alex este căsătorit cu Manuela și au doi copii. Slujește ca pastor al bisericii baptiste din Stoborăști.",
-    "image": "/images/echipa/alex.jpg"
+    "image": "/images/echipa/alex.webp"
   },
   {
     "id": "2",
     "name": "Andrei Croitoru",
     "role": "Învățător",
     "bio": "Andrei este căsătorit cu Cristina și au trei băieți. Slujește ca învățător în biserica baptistă Logos din Chicago.",
-    "image": "/images/echipa/andrei.jpg"
+    "image": "/images/echipa/andrei.webp"
   },
   {
     "id": "3",
     "name": "Cristi Maritan",
     "role": "Prezbiter",
     "bio": "Cristi este căsătorit cu Bianca și au trei fete. Slujește ca prezbiter în Biserica Baptistă ProNobis din Timișoara.",
-    "image": "/images/echipa/cristi.jpg"
+    "image": "/images/echipa/cristi.webp"
   },
   {
     "id": "4",
     "name": "David Lavric",
     "role": "Pastor",
     "bio": "David este căsătorit cu Manana și au trei copii. Slujește ca pastor al Bisericii Baptiste ProNobis din Timișoara.",
-    "image": "/images/echipa/david.jpg"
+    "image": "/images/echipa/david.webp"
   },
   {
     "id": "5",
     "name": "Iosua Faur",
     "role": "Pastor",
     "bio": "Iosua este căsătorit cu Cristiana și au trei copii. Slujește ca pastor al Bisericii Baptiste Sfânta Treime din Brăila.",
-    "image": "/images/echipa/iosua.jpg"
+    "image": "/images/echipa/iosua.webp"
   },
   {
     "id": "6",
     "name": "Lucian Bălănescu",
     "role": "Pastor",
     "bio": "Lucian este căsătorit cu Rodi și au două fiice. Slujește ca pastor al Bisericii Baptiste Buna Vestire din București.",
-    "image": "/images/echipa/lucian.jpeg"
+    "image": "/images/echipa/lucian.webp"
   }
 ]

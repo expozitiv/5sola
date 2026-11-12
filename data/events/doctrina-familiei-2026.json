@@ -5,7 +5,7 @@
   "location": "Centrul Creștin Brașov",
   "locationUrl": "https://maps.app.goo.gl/k5MSkVopXTjU9Vaf7",
   "description": "O perspectivă biblică pentru fiecare generație.",
-  "image": "/images/events/doctrina-familiei.jpg",
+  "image": "/images/events/doctrina-familiei.webp",
   "registrationClosed": false,
   "registrationDeadline": "2026-10-16",
   "stripeLink": "https://buy.stripe.com/7sYbJ12t5b6A8TWexveAg0d?prefilled_promo_code=EARLYBIRDBRASOV&locale=ro",
@@ -15,33 +15,33 @@
     {
       "name": "Beniamin Costea",
       "role": "Pastor, Biserica Baptistă Emanuel, Arad",
-      "image": "/images/echipa/beniamin-costea.jpg",
+      "image": "/images/echipa/beniamin-costea.webp",
       "bio": "Cu peste trei decenii de slujire pastorală, o bogată experiență în predicare și formarea slujitorilor, precum și o pregătire teologică aprofundată, pastorul Beniamin Costea slujește în prezent în biserica baptistă „Emanuel” din Arad."
     },
     {
       "name": "Alex Ghiță",
       "role": "Pastor, Stoborăști",
-      "image": "/images/echipa/alex.jpg"
+      "image": "/images/echipa/alex.webp"
     },
     {
       "name": "Andrei Croitoru",
       "role": "Învățător în biserica baptistă Logos din Chicago",
-      "image": "/images/echipa/andrei.jpg"
+      "image": "/images/echipa/andrei.webp"
     },
     {
       "name": "David Lavric",
       "role": "Pastor, Biserica Baptistă ProNobis, Timișoara",
-      "image": "/images/echipa/david.jpg"
+      "image": "/images/echipa/david.webp"
     },
     {
       "name": "Iosua Faur",
       "role": "Pastor, Biserica Baptistă Sfânta Treime, Brăila",
-      "image": "/images/echipa/iosua.jpg"
+      "image": "/images/echipa/iosua.webp"
     },
     {
       "name": "Lucian Bălănescu",
       "role": "Pastor, Biserica Baptistă Buna Vestire, București",
-      "image": "/images/echipa/lucian.jpeg"
+      "image": "/images/echipa/lucian.webp"
     }
   ],
   "schedule": [

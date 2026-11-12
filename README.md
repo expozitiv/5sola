@@ -236,9 +236,14 @@ Creează un fișier nou `data/events/<slug>.json` (ex. `data/events/sola-gratia-
 ### Imagini
 
 Poți folosi:
-- **Fișier local** (recomandat): pune imaginea în `public/images/events/` și referențiaz-o ca `"image": "/images/events/nume.jpg"`
-- **URL extern**: `"image": "https://domeniu.com/foto.jpg"` — dacă folosești un domeniu nou, trebuie adăugat în `next.config.ts` la `images.remotePatterns`, altfel Next.js va bloca imaginea
+- **Fișier local** (recomandat): pune imaginea în `public/images/events/` și referențiaz-o ca `"image": "/images/events/nume.webp"`
+- **URL extern**: `"image": "https://domeniu.com/foto.jpg"` — orice URL `https://` este acceptat
 - **Placeholder temporar**: `"image": "https://picsum.photos/seed/NUME/800/600"`
+
+**Dimensiuni și format.** Toate imaginile sunt servite prin `next/image`, care le redimensionează și le re-codează (WebP/AVIF) automat pentru fiecare ecran, deci vizitatorul nu descarcă niciodată fișierul original. Totuși, fișierul din repo contează pentru build, pentru cache-ul de optimizare și pentru mărimea repo-ului, așa că înainte de upload:
+- redimensionează la **max. 1200 px** pe latura lungă (afișe, coperți, portrete) sau 1600 px pentru fundaluri late;
+- salvează ca **WebP** la calitate 80 (sau JPEG q80 dacă nu ai WebP); evită PNG pentru fotografii;
+- un fișier bun are sub **150 KB**; logo-ul și iconițele sunt deja la dimensiunea corectă în `public/images/`.
 
 ---
 

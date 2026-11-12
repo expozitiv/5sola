@@ -1,15 +1,25 @@
 "use client";
+import Image from "next/image";
 import { motion } from "motion/react";
 import type { TeamMember } from "@/types";
 
-export function TeamMemberCard({ member }: { member: TeamMember }) {
+interface Props {
+  member: TeamMember;
+  /** First cards are above the fold: preload them so the LCP image loads eagerly. */
+  priority?: boolean;
+}
+
+export function TeamMemberCard({ member, priority = false }: Props) {
   return (
     <motion.div whileHover={{ y: -10 }} className="group">
       <div className="aspect-[3/4] overflow-hidden mb-6 bg-surface-low relative">
-        <img
+        <Image
           src={member.image}
           alt={member.name}
-          className="w-full h-full object-cover transition-all duration-700 scale-110 group-hover:scale-100"
+          fill
+          priority={priority}
+          sizes="(min-width: 1024px) 33vw, (min-width: 640px) 50vw, 100vw"
+          className="object-cover transition-all duration-700 scale-110 group-hover:scale-100"
           referrerPolicy="no-referrer"
         />
         <div className="absolute inset-0 bg-primary/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />

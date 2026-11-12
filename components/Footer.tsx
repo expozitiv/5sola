@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import {
   Facebook,
   Instagram,
@@ -35,9 +36,11 @@ export function Footer({ lang }: { lang: Locale }) {
       <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-4 gap-20">
         <div className="col-span-1 md:col-span-2">
           <Link href={localizePath(lang, "/")} className="flex items-center gap-3 mb-10 group">
-            <img
+            <Image
               src="/images/social_logo.jpg"
               alt="5 Sola"
+              width={48}
+              height={48}
               className="w-12 h-12 rounded-xs object-cover"
             />
             <span className="font-serif text-3xl font-black tracking-tighter group-hover:text-primary transition-colors duration-300">

@@ -3,29 +3,29 @@
   "startDate": "2023-05-18",
   "endDate": "2023-05-20",
   "location": "Aurum Palace, București",
-  "image": "/images/events/sfintenia-lui-dumnezeu.jpg",
+  "image": "/images/events/sfintenia-lui-dumnezeu.webp",
   "locationUrl": "https://maps.google.com/?q=Aurum+Palace+Sos+Electronicii+19+Bucuresti",
   "description": "Prima conferință națională 5 Sola, dedicată sfințeniei lui Dumnezeu — temelia din care izvorăsc toate celelalte atribute divine și chemarea la sfințenie a poporului Său.",
   "speakers": [
     {
       "name": "Lucian Bălănescu",
       "role": "Pastor, Biserica Baptistă Buna Vestire, București",
-      "image": "/images/echipa/lucian.jpg"
+      "image": "/images/echipa/lucian.webp"
     },
     {
       "name": "Alex Ghiță",
       "role": "Pastor, Stoborăști",
-      "image": "/images/echipa/alex.jpg"
+      "image": "/images/echipa/alex.webp"
     },
     {
       "name": "Iosua Faur",
       "role": "Pastor, Biserica Baptistă Sfânta Treime, Brăila",
-      "image": "/images/echipa/iosua.jpg"
+      "image": "/images/echipa/iosua.webp"
     },
     {
       "name": "Andrei Croitoru",
       "role": "Lucrător în Biserică, Sășa, Gorj",
-      "image": "/images/echipa/andrei.jpg"
+      "image": "/images/echipa/andrei.webp"
     }
   ],
   "topics": [

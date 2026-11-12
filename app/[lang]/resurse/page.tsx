@@ -41,6 +41,7 @@ function ResourceCard({ resource, orderLabel }: { resource: Resource; orderLabel
           src={resource.coverImage}
           alt={resource.title}
           fill
+          sizes="(min-width: 1024px) 33vw, (min-width: 640px) 50vw, 100vw"
           className="object-cover transition-all duration-700 scale-105 group-hover:scale-100"
         />
         <div className="absolute inset-0 bg-primary/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
