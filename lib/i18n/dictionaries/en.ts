@@ -111,6 +111,13 @@ const en: Dictionary = {
       "Join us at our upcoming events as we explore together the depths of Christian theology.",
     recentText: "Explore our past conferences and the theological resources available.",
     allEvents: "See all events",
+    liveNow: "Happening now",
+    liveDay: (day: number, total: number) => `Day ${day} of ${total}`,
+    liveCurrent: "Now",
+    liveNext: "Up next",
+    liveStartsAt: (time: string) => `Today's program starts at ${time}`,
+    liveDayEnded: "Today's program has ended",
+    liveSeeProgram: "See the full schedule",
   },
 
   newsletter: {

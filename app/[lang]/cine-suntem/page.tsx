@@ -57,14 +57,14 @@ export default async function CineSuntem({ params }: Props) {
         </section>
 
         {/* Mission & Vision */}
-        <section className="px-6 mb-12 md:mb-20 lg:mb-32">
+        <section className="px-6 mb-12 md:mb-16 lg:mb-20">
           <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-6">
-            <div className="bento-card p-8 md:p-12 lg:p-20 flex flex-col justify-between min-h-0 md:min-h-[400px]">
+            <div className="bento-card p-8 md:p-10 lg:p-12 flex flex-col justify-between">
               <div>
-                <span className="label-caps text-primary mb-6 block">
+                <span className="label-caps text-primary mb-4 block">
                   {t.missionLabel}
                 </span>
-                <h2 className="text-4xl md:text-5xl font-serif font-black mb-8 leading-tight">
+                <h2 className="text-3xl md:text-4xl font-serif font-black mb-6 leading-tight">
                   {t.missionTitle}
                 </h2>
               </div>
@@ -72,12 +72,12 @@ export default async function CineSuntem({ params }: Props) {
                 {t.missionText}
               </p>
             </div>
-            <div className="bento-card p-8 md:p-12 lg:p-20 flex flex-col justify-between min-h-0 md:min-h-[400px] bg-surface-low">
+            <div className="bento-card p-8 md:p-10 lg:p-12 flex flex-col justify-between bg-surface-low">
               <div>
                 <span className="label-caps text-secondary mb-6 block">
                   {t.visionLabel}
                 </span>
-                <h2 className="text-4xl md:text-5xl font-serif font-black mb-8 leading-tight">
+                <h2 className="text-3xl md:text-4xl font-serif font-black mb-6 leading-tight">
                   {t.visionTitle}
                 </h2>
               </div>
@@ -89,14 +89,14 @@ export default async function CineSuntem({ params }: Props) {
         </section>
 
         {/* Values */}
-        <section className="bg-surface-low py-12 md:py-20 lg:py-32 px-6 mb-12 md:mb-20 lg:mb-32">
+        <section className="bg-surface-low py-12 md:py-16 lg:py-20 px-6 mb-12 md:mb-16 lg:mb-20">
           <div className="max-w-7xl mx-auto">
-            <div className="flex flex-col md:flex-row justify-between items-end mb-10 md:mb-16 lg:mb-20 gap-8">
+            <div className="flex flex-col md:flex-row justify-between items-end mb-8 md:mb-12 gap-6">
               <div className="max-w-2xl">
-                <span className="label-caps text-primary mb-6 block">
+                <span className="label-caps text-primary mb-4 block">
                   {t.valuesLabel}
                 </span>
-                <h2 className="text-5xl md:text-7xl font-serif font-black leading-none uppercase">
+                <h2 className="text-4xl md:text-6xl font-serif font-black leading-none uppercase">
                   {t.valuesTitleA} <br /> <span className="text-primary">{t.valuesTitleB}</span>
                 </h2>
               </div>
@@ -119,11 +119,11 @@ export default async function CineSuntem({ params }: Props) {
         </section>
 
         {/* Team — client, uses whileHover */}
-        <section className="px-6 mb-12 md:mb-20 lg:mb-32">
+        <section className="px-6 mb-12 md:mb-16 lg:mb-20">
           <div className="max-w-7xl mx-auto">
-            <div className="mb-10 md:mb-16 lg:mb-20">
-              <span className="label-caps text-primary mb-6 block">{t.teamLabel}</span>
-              <h2 className="text-5xl md:text-7xl font-serif font-black leading-none uppercase">
+            <div className="mb-8 md:mb-12">
+              <span className="label-caps text-primary mb-4 block">{t.teamLabel}</span>
+              <h2 className="text-4xl md:text-6xl font-serif font-black leading-none uppercase">
                 {t.teamTitleA} <br /> <span className="text-primary">{t.teamTitleB}</span>
               </h2>
             </div>
@@ -135,7 +135,7 @@ export default async function CineSuntem({ params }: Props) {
           </div>
         </section>
 
-        <section className="px-6 mb-12 md:mb-20 lg:mb-32">
+        <section className="px-6 mb-12 md:mb-16 lg:mb-20">
           <div className="max-w-7xl mx-auto">
             <BiblicalQuote
               text={t.quoteText}

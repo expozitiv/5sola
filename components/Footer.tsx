@@ -32,8 +32,8 @@ export function Footer({ lang }: { lang: Locale }) {
   ];
 
   return (
-    <footer className="bg-bg border-t border-outline-variant pt-32 pb-16">
-      <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-4 gap-20">
+    <footer className="bg-bg border-t border-outline-variant pt-16 md:pt-20 pb-10">
+      <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-4 gap-10 md:gap-12">
         <div className="col-span-1 md:col-span-2">
           <Link href={localizePath(lang, "/")} className="flex items-center gap-3 mb-10 group">
             <Image

@@ -20,9 +20,9 @@ export function EventsTabSection({ events }: { events: Event[] }) {
     });
 
   return (
-    <section className="px-6 mb-32">
+    <section className="px-6 mb-16 md:mb-20">
       <div className="max-w-7xl mx-auto">
-        <div className="flex items-center justify-start gap-12 mb-20 border-b border-outline-variant">
+        <div className="flex items-center justify-start gap-8 md:gap-12 mb-10 md:mb-12 border-b border-outline-variant">
           <button
             onClick={() => setActiveTab("future")}
             className={cn(
@@ -74,7 +74,7 @@ export function EventsTabSection({ events }: { events: Event[] }) {
           <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
-            className="text-center py-32 bento-card bg-surface-low"
+            className="text-center py-16 md:py-20 bento-card bg-surface-low"
           >
             <p className="text-xl text-muted font-serif italic">
               {t.empty}

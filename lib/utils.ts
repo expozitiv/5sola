@@ -1,6 +1,7 @@
 import { type ClassValue, clsx } from "clsx";
 import { twMerge } from "tailwind-merge";
 import { dateLocales, type Locale } from "@/lib/i18n/config";
+import { eventNow } from "@/lib/live";
 
 export function cn(...inputs: ClassValue[]) {
   return twMerge(clsx(inputs));
@@ -39,8 +40,7 @@ export function formatDateRange(startDate: string, endDate: string, lang: Locale
 }
 
 function localTodayISO() {
-  const d = new Date();
-  return `${d.getFullYear()}-${String(d.getMonth() + 1).padStart(2, "0")}-${String(d.getDate()).padStart(2, "0")}`;
+  return eventNow().date;
 }
 
 export function isEventFuture(endDate: string) {

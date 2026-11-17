@@ -55,7 +55,7 @@ export default async function Doneaza({ params }: Props) {
         </section>
 
         {/* Donation options */}
-        <section className="px-6 mb-12 md:mb-20 lg:mb-32">
+        <section className="px-6 mb-12 md:mb-16 lg:mb-20">
           <AnimateIn
             direction="up"
             className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-5 gap-6"
@@ -135,14 +135,14 @@ export default async function Doneaza({ params }: Props) {
           </AnimateIn>
         </section>
 
-        <section className="px-6 mb-12 md:mb-20 lg:mb-32">
+        <section className="px-6 mb-12 md:mb-16 lg:mb-20">
           <div className="max-w-7xl mx-auto">
             <BiblicalQuote text={t.quoteText} reference={t.quoteRef} />
           </div>
         </section>
 
         {/* Questions */}
-        <section className="px-6 mb-12 md:mb-20 lg:mb-32">
+        <section className="px-6 mb-12 md:mb-16 lg:mb-20">
           <div className="max-w-7xl mx-auto bento-card p-8 md:p-16 text-center bg-surface-low">
             <h2 className="text-3xl md:text-5xl font-serif font-black mb-6 uppercase leading-tight">
               {t.questionsTitle}

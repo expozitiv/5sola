@@ -109,6 +109,13 @@ const ro = {
     recentText:
       "Explorează conferințele noastre anterioare și resursele teologice disponibile.",
     allEvents: "Vezi toate evenimentele",
+    liveNow: "Acum în desfășurare",
+    liveDay: (day: number, total: number) => `Ziua ${day} din ${total}`,
+    liveCurrent: "Acum",
+    liveNext: "Urmează",
+    liveStartsAt: (time: string) => `Programul de azi începe la ${time}`,
+    liveDayEnded: "Programul de azi s-a încheiat",
+    liveSeeProgram: "Vezi programul complet",
   },
 
   newsletter: {

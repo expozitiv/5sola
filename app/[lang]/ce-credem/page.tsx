@@ -56,11 +56,11 @@ export default async function CeCredem({ params }: Props) {
       </section>
 
       {/* 5 Solas Grid — client, each card uses whileInView */}
-      <section className="px-6 mb-12 md:mb-20 lg:mb-32">
+      <section className="px-6 mb-12 md:mb-16 lg:mb-20">
         <div className="max-w-7xl mx-auto">
-          <div className="mb-10 md:mb-16 lg:mb-20">
-            <span className="label-caps text-primary mb-6 block">{t.pillarsLabel}</span>
-            <h2 className="text-5xl md:text-7xl font-serif font-black leading-none uppercase">
+          <div className="mb-8 md:mb-12">
+            <span className="label-caps text-primary mb-4 block">{t.pillarsLabel}</span>
+            <h2 className="text-4xl md:text-6xl font-serif font-black leading-none uppercase">
               {t.solasTitleA} <br /> <span className="text-primary">{t.solasTitleB}</span>
             </h2>
           </div>
@@ -73,17 +73,17 @@ export default async function CeCredem({ params }: Props) {
       </section>
 
       {/* Confession of Faith */}
-      <section className="bg-surface-low py-12 md:py-20 lg:py-32 px-6 mb-12 md:mb-20 lg:mb-32">
+      <section className="bg-surface-low py-12 md:py-16 lg:py-20 px-6 mb-12 md:mb-16 lg:mb-20">
         <div className="max-w-4xl mx-auto">
-          <div className="mb-10 md:mb-16 lg:mb-20 text-center">
-            <span className="label-caps text-primary mb-6 block">{t.confessionLabel}</span>
-            <h2 className="text-5xl md:text-7xl font-serif font-black leading-none uppercase">
+          <div className="mb-8 md:mb-12 text-center">
+            <span className="label-caps text-primary mb-4 block">{t.confessionLabel}</span>
+            <h2 className="text-4xl md:text-6xl font-serif font-black leading-none uppercase">
               {t.confessionTitleA} <br /> <span className="text-primary">{t.confessionTitleB}</span>
             </h2>
           </div>
           <AnimateIn
             direction="scale"
-            className="bg-bg p-8 md:p-16 lg:p-24 border border-outline-variant shadow-2xl relative overflow-hidden"
+            className="bg-bg p-8 md:p-12 lg:p-16 border border-outline-variant shadow-2xl relative overflow-hidden"
           >
             <div className="absolute top-0 right-0 font-serif text-[20rem] font-black text-ink/[0.04] leading-none select-none pointer-events-none -translate-y-20 translate-x-20">
               S
@@ -96,9 +96,9 @@ export default async function CeCredem({ params }: Props) {
       </section>
 
       {/* CTA */}
-      <section className="px-6 mb-12 md:mb-20 lg:mb-32">
-        <div className="max-w-7xl mx-auto bento-card p-8 md:p-16 lg:p-24 text-center bg-primary/5 border-primary/20">
-          <h2 className="text-4xl md:text-6xl font-serif font-black mb-8 uppercase leading-tight">
+      <section className="px-6 mb-12 md:mb-16 lg:mb-20">
+        <div className="max-w-7xl mx-auto bento-card p-8 md:p-12 lg:p-16 text-center bg-primary/5 border-primary/20">
+          <h2 className="text-3xl md:text-5xl font-serif font-black mb-6 uppercase leading-tight">
             {t.ctaTitleA} <br /> <span className="text-primary">{t.ctaTitleB}</span>
           </h2>
           <p className="text-xl text-muted mb-12 max-w-2xl mx-auto">

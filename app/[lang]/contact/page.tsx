@@ -34,15 +34,15 @@ export default async function Contact({ params }: Props) {
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumb) }} />
-      <div className="pt-32">
+      <div className="pt-20">
       {/* Header */}
-      <section className="px-6 mb-32">
+      <section className="px-6 mb-16 md:mb-20">
         <div className="max-w-7xl mx-auto">
           <PageHeading>
             {t.headingA} <span className="text-primary glow-red">{t.headingB}</span>
           </PageHeading>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-20">
-            <p className="text-2xl md:text-3xl font-serif italic leading-relaxed text-white">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
+            <p className="text-xl font-serif italic leading-relaxed text-ink">
               {t.lead}
             </p>
             <p className="text-muted text-lg leading-relaxed">
@@ -52,12 +52,12 @@ export default async function Contact({ params }: Props) {
         </div>
       </section>
 
-      <section className="px-6 mb-32">
-        <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 md:gap-24">
+      <section className="px-6 mb-16 md:mb-20">
+        <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16">
           {/* Contact Info — server-rendered, animated in via AnimateIn */}
-          <AnimateIn direction="left" className="space-y-16">
+          <AnimateIn direction="left" className="space-y-10">
             <div>
-              <span className="label-caps text-primary mb-12 block">{t.infoLabel}</span>
+              <span className="label-caps text-primary mb-4 block">{t.infoLabel}</span>
               <div className="space-y-12">
                 <div className="flex items-start gap-8 group">
                   <div className="w-16 h-16 bg-surface-low border border-white/5 flex items-center justify-center text-primary shrink-0 group-hover:bg-primary group-hover:text-white transition-all duration-500 rounded-xs">

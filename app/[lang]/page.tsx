@@ -37,21 +37,21 @@ export default async function Home({ params }: Props) {
   const events = getEvents(lang);
 
   const hasFutureEvents = events.some((e) => isEventFuture(e.endDate));
+  const byMostRecent = [...events].sort(
+    (a, b) => new Date(b.endDate).getTime() - new Date(a.endDate).getTime(),
+  );
   const featuredEvent = hasFutureEvents
     ? events.find((e) => isEventFuture(e.endDate))!
-    : [...events].sort(
-        (a, b) => new Date(b.endDate).getTime() - new Date(a.endDate).getTime(),
-      )[0];
-  const upcomingEvents = hasFutureEvents
-    ? events
-        .filter((e) => isEventFuture(e.endDate) && e.id !== featuredEvent.id)
-        .slice(0, 3)
-    : [...events]
-        .sort(
-          (a, b) =>
-            new Date(b.endDate).getTime() - new Date(a.endDate).getTime(),
-        )
-        .slice(0, 3);
+    : byMostRecent[0];
+  const otherUpcoming = events
+    .filter((e) => isEventFuture(e.endDate) && e.id !== featuredEvent.id)
+    .slice(0, 3);
+  // When the featured event is the only one ahead, show past conferences instead
+  // of an empty "upcoming" grid.
+  const showUpcoming = otherUpcoming.length > 0;
+  const listedEvents = showUpcoming
+    ? otherUpcoming
+    : byMostRecent.filter((e) => e.id !== featuredEvent.id).slice(0, 3);
 
   return (
     <div className="pt-20">
@@ -62,8 +62,8 @@ export default async function Home({ params }: Props) {
       />
 
       {/* Cine Suntem Preview */}
-      <section className="py-16 md:py-28 lg:py-32 bg-bg relative overflow-hidden">
-        <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-24 items-center">
+      <section className="py-14 md:py-20 bg-bg relative overflow-hidden">
+        <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 items-center">
           <div className="order-2 lg:order-1 relative">
             <div className="grid grid-cols-2 gap-8">
               <AnimateIn className="relative aspect-square bg-surface-high overflow-hidden rounded-lg">
@@ -94,14 +94,14 @@ export default async function Home({ params }: Props) {
           </div>
 
           <AnimateIn direction="right" className="order-1 lg:order-2">
-            <div className="label-caps mb-6 text-primary">{t.missionLabel}</div>
-            <h2 className="text-5xl md:text-7xl mb-10 font-black leading-tight">
+            <div className="label-caps mb-4 text-primary">{t.missionLabel}</div>
+            <h2 className="text-4xl md:text-6xl mb-6 font-black leading-tight">
               {t.aboutTitle}
             </h2>
-            <p className="text-xl text-muted mb-8 leading-relaxed font-medium">
+            <p className="text-xl text-muted mb-6 leading-relaxed font-medium">
               {t.aboutLead}
             </p>
-            <p className="text-muted mb-12 leading-relaxed">{t.aboutBody}</p>
+            <p className="text-muted mb-8 leading-relaxed">{t.aboutBody}</p>
             <Link
               href={localizePath(lang, "/cine-suntem")}
               className="group inline-flex items-center gap-3 text-primary label-caps text-sm"
@@ -116,30 +116,30 @@ export default async function Home({ params }: Props) {
         </div>
       </section>
 
-      <section className="py-10 md:py-14 bg-surface-low">
+      <section className="py-8 md:py-10 bg-surface-low">
         <div className="max-w-7xl mx-auto px-6">
           <BiblicalQuote text={t.quoteText} reference={t.quoteRef} />
         </div>
       </section>
 
-      <section className="py-16 md:py-28 lg:py-32 bg-bg">
+      <section className="py-14 md:py-20 bg-bg">
         <div className="max-w-7xl mx-auto px-6">
-          <div className="flex flex-col md:flex-row justify-between items-end gap-8 mb-10 md:mb-16 lg:mb-20">
+          <div className="flex flex-col md:flex-row justify-between items-end gap-6 mb-8 md:mb-12">
             <div>
-              <div className="label-caps mb-6 text-primary">{t.calendarLabel}</div>
-              <h2 className="text-5xl md:text-7xl font-black mb-6">
-                {hasFutureEvents ? t.upcomingTitle : t.recentTitle}
+              <div className="label-caps mb-4 text-primary">{t.calendarLabel}</div>
+              <h2 className="text-4xl md:text-6xl font-black mb-4">
+                {showUpcoming ? t.upcomingTitle : t.recentTitle}
               </h2>
               <p className="text-muted max-w-xl text-lg font-medium">
-                {hasFutureEvents ? t.upcomingText : t.recentText}
+                {showUpcoming ? t.upcomingText : t.recentText}
               </p>
             </div>
             <Link href={localizePath(lang, "/evenimente")} className="btn-outline">
               <span>{t.allEvents}</span>
             </Link>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
-            {upcomingEvents.map((event, index) => (
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {listedEvents.map((event, index) => (
               <EventCard key={event.id} event={event} index={index} />
             ))}
           </div>

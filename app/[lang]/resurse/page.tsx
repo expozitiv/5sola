@@ -121,13 +121,13 @@ export default async function Resurse({ params }: Props) {
         </section>
 
         {/* Revista Ad Fontes */}
-        <section className="px-6 mb-32">
+        <section className="px-6 mb-16 md:mb-20">
           <div className="max-w-7xl mx-auto">
-            <div className="mb-20">
-              <span className="label-caps text-primary mb-6 block">
+            <div className="mb-10 md:mb-12">
+              <span className="label-caps text-primary mb-4 block">
                 {t.periodical}
               </span>
-              <h2 className="text-5xl md:text-7xl font-serif font-black leading-none uppercase">
+              <h2 className="text-4xl md:text-6xl font-serif font-black leading-none uppercase">
                 {t.magazineTitleA} <br /> <span className="text-primary">Ad Fontes</span>
               </h2>
             </div>
@@ -142,10 +142,10 @@ export default async function Resurse({ params }: Props) {
         </section>
 
         {/* Cărți traduse */}
-        <section className="bg-surface-low py-32 px-6 mb-32">
+        <section className="bg-surface-low py-12 md:py-16 lg:py-20 px-6 mb-12 md:mb-16 lg:mb-20">
           <div className="max-w-7xl mx-auto">
-            <div className="mb-20">
-              <span className="label-caps text-primary mb-6 block">
+            <div className="mb-10 md:mb-12">
+              <span className="label-caps text-primary mb-4 block">
                 {t.publisher}{" "}
                 <Link
                   href="https://corpusreformatorum.org/"
@@ -156,7 +156,7 @@ export default async function Resurse({ params }: Props) {
                   Corpus Reformatorum
                 </Link>
               </span>
-              <h2 className="text-5xl md:text-7xl font-serif font-black leading-none uppercase">
+              <h2 className="text-4xl md:text-6xl font-serif font-black leading-none uppercase">
                 {t.booksTitle} <br />
               </h2>
             </div>
@@ -171,9 +171,9 @@ export default async function Resurse({ params }: Props) {
         </section>
 
         {/* CTA */}
-        <section className="px-6 mb-32">
-          <div className="max-w-7xl mx-auto bento-card p-12 md:p-24 text-center bg-primary/5 border-primary/20">
-            <h2 className="text-4xl md:text-6xl font-serif font-black mb-8 uppercase leading-tight">
+        <section className="px-6 mb-16 md:mb-20">
+          <div className="max-w-7xl mx-auto bento-card p-10 md:p-16 text-center bg-primary/5 border-primary/20">
+            <h2 className="text-3xl md:text-5xl font-serif font-black mb-6 uppercase leading-tight">
               {t.ctaTitleA} <br />{" "}
               <span className="text-primary">{t.ctaTitleB}</span>
             </h2>

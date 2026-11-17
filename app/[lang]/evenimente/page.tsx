@@ -57,11 +57,11 @@ export default async function Evenimente({ params }: Props) {
       <EventsTabSection events={events} />
 
       {/* Newsletter CTA */}
-      <section className="px-6 mb-32">
-        <div className="max-w-7xl mx-auto bento-card p-12 md:p-24 text-center bg-surface-low">
+      <section className="px-6 mb-16 md:mb-20">
+        <div className="max-w-7xl mx-auto bento-card p-10 md:p-16 text-center bg-surface-low">
           <div className="max-w-2xl mx-auto">
-            <span className="label-caps text-primary mb-6 block">{t.newsletterLabel}</span>
-            <h3 className="text-4xl md:text-6xl font-serif font-black mb-8 uppercase leading-tight">
+            <span className="label-caps text-primary mb-4 block">{t.newsletterLabel}</span>
+            <h3 className="text-3xl md:text-5xl font-serif font-black mb-6 uppercase leading-tight">
               {t.newsletterTitleA} <br /> <span className="text-primary">{t.newsletterTitleB}</span>
             </h3>
             <p className="text-muted mb-12 text-lg leading-relaxed">
