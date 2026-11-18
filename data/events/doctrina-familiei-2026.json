@@ -79,8 +79,8 @@
         },
         {
           "time": "18:30",
-          "activity": "Sesiunea I",
-          "topic": "Single și logodnă. Cum ne pregătim pentru familie",
+          "activity": "I. Single și logodnă.",
+          "topic": "Cum ne pregătim pentru familie",
           "speaker": "Lucian Bălănescu"
         },
         {
@@ -89,8 +89,8 @@
         },
         {
           "time": "20:00",
-          "activity": "Sesiunea II",
-          "topic": "Căsătoria ca legământ. Cadrul care susține iubirea",
+          "activity": "II. Căsătoria ca legământ.",
+          "topic": "Cadrul care susține iubirea",
           "speaker": "Iosua Faur"
         }
       ]
@@ -100,8 +100,8 @@
       "items": [
         {
           "time": "09:00",
-          "activity": "Sesiunea III",
-          "topic": "Soț și soție. Roluri care Îl cinstesc pe Cristos",
+          "activity": "III. Soț și soție.",
+          "topic": "Roluri care Îl cinstesc pe Cristos",
           "speaker": "Beniamin Costea"
         },
         {
@@ -110,8 +110,8 @@
         },
         {
           "time": "10:45",
-          "activity": "Sesiunea IV",
-          "topic": "Închinarea în familie. Eu și casa mea vom sluji Domnului",
+          "activity": "IV. Închinarea în familie.",
+          "topic": "Eu și casa mea vom sluji Domnului",
           "speaker": "Alex Ghiță"
         },
         {
@@ -172,8 +172,8 @@
         },
         {
           "time": "15:45",
-          "activity": "Sesiunea V",
-          "topic": "Copiii nu sunt ai noștri. Chemarea părinților creștini",
+          "activity": "V. Copiii nu sunt ai noștri.",
+          "topic": "Chemarea părinților creștini",
           "speaker": "Andrei Croitoru"
         },
         {
@@ -182,8 +182,8 @@
         },
         {
           "time": "17:15",
-          "activity": "Sesiunea VI",
-          "topic": "Consilierea familiilor în criză. Kit de prim ajutor",
+          "activity": "VI. Consilierea familiilor în criză.",
+          "topic": "Kit de prim ajutor",
           "speaker": "David Lavric"
         },
         {

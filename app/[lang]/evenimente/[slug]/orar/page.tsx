@@ -29,7 +29,8 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 }
 
 const isSession = (activity: string) =>
-  /sesiu|session|panel|q&a|atelier|workshop/i.test(activity);
+  /sesiu|session|panel|q&a|atelier|workshop/i.test(activity) ||
+  /^[IVX]+\.\s/.test(activity); // "I. Titlu"
 
 export default async function OrarPage({ params }: Props) {
   const { lang: rawLang, slug } = await params;
