@@ -66,7 +66,9 @@
         },
         {
           "time": "18:30",
-          "activity": "Sesiunea I"
+          "activity": "⁠Single și logodnă",
+          "topic": "Cum ne pregătim pentru familie",
+          "speaker": "Lucian Bălănescu"
         },
         {
           "time": "19:45",
@@ -98,6 +100,11 @@
           "activity": "Atelier I",
           "parallel": [
             {
+              "room": "Sala 0",
+              "speaker": "Andrei Croitoru",
+              "topic": "Generația taților absenți"
+            },
+            {
               "room": "Sala 1",
               "speaker": "Iosua Faur",
               "topic": "Divorț și recăsătorire: Cum putem evita un malpraxis al familiei și bisericii."
@@ -111,11 +118,6 @@
               "room": "Sala 3",
               "speaker": "Lucian Bălănescu",
               "topic": "Atmosfera familiei creștine: Frica de Domnul și înflorirea vieții de familie."
-            },
-            {
-              "room": "Sala 0",
-              "speaker": "Andrei Croitoru",
-              "topic": "Generația taților absenți"
             }
           ]
         },
