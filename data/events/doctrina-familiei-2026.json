@@ -42,6 +42,18 @@
       "name": "Lucian Bălănescu",
       "role": "Pastor, Biserica Baptistă Buna Vestire, București",
       "image": "/images/echipa/lucian.webp"
+    },
+    {
+      "name": "Corin Mihăilă",
+      "role": "Pastor, Biserica Baptistă Nr. 1, Brașov",
+      "image": "/images/echipa/corin-mihaila.webp",
+      "bio": "Pastor al Bisericii Baptiste Nr. 1 din Brașov și lector universitar dr. la Universitatea Emanuel din Oradea."
+    },
+    {
+      "name": "Sorin Prodan",
+      "role": "Pastor, Biserica Baptistă Providența, Brașov",
+      "image": "/images/echipa/sorin-prodan.webp",
+      "bio": "Pastor al Bisericii Baptiste Providența din Brașov și director al organizației HeartCry pentru Europa de Est."
     }
   ],
   "schedule": [
@@ -58,7 +70,8 @@
         },
         {
           "time": "17:15",
-          "activity": "Panel"
+          "activity": "Panel",
+          "topic": "Toți vorbitorii"
         },
         {
           "time": "18:15",
@@ -66,8 +79,8 @@
         },
         {
           "time": "18:30",
-          "activity": "⁠Single și logodnă",
-          "topic": "Cum ne pregătim pentru familie",
+          "activity": "Sesiunea I",
+          "topic": "Single și logodnă. Cum ne pregătim pentru familie",
           "speaker": "Lucian Bălănescu"
         },
         {
@@ -76,7 +89,9 @@
         },
         {
           "time": "20:00",
-          "activity": "Sesiunea II"
+          "activity": "Sesiunea II",
+          "topic": "Căsătoria ca legământ. Cadrul care susține iubirea",
+          "speaker": "Iosua Faur"
         }
       ]
     },
@@ -85,7 +100,9 @@
       "items": [
         {
           "time": "09:00",
-          "activity": "Sesiunea III"
+          "activity": "Sesiunea III",
+          "topic": "Soț și soție. Roluri care Îl cinstesc pe Cristos",
+          "speaker": "Beniamin Costea"
         },
         {
           "time": "10:20",
@@ -93,7 +110,9 @@
         },
         {
           "time": "10:45",
-          "activity": "Sesiunea IV"
+          "activity": "Sesiunea IV",
+          "topic": "Închinarea în familie. Eu și casa mea vom sluji Domnului",
+          "speaker": "Alex Ghiță"
         },
         {
           "time": "12:00",
@@ -153,7 +172,9 @@
         },
         {
           "time": "15:45",
-          "activity": "Sesiunea V"
+          "activity": "Sesiunea V",
+          "topic": "Copiii nu sunt ai noștri. Chemarea părinților creștini",
+          "speaker": "Andrei Croitoru"
         },
         {
           "time": "17:00",
@@ -161,7 +182,9 @@
         },
         {
           "time": "17:15",
-          "activity": "Sesiunea VI"
+          "activity": "Sesiunea VI",
+          "topic": "Consilierea familiilor în criză. Kit de prim ajutor",
+          "speaker": "David Lavric"
         },
         {
           "time": "18:30",
@@ -169,7 +192,8 @@
         },
         {
           "time": "19:45",
-          "activity": "Q&A"
+          "activity": "Q&A",
+          "topic": "Toți vorbitorii"
         }
       ]
     }
