@@ -111,6 +111,11 @@
               "room": "Sala 3",
               "speaker": "Lucian Bălănescu",
               "topic": "Atmosfera familiei creștine: Frica de Domnul și înflorirea vieții de familie."
+            },
+            {
+              "room": "Sala 0",
+              "speaker": "Andrei Croitoru",
+              "topic": "Generația taților absenți"
             }
           ]
         },
@@ -136,6 +141,11 @@
               "room": "Sala 2",
               "speaker": "Alex Ghiță",
               "topic": "Cum să ne certăm bine: Gestionarea conflictelor între soți, frați și părinți-copii."
+            },
+            {
+              "room": "Sala 3",
+              "speaker": "Sorin Prodan",
+              "topic": "Familia și misiunea"
             }
           ]
         },
