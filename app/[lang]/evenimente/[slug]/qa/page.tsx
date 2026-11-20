@@ -8,6 +8,10 @@ import { locales, localizePath, pageAlternates, toLocale } from "@/lib/i18n/conf
 import { getDictionary } from "@/lib/i18n";
 import { getEvents } from "@/lib/i18n/content";
 
+// The "is the event ongoing" check depends on today's date, so it must run per
+// request — a build-time prerender bakes in a redirect to the event page.
+export const dynamic = "force-dynamic";
+
 type Props = { params: Promise<{ lang: string; slug: string }> };
 
 export function generateStaticParams() {
