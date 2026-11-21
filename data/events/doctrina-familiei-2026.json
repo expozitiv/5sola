@@ -115,7 +115,7 @@
           "speaker": "Alex Ghiță"
         },
         {
-          "time": "12:00",
+          "time": "12:40",
           "activity": "Atelier I",
           "parallel": [
             {
@@ -141,11 +141,11 @@
           ]
         },
         {
-          "time": "13:10",
+          "time": "13:55",
           "activity": "Pauza de prânz"
         },
         {
-          "time": "14:30",
+          "time": "15:15",
           "activity": "Atelier II",
           "parallel": [
             {
@@ -171,27 +171,17 @@
           ]
         },
         {
-          "time": "15:45",
-          "activity": "V. Copiii nu sunt ai noștri.",
-          "topic": "Chemarea părinților creștini",
-          "speaker": "Andrei Croitoru"
-        },
-        {
-          "time": "17:00",
-          "activity": "Pauză"
-        },
-        {
-          "time": "17:15",
-          "activity": "VI. Consilierea familiilor în criză.",
+          "time": "16:30",
+          "activity": "V. Consilierea familiilor în criză.",
           "topic": "Kit de prim ajutor",
           "speaker": "David Lavric"
         },
         {
-          "time": "18:30",
+          "time": "17:45",
           "activity": "Cina"
         },
         {
-          "time": "19:45",
+          "time": "19:00",
           "activity": "Q&A",
           "topic": "Toți vorbitorii"
         }
