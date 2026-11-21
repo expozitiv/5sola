@@ -119,19 +119,19 @@
           "activity": "Atelier I",
           "parallel": [
             {
-              "room": "Sala 1",
+              "room": "Sala 0",
               "speaker": "Iosua Faur",
               "topic": "Divorț și recăsătorire: Cum putem evita un malpraxis al familiei și bisericii."
             },
             {
-              "room": "Sala 2",
-              "speaker": "David Lavric",
-              "topic": "Gentle parenting: Nu cruța nuiaua."
+              "room": "Sala 1",
+              "speaker": "Lucian Bălănescu",
+              "topic": "Atmosfera familiei creștine: Frica de Domnul și înflorirea vieții de familie."
             },
             {
               "room": "Sala 3",
-              "speaker": "Lucian Bălănescu",
-              "topic": "Atmosfera familiei creștine: Frica de Domnul și înflorirea vieții de familie."
+              "speaker": "David Lavric",
+              "topic": "Gentle parenting: Nu cruța nuiaua."
             }
           ]
         },
