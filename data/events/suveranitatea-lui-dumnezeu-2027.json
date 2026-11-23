@@ -1,0 +1,88 @@
+{
+  "title": "Suveranitatea lui Dumnezeu",
+  "startDate": "2027-01-28",
+  "endDate": "2027-01-30",
+  "location": "Bruxelles, Belgia",
+  "description": "Conferința 5 Sola Belgia, dedicată suveranității lui Dumnezeu.",
+  "image": "/images/events/suveranitatea-lui-dumnezeu.webp",
+  "stripeLink": "https://vttcu6spbj.zite.so/",
+  "speakers": [
+    {
+      "name": "Andrei Croitoru",
+      "role": "Învățător în biserica baptistă Logos din Chicago",
+      "image": "/images/echipa/andrei.webp"
+    },
+    {
+      "name": "Andrei Sava",
+      "role": "Pastor",
+      "image": "/images/echipa/andrei-sava.webp"
+    },
+    {
+      "name": "Alex Ghiță",
+      "role": "Pastor, Stoborăști",
+      "image": "/images/echipa/alex.webp"
+    },
+    {
+      "name": "David Lavric",
+      "role": "Pastor, Biserica Baptistă ProNobis, Timișoara",
+      "image": "/images/echipa/david.webp"
+    },
+    {
+      "name": "Iosua Faur",
+      "role": "Pastor, Biserica Baptistă Sfânta Treime, Brăila",
+      "image": "/images/echipa/iosua.webp"
+    },
+    {
+      "name": "Lucian Bălănescu",
+      "role": "Pastor, Biserica Baptistă Buna Vestire, București",
+      "image": "/images/echipa/lucian.webp"
+    }
+  ],
+  "topics": [],
+  "schedule": [
+    {
+      "day": "Ziua 1 — Joi, 28 Ianuarie",
+      "items": [
+        {
+          "time": "18:00",
+          "activity": "Început program"
+        },
+        {
+          "time": "22:00",
+          "activity": "Încheiere"
+        }
+      ]
+    },
+    {
+      "day": "Ziua 2 — Vineri, 29 Ianuarie",
+      "items": [
+        {
+          "time": "18:00",
+          "activity": "Început program"
+        },
+        {
+          "time": "22:00",
+          "activity": "Încheiere"
+        }
+      ]
+    },
+    {
+      "day": "Ziua 3 — Sâmbătă, 30 Ianuarie",
+      "items": [
+        {
+          "time": "09:00",
+          "activity": "Început program"
+        },
+        {
+          "time": "14:00",
+          "activity": "Încheiere"
+        }
+      ]
+    }
+  ],
+  "en": {
+    "title": "The Sovereignty of God",
+    "location": "Brussels, Belgium",
+    "description": "The 5 Sola Belgium Conference, devoted to the sovereignty of God."
+  }
+}
