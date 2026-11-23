@@ -44,6 +44,10 @@
       "day": "Ziua 1 — Joi, 28 Ianuarie",
       "items": [
         {
+          "time": "16:00",
+          "activity": "Înregistrare"
+        },
+        {
           "time": "18:00",
           "activity": "Început program"
         },
